@@ -3,6 +3,9 @@ class User
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :validatable, :timeoutable
 
+  field :first_name,             :type => String
+  field :last_name,              :type => String
+
   field :email,                  :type => String, :default => ""
   field :encrypted_password,     :type => String, :default => ""
   field :reset_password_token,   :type => String

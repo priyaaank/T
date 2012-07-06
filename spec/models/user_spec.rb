@@ -13,6 +13,9 @@ describe User do
     it { should respond_to :confirmed_at }
     it { should respond_to :confirmation_token }
 
+    it { should validate_presence_of(:email) }
+    it { should validate_presence_of(:encrypted_password) }
+
   end
 
 end
