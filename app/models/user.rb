@@ -1,5 +1,7 @@
 class User
+
   include Mongoid::Document
+  
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :validatable, :timeoutable
 
@@ -18,4 +20,5 @@ class User
 
   validates_presence_of :email
   validates_presence_of :encrypted_password
+
 end

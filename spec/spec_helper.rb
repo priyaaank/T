@@ -13,12 +13,19 @@ RSpec.configure do |config|
   config.mock_with :rspec
 
   #To clean database before every scenario run
-  config.before(:each) do
-    #Mongoid.database.collections.each { |collection| collection.remove }
+  config.before(:suite) do
+    DatabaseCleaner[:mongoid].strategy = :truncation
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
   end
 
   # If true, the base class of anonymous controllers will be inferred
   # automatically. This will be the default behavior in future versions of
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
+
+  #added devise helpers for rspec
+  config.include Devise::TestHelpers, :type => :controller
 end
