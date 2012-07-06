@@ -5,6 +5,7 @@ describe User do
   context "attributes" do
     
     it { should respond_to :email }
+    it { should respond_to :unconfirmed_email }
     it { should respond_to :encrypted_password }
     it { should respond_to :reset_password_sent_at }
     it { should respond_to :reset_password_token }
