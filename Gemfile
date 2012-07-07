@@ -18,6 +18,7 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'mongoid', "~> 3.0.0.rc"
 gem 'bson_ext'
+gem 'thin'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

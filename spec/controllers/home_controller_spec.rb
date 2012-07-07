@@ -22,9 +22,9 @@ describe HomeController do
       it "should render index page" do
         get :index
 
-        response.should_not redirect_to("http://test.host/users/sign_in")
         response.should be_success
         response.should render_template('home/index')
+        response.should_not redirect_to("http://test.host/users/sign_in")
       end
     end
 
