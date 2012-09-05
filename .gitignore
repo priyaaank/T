@@ -17,3 +17,4 @@ pickle-email-*.html
 /.bundle
 /db/*.sqlite3
 .env
+.notes
