@@ -6,7 +6,7 @@ class Destination
   field :name, :type => String
   
   embeds_many :categories
-  embeds_many :pictures
+  embeds_many :photos
   embeds_many :tips
   embeds_many :reviews
   embeds_many :alternate_names

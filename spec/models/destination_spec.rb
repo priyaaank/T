@@ -4,7 +4,7 @@ describe Destination do
   
   context "attributes" do
     it { should respond_to :categories          }
-    it { should respond_to :pictures            }
+    it { should respond_to :photos              }
     it { should respond_to :tips                }
     it { should respond_to :reviews             }
     it { should respond_to :location            }
