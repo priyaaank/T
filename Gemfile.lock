@@ -143,7 +143,7 @@ DEPENDENCIES
   fabrication
   haml
   jquery-rails
-  mongoid
+  mongoid (~> 3.0.5)
   rails (= 3.1.3)
   rspec
   rspec-rails

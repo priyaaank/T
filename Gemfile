@@ -16,7 +16,7 @@ gem 'rails', '3.1.3'
 gem 'devise'
 gem 'jquery-rails'
 gem 'haml'
-gem 'mongoid'
+gem 'mongoid', "~> 3.0.5"
 gem 'bson_ext'
 gem 'thin'
 
