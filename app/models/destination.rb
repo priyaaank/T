@@ -12,7 +12,7 @@ class Destination
   embeds_many :alternate_names
   embeds_one  :contact_info
   embeds_one  :location
-  embeds_one  :stickiness_stats
+  embeds_one  :stats
 
   has_one     :owner
 
