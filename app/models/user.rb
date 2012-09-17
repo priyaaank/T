@@ -18,6 +18,8 @@ class User
   field :confirmed_at,           :type => Time
   field :confirmation_sent_at,   :type => Time
 
+  belongs_to :owner, :polymorphic => true
+
   validates_presence_of :email
   validates_presence_of :encrypted_password
 

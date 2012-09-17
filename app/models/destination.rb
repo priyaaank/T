@@ -14,6 +14,6 @@ class Destination
   embeds_one  :location
   embeds_one  :stats
 
-  has_one     :owner
+  has_one     :user, :as => :owner
 
 end
