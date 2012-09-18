@@ -36,6 +36,8 @@ GEM
     bson_ext (1.7.0)
       bson (~> 1.7.0)
     builder (3.0.0)
+    carrierwave (0.5.8)
+      activesupport (~> 3.0)
     daemons (1.1.9)
     database_cleaner (0.8.0)
     devise (2.1.2)
@@ -138,6 +140,7 @@ PLATFORMS
 
 DEPENDENCIES
   bson_ext
+  carrierwave
   database_cleaner
   devise
   fabrication

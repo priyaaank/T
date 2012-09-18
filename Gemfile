@@ -19,6 +19,7 @@ gem 'haml'
 gem 'mongoid', "~> 3.0.5"
 gem 'bson_ext'
 gem 'thin'
+gem 'carrierwave'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
