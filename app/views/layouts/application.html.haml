@@ -3,12 +3,12 @@
     %title
       Title
 
-    = javascript_include_tag "application"
-    = stylesheet_link_tag "application"
-
     %body
 
       %p.notice= @notice
       %p.alert= @alert
 
       = yield
+
+    = javascript_include_tag "application"
+    = stylesheet_link_tag "application"

@@ -10,6 +10,7 @@ gem 'bson_ext'
 gem 'thin'
 gem 'carrierwave'
 gem 'mongoid-ancestry'
+gem 'rails-backbone'
 
 group :development do
   gem 'travis-lint'
