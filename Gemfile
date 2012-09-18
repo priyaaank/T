@@ -9,6 +9,7 @@ gem 'mongoid', "~> 3.0.5"
 gem 'bson_ext'
 gem 'thin'
 gem 'carrierwave'
+gem 'mongoid-ancestry'
 
 group :development do
   gem 'travis-lint'

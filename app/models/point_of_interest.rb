@@ -2,6 +2,9 @@ class PointOfInterest
 
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Ancestry
+
+  has_ancestry
 
   field :name, :type => String
   
