@@ -7,7 +7,7 @@ describe Review do
     it { should respond_to :reviewer     }
     it { should respond_to :rating_value }
     it { should respond_to :review_date  }
-    it { should respond_to :destination  }
+    it { should respond_to :point_of_interest  }
   end
 
 end
