@@ -8,9 +8,9 @@ class Destination
   embeds_many :categories
   embeds_many :photos
   embeds_many :alternate_names
-  embeds_one  :contact_info
   embeds_one  :location
   embeds_one  :stats
+  embeds_one  :contact_info, :as => :contactable
 
   has_many :tips
   has_many :reviews
