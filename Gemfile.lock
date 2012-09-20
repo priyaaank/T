@@ -57,6 +57,10 @@ GEM
       multi_json (~> 1.0)
     fabrication (2.2.3)
     haml (3.1.7)
+    handlebars_assets (0.6.5)
+      execjs (>= 1.2.9)
+      sprockets (>= 2.0.3)
+      tilt
     hashr (0.0.22)
     hike (1.2.1)
     i18n (0.6.1)
@@ -158,6 +162,7 @@ DEPENDENCIES
   devise
   fabrication
   haml
+  handlebars_assets
   jquery-rails
   mongoid (~> 3.0.5)
   mongoid-ancestry

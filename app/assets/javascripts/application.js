@@ -9,5 +9,9 @@
 //= require backbone
 //= require backbone_rails_sync
 //= require backbone_datalink
-//= require backbone/t
+//= require lib/backbone.modelbinder.min.js
+//= require lib/backbone.marionette.min.js
+//= require handlebars.js
+//= require render_handlebar_templates
+//= require init
 //= require_tree .

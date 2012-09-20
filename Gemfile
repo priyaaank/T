@@ -16,6 +16,10 @@ group :development do
   gem 'travis-lint'
 end
 
+group :assets do
+  gem 'handlebars_assets'
+end
+
 group :test do
   gem 'turn', '~> 0.8.3', :require => false
   gem 'rspec'
