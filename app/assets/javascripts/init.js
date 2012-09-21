@@ -10,8 +10,9 @@ App.Helpers = {};
 App.layouts = {};
 
 App.addRegions({
-  content: '#content',
-  loginWidget: '#login-widget'
+  content: '#content'
 });
 
-App.content.show(App.layouts.home);
+App.bind("initialize:after", function() {
+  App.content.show(App.layouts.home);
+});

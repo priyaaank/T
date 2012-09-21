@@ -2,13 +2,13 @@ App.Views.Layouts.Home = Backbone.Marionette.Layout.extend({
   template: 'layouts/home',
 
   regions : {
-    loginWidget: 'login-widget'
+    loginWidget: '#login-widget'
   },
 
   views:{},
 
   onShow: function() {
-    this.views.login = App.Views.RegistrationAndLogin.Login;
+    this.views.login = App.Views.LoginAndRegistration.Login;
     this.loginWidget.show(new this.views.login);
   }
 });

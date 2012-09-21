@@ -11805,2266 +11805,1465 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
     }
   });
 })(jQuery);
-  
-
-
-<!DOCTYPE html>
-<html>
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Backbone.ModelBinder/Backbone.ModelBinder.min.js at master · theironcook/Backbone.ModelBinder</title>
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
-    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144.png" />
-
-    
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.png" />
-
-    <meta content="authenticity_token" name="csrf-param" />
-<meta content="NFN40QTAT4Ccb12J1qzN8tYB7L7NFgpJl0nEIsfDTKU=" name="csrf-token" />
-
-    <link href="https://a248.e.akamai.net/assets.github.com/assets/github-6ba0b2d571b5d2378748112d06dd8129025a3866.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://a248.e.akamai.net/assets.github.com/assets/github2-928133720bee0f0dabf9a421aa4f46defd08c348.css" media="screen" rel="stylesheet" type="text/css" />
-    
-
-
-    <script src="https://a248.e.akamai.net/assets.github.com/assets/frameworks-74babe6ea3f1446af579a5f1870604db61e9c348.js" type="text/javascript"></script>
-    <script defer="defer" src="https://a248.e.akamai.net/assets.github.com/assets/github-305a3da4e430ff26cca020405f9a254c85ca7a27.js" type="text/javascript"></script>
-    
-
-      <link rel='permalink' href='/theironcook/Backbone.ModelBinder/blob/349c721d388a9ecc7dfcc91961f0501ae4cb4742/Backbone.ModelBinder.min.js'>
-    <meta property="og:title" content="Backbone.ModelBinder"/>
-    <meta property="og:type" content="githubog:gitrepository"/>
-    <meta property="og:url" content="https://github.com/theironcook/Backbone.ModelBinder"/>
-    <meta property="og:image" content="https://a248.e.akamai.net/assets.github.com/images/gravatars/gravatar-user-420.png?1345673561"/>
-    <meta property="og:site_name" content="GitHub"/>
-    <meta property="og:description" content="Backbone.ModelBinder - Simple, flexible and powerful Model-View binding for Backbone."/>
-
-    <meta name="description" content="Backbone.ModelBinder - Simple, flexible and powerful Model-View binding for Backbone." />
-  <link href="https://github.com/theironcook/Backbone.ModelBinder/commits/master.atom" rel="alternate" title="Recent Commits to Backbone.ModelBinder:master" type="application/atom+xml" />
-
-  </head>
-
-
-  <body class="logged_in page-blob macintosh vis-public env-production ">
-    <div id="wrapper">
-
-    
-    
-
-      <div id="header" class="true clearfix">
-        <div class="container clearfix">
-          <a class="site-logo " href="https://github.com/organizations/loganberry">
-            <img alt="GitHub" class="github-logo-4x" height="30" src="https://a248.e.akamai.net/assets.github.com/images/modules/header/logov7@4x.png?1338945075" />
-            <img alt="GitHub" class="github-logo-4x-hover" height="30" src="https://a248.e.akamai.net/assets.github.com/images/modules/header/logov7@4x-hover.png?1338945075" />
-          </a>
-
-            <a href="/notifications" class="notification-indicator tooltipped downwards" title="You have unread notifications">
-              <span class="mail-status unread"></span>
-            </a>
-
-              
-    <div class="topsearch command-bar-activated">
-      <form accept-charset="UTF-8" action="/search" class="command_bar_form" id="top_search_form" method="get">
-  <a href="/search" class="advanced-search tooltipped downwards command-bar-search" id="advanced_search" title="Advanced Search"><span class="mini-icon mini-icon-advanced-search "></span></a>
-  <input type="text" name="q" id="command-bar" placeholder="Search or Type a Command" />
-  <span class="mini-icon help tooltipped downwards" title="Show Command Bar Help"></span>
-  <input type="hidden" name="type" value="Everything" />
-  <input type="hidden" name="repo" value="" />
-  <input type="hidden" name="langOverride" value="" />
-  <input type="hidden" name="start_value" value="1" />
-</form>
-
-      <ul class="top-nav">
-          <li class="explore"><a href="https://github.com/explore">Explore</a></li>
-          <li><a href="https://gist.github.com">Gist</a></li>
-          <li><a href="/blog">Blog</a></li>
-        <li><a href="http://help.github.com">Help</a></li>
-      </ul>
-    </div>
-
-
-            
-
-
-  
-  <div id="userbox">
-    <div id="user">
-      <a href="https://github.com/priyaaank"><img height="20" src="https://secure.gravatar.com/avatar/f2c9624bde8ce8209edc8736d8e24cde?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /></a>
-      <a href="https://github.com/priyaaank" class="name">priyaaank</a>
-    </div>
-    <ul id="user-links">
-      <li>
-        <a href="/new" id="new_repo" class="tooltipped downwards" title="Create a New Repo"><span class="mini-icon mini-icon-create"></span></a>
-      </li>
-      <li>
-        <a href="/settings/profile" id="account_settings"
-          class="tooltipped downwards"
-          title="Account Settings ">
-          <span class="mini-icon mini-icon-account-settings"></span>
-        </a>
-      </li>
-      <li>
-          <a href="/logout" data-method="post" id="logout" class="tooltipped downwards" title="Sign Out">
-            <span class="mini-icon mini-icon-logout"></span>
-          </a>
-      </li>
-    </ul>
-  </div>
-
-
-
-          
-        </div>
-      </div>
-
-      
-
-      
-
-            <div class="site hfeed" itemscope itemtype="http://schema.org/WebPage">
-      <div class="container hentry">
-        
-        <div class="pagehead repohead instapaper_ignore readability-menu">
-        <div class="title-actions-bar">
-          
-
-
-              <ul class="pagehead-actions">
-
-          <li class="subscription">
-              <form accept-charset="UTF-8" action="/notifications/subscribe" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="NFN40QTAT4Ccb12J1qzN8tYB7L7NFgpJl0nEIsfDTKU=" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="3529555" />
-  <div class="context-menu-container js-menu-container js-context-menu">
-    <span class="minibutton switcher bigger js-menu-target">
-      <span class="js-context-button">
-          <span class="mini-icon mini-icon-watching"></span>Watch
-      </span>
-    </span>
-
-    <div class="context-pane js-menu-content">
-      <a href="javascript:;" class="close js-menu-close"><span class="mini-icon mini-icon-remove-close"></span></a>
-      <div class="context-title">Notification status</div>
-
-      <div class="context-body pane-selector">
-        <ul class="js-navigation-container">
-          <li class="selector-item js-navigation-item js-navigation-target selected">
-            <span class="mini-icon mini-icon-confirm"></span>
-            <label>
-              <input checked="checked" id="do_included" name="do" type="radio" value="included" />
-              <h4>Not watching</h4>
-              <p>You will only receive notifications when you participate or are mentioned.</p>
-            </label>
-            <span class="context-button-text js-context-button-text">
-              <span class="mini-icon mini-icon-watching"></span>
-              Watch
-            </span>
-          </li>
-          <li class="selector-item js-navigation-item js-navigation-target ">
-            <span class="mini-icon mini-icon-confirm"></span>
-            <label>
-              <input id="do_subscribed" name="do" type="radio" value="subscribed" />
-              <h4>Watching</h4>
-              <p>You will receive all notifications for this repository.</p>
-            </label>
-            <span class="context-button-text js-context-button-text">
-              <span class="mini-icon mini-icon-unwatch"></span>
-              Unwatch
-            </span>
-          </li>
-          <li class="selector-item js-navigation-item js-navigation-target ">
-            <span class="mini-icon mini-icon-confirm"></span>
-            <label>
-              <input id="do_ignore" name="do" type="radio" value="ignore" />
-              <h4>Ignored</h4>
-              <p>You will not receive notifications for this repository.</p>
-            </label>
-            <span class="context-button-text js-context-button-text">
-              <span class="mini-icon mini-icon-mute"></span>
-              Stop ignoring
-            </span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</form>
-          </li>
-
-          <li class="js-toggler-container js-social-container starring-container ">
-            <a href="/theironcook/Backbone.ModelBinder/unstar" class="minibutton js-toggler-target starred" data-remote="true" data-method="post" rel="nofollow">
-              <span class="mini-icon mini-icon-star"></span>Unstar
-            </a><a href="/theironcook/Backbone.ModelBinder/star" class="minibutton js-toggler-target unstarred" data-remote="true" data-method="post" rel="nofollow">
-              <span class="mini-icon mini-icon-star"></span>Star
-            </a><a class="social-count js-social-count" href="/theironcook/Backbone.ModelBinder/stargazers">531</a>
-          </li>
-
-              <li>
-                <a href="/theironcook/Backbone.ModelBinder/fork_select" class="minibutton js-toggler-target lighter" rel="facebox nofollow"><span class="mini-icon mini-icon-fork"></span>Fork</a><a href="/theironcook/Backbone.ModelBinder/network" class="social-count">64</a>
-              </li>
-
-
-    </ul>
-
-          <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
-            <span class="repo-label"><span>public</span></span>
-            <span class="mega-icon mega-icon-public-repo"></span>
-            <span class="author vcard">
-              <a href="/theironcook" class="url fn" itemprop="url" rel="author">
-              <span itemprop="title">theironcook</span>
-              </a></span> /
-            <strong><a href="/theironcook/Backbone.ModelBinder" class="js-current-repository">Backbone.ModelBinder</a></strong>
-          </h1>
-        </div>
-
-          
-
-  <ul class="tabs">
-    <li><a href="/theironcook/Backbone.ModelBinder" class="selected" highlight="repo_sourcerepo_downloadsrepo_commitsrepo_tagsrepo_branches">Code</a></li>
-    <li><a href="/theironcook/Backbone.ModelBinder/network" highlight="repo_network">Network</a></li>
-    <li><a href="/theironcook/Backbone.ModelBinder/pulls" highlight="repo_pulls">Pull Requests <span class='counter'>3</span></a></li>
-
-      <li><a href="/theironcook/Backbone.ModelBinder/issues" highlight="repo_issues">Issues <span class='counter'>11</span></a></li>
-
-      <li><a href="/theironcook/Backbone.ModelBinder/wiki" highlight="repo_wiki">Wiki</a></li>
-
-
-    <li><a href="/theironcook/Backbone.ModelBinder/graphs" highlight="repo_graphsrepo_contributors">Graphs</a></li>
-
-
-  </ul>
-  
-<div class="frame frame-center tree-finder" style="display:none"
-      data-tree-list-url="/theironcook/Backbone.ModelBinder/tree-list/349c721d388a9ecc7dfcc91961f0501ae4cb4742"
-      data-blob-url-prefix="/theironcook/Backbone.ModelBinder/blob/349c721d388a9ecc7dfcc91961f0501ae4cb4742"
-    >
-
-  <div class="breadcrumb">
-    <span class="bold"><a href="/theironcook/Backbone.ModelBinder">Backbone.ModelBinder</a></span> /
-    <input class="tree-finder-input js-navigation-enable" type="text" name="query" autocomplete="off" spellcheck="false">
-  </div>
-
-    <div class="octotip">
-      <p>
-        <a href="/theironcook/Backbone.ModelBinder/dismiss-tree-finder-help" class="dismiss js-dismiss-tree-list-help" title="Hide this notice forever" rel="nofollow">Dismiss</a>
-        <span class="bold">Octotip:</span> You've activated the <em>file finder</em>
-        by pressing <span class="kbd">t</span> Start typing to filter the
-        file list. Use <span class="kbd badmono">↑</span> and
-        <span class="kbd badmono">↓</span> to navigate,
-        <span class="kbd">enter</span> to view files.
-      </p>
-    </div>
-
-  <table class="tree-browser" cellpadding="0" cellspacing="0">
-    <tr class="js-header"><th>&nbsp;</th><th>name</th></tr>
-    <tr class="js-no-results no-results" style="display: none">
-      <th colspan="2">No matching files</th>
-    </tr>
-    <tbody class="js-results-list js-navigation-container">
-    </tbody>
-  </table>
-</div>
-
-<div id="jump-to-line" style="display:none">
-  <h2>Jump to Line</h2>
-  <form accept-charset="UTF-8">
-    <input class="textfield" type="text">
-    <div class="full-button">
-      <button type="submit" class="classy">
-        Go
-      </button>
-    </div>
-  </form>
-</div>
-
-
-<div class="tabnav">
-
-  <span class="tabnav-right">
-    <ul class="tabnav-tabs">
-      <li><a href="/theironcook/Backbone.ModelBinder/tags" class="tabnav-tab" highlight="repo_tags">Tags <span class="counter ">5</span></a></li>
-      <li><a href="/theironcook/Backbone.ModelBinder/downloads" class="tabnav-tab" highlight="repo_downloads">Downloads <span class="counter blank">0</span></a></li>
-    </ul>
-    
-  </span>
-
-  <div class="tabnav-widget scope">
-
-    <div class="context-menu-container js-menu-container js-context-menu">
-      <a href="#"
-         class="minibutton bigger switcher js-menu-target js-commitish-button btn-branch repo-tree"
-         data-hotkey="w"
-         data-master-branch="master"
-         data-ref="master">
-         <span><em class="mini-icon mini-icon-branch"></em><i>branch:</i> master</span>
-      </a>
-
-      <div class="context-pane commitish-context js-menu-content">
-        <a href="javascript:;" class="close js-menu-close"><span class="mini-icon mini-icon-remove-close"></span></a>
-        <div class="context-title">Switch branches/tags</div>
-        <div class="context-body pane-selector commitish-selector js-navigation-container">
-          <div class="filterbar">
-            <input type="text" id="context-commitish-filter-field" class="js-navigation-enable" placeholder="Filter branches/tags" data-filterable />
-            <ul class="tabs">
-              <li><a href="#" data-filter="branches" class="selected">Branches</a></li>
-              <li><a href="#" data-filter="tags">Tags</a></li>
-            </ul>
-          </div>
-
-          <div class="js-filter-tab js-filter-branches" data-filterable-for="context-commitish-filter-field" data-filterable-type=substring>
-            <div class="no-results js-not-filterable">Nothing to show</div>
-              <div class="commitish-item branch-commitish selector-item js-navigation-item js-navigation-target selected">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/theironcook/Backbone.ModelBinder/blob/master/Backbone.ModelBinder.min.js" class="js-navigation-open" data-name="master" rel="nofollow">master</a>
-                </h4>
-              </div>
-          </div>
-
-          <div class="js-filter-tab js-filter-tags" style="display:none" data-filterable-for="context-commitish-filter-field" data-filterable-type=substring>
-            <div class="no-results js-not-filterable">Nothing to show</div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/theironcook/Backbone.ModelBinder/blob/v0.1.6/Backbone.ModelBinder.min.js" class="js-navigation-open" data-name="v0.1.6" rel="nofollow">v0.1.6</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/theironcook/Backbone.ModelBinder/blob/v0.1.5/Backbone.ModelBinder.min.js" class="js-navigation-open" data-name="v0.1.5" rel="nofollow">v0.1.5</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/theironcook/Backbone.ModelBinder/blob/v0.1.4/Backbone.ModelBinder.min.js" class="js-navigation-open" data-name="v0.1.4" rel="nofollow">v0.1.4</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/theironcook/Backbone.ModelBinder/blob/v0.1.3/Backbone.ModelBinder.min.js" class="js-navigation-open" data-name="v0.1.3" rel="nofollow">v0.1.3</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/theironcook/Backbone.ModelBinder/blob/v0.1.2/Backbone.ModelBinder.min.js" class="js-navigation-open" data-name="v0.1.2" rel="nofollow">v0.1.2</a>
-                </h4>
-              </div>
-          </div>
-        </div>
-      </div><!-- /.commitish-context-context -->
-    </div>
-  </div> <!-- /.scope -->
-
-  <ul class="tabnav-tabs">
-    <li><a href="/theironcook/Backbone.ModelBinder" class="selected tabnav-tab" highlight="repo_source">Files</a></li>
-    <li><a href="/theironcook/Backbone.ModelBinder/commits/master" class="tabnav-tab" highlight="repo_commits">Commits</a></li>
-    <li><a href="/theironcook/Backbone.ModelBinder/branches" class="tabnav-tab" highlight="repo_branches" rel="nofollow">Branches <span class="counter ">1</span></a></li>
-  </ul>
-
-</div>
-
-  
-  
-  
-
-
-          
-
-        </div><!-- /.repohead -->
-
-        <div id="js-repo-pjax-container" data-pjax-container>
-          
-
-
-<!-- blob contrib key: blob_contributors:v21:47c23fb54ec016a53a32cca37712edc5 -->
-<!-- blob contrib frag key: views10/v8/blob_contributors:v21:47c23fb54ec016a53a32cca37712edc5 -->
-
-<!-- block_view_fragment_key: views10/v8/blob:v21:46a1ab970f6b8657cebee9d2d0b45b8e -->
-  <div id="slider">
-
-    <div class="breadcrumb" data-path="Backbone.ModelBinder.min.js/">
-      <b itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/theironcook/Backbone.ModelBinder/tree/349c721d388a9ecc7dfcc91961f0501ae4cb4742" class="js-rewrite-sha" itemprop="url"><span itemprop="title">Backbone.ModelBinder</span></a></b> / <strong class="final-path">Backbone.ModelBinder.min.js</strong> <span class="js-clippy mini-icon mini-icon-clippy " data-clipboard-text="Backbone.ModelBinder.min.js" data-copied-hint="copied!" data-copy-hint="copy to clipboard"></span>
-    </div>
-
-      
-  <div class="commit file-history-tease js-blob-contributors-content" data-path="Backbone.ModelBinder.min.js/">
-    <img class="main-avatar" height="24" src="https://secure.gravatar.com/avatar/1c1da53322b0d38be4fabd1679bd454a?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
-    <span class="author"><a href="/theironcook">theironcook</a></span>
-    <time class="js-relative-date" datetime="2012-08-28T09:40:32-07:00" title="2012-08-28 09:40:32">August 28, 2012</time>
-    <div class="commit-title">
-        <a href="/theironcook/Backbone.ModelBinder/commit/349c721d388a9ecc7dfcc91961f0501ae4cb4742" class="message">Bugfix for issue 74</a>
-    </div>
-
-    <div class="participation">
-      <p class="quickstat"><a href="#blob_contributors_box" rel="facebox"><strong>2</strong> contributors</a></p>
-          <a class="avatar tooltipped downwards" title="captncraig" href="/theironcook/Backbone.ModelBinder/commits/master/Backbone.ModelBinder.min.js?author=captncraig"><img height="20" src="https://secure.gravatar.com/avatar/39396b815c9a804b8b99000ee9ea50e8?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /></a>
-    <a class="avatar tooltipped downwards" title="theironcook" href="/theironcook/Backbone.ModelBinder/commits/master/Backbone.ModelBinder.min.js?author=theironcook"><img height="20" src="https://secure.gravatar.com/avatar/1c1da53322b0d38be4fabd1679bd454a?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /></a>
-
-
-    </div>
-    <div id="blob_contributors_box" style="display:none">
-      <h2>Users on GitHub who have contributed to this file</h2>
-      <ul class="facebox-user-list">
-        <li>
-          <img height="24" src="https://secure.gravatar.com/avatar/39396b815c9a804b8b99000ee9ea50e8?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
-          <a href="/captncraig">captncraig</a>
-        </li>
-        <li>
-          <img height="24" src="https://secure.gravatar.com/avatar/1c1da53322b0d38be4fabd1679bd454a?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
-          <a href="/theironcook">theironcook</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-
-    <div class="frames">
-      <div class="frame frame-center" data-path="Backbone.ModelBinder.min.js/" data-permalink-url="/theironcook/Backbone.ModelBinder/blob/349c721d388a9ecc7dfcc91961f0501ae4cb4742/Backbone.ModelBinder.min.js" data-title="Backbone.ModelBinder/Backbone.ModelBinder.min.js at master · theironcook/Backbone.ModelBinder · GitHub" data-type="blob">
-
-        <div id="files" class="bubble">
-          <div class="file">
-            <div class="meta">
-              <div class="info">
-                <span class="icon"><b class="mini-icon mini-icon-text-file"></b></span>
-                <span class="mode" title="File Mode">file</span>
-                  <span>37 lines (36 sloc)</span>
-                <span>11.159 kb</span>
-              </div>
-              <ul class="button-group actions">
-                  <li>
-                    <a class="grouped-button file-edit-link minibutton bigger lighter js-rewrite-sha" href="/theironcook/Backbone.ModelBinder/edit/349c721d388a9ecc7dfcc91961f0501ae4cb4742/Backbone.ModelBinder.min.js" data-method="post" rel="nofollow" data-hotkey="e">Edit</a>
-                  </li>
-                <li>
-                  <a href="/theironcook/Backbone.ModelBinder/raw/master/Backbone.ModelBinder.min.js" class="minibutton btn-raw grouped-button bigger lighter" id="raw-url">Raw</a>
-                </li>
-                  <li>
-                    <a href="/theironcook/Backbone.ModelBinder/blame/master/Backbone.ModelBinder.min.js" class="minibutton btn-blame grouped-button bigger lighter">Blame</a>
-                  </li>
-                <li>
-                  <a href="/theironcook/Backbone.ModelBinder/commits/master/Backbone.ModelBinder.min.js" class="minibutton btn-history grouped-button bigger lighter" rel="nofollow">History</a>
-                </li>
-              </ul>
-            </div>
-              <div class="data type-javascript">
-      <table cellpadding="0" cellspacing="0" class="lines">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="L1" rel="#L1">1</span>
-<span id="L2" rel="#L2">2</span>
-<span id="L3" rel="#L3">3</span>
-<span id="L4" rel="#L4">4</span>
-<span id="L5" rel="#L5">5</span>
-<span id="L6" rel="#L6">6</span>
-<span id="L7" rel="#L7">7</span>
-<span id="L8" rel="#L8">8</span>
-<span id="L9" rel="#L9">9</span>
-<span id="L10" rel="#L10">10</span>
-<span id="L11" rel="#L11">11</span>
-<span id="L12" rel="#L12">12</span>
-<span id="L13" rel="#L13">13</span>
-<span id="L14" rel="#L14">14</span>
-<span id="L15" rel="#L15">15</span>
-<span id="L16" rel="#L16">16</span>
-<span id="L17" rel="#L17">17</span>
-<span id="L18" rel="#L18">18</span>
-<span id="L19" rel="#L19">19</span>
-<span id="L20" rel="#L20">20</span>
-<span id="L21" rel="#L21">21</span>
-<span id="L22" rel="#L22">22</span>
-<span id="L23" rel="#L23">23</span>
-<span id="L24" rel="#L24">24</span>
-<span id="L25" rel="#L25">25</span>
-<span id="L26" rel="#L26">26</span>
-<span id="L27" rel="#L27">27</span>
-<span id="L28" rel="#L28">28</span>
-<span id="L29" rel="#L29">29</span>
-<span id="L30" rel="#L30">30</span>
-<span id="L31" rel="#L31">31</span>
-<span id="L32" rel="#L32">32</span>
-<span id="L33" rel="#L33">33</span>
-<span id="L34" rel="#L34">34</span>
-<span id="L35" rel="#L35">35</span>
-<span id="L36" rel="#L36">36</span>
-<span id="L37" rel="#L37">37</span>
-</pre>
-          </td>
-          <td width="100%">
-                <div class="highlight"><pre><div class='line' id='LC1'><span class="c1">// Backbone.ModelBinder v0.1.6</span></div><div class='line' id='LC2'><span class="c1">// (c) 2012 Bart Wood</span></div><div class='line' id='LC3'><span class="c1">// Distributed Under MIT License</span></div><div class='line' id='LC4'><br/></div><div class='line' id='LC5'><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">factory</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">define</span><span class="o">===</span><span class="s1">&#39;function&#39;</span><span class="o">&amp;&amp;</span><span class="nx">define</span><span class="p">.</span><span class="nx">amd</span><span class="p">){</span><span class="nx">define</span><span class="p">([</span><span class="s1">&#39;underscore&#39;</span><span class="p">,</span><span class="s1">&#39;jquery&#39;</span><span class="p">,</span><span class="s1">&#39;backbone&#39;</span><span class="p">],</span><span class="nx">factory</span><span class="p">);}</span><span class="k">else</span><span class="p">{</span><span class="nx">factory</span><span class="p">(</span><span class="nx">_</span><span class="p">,</span><span class="nx">$</span><span class="p">,</span><span class="nx">Backbone</span><span class="p">);}}(</span><span class="kd">function</span><span class="p">(</span><span class="nx">_</span><span class="p">,</span><span class="nx">$</span><span class="p">,</span><span class="nx">Backbone</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">Backbone</span><span class="p">){</span><span class="k">throw</span><span class="s1">&#39;Please include Backbone.js before Backbone.ModelBinder.js&#39;</span><span class="p">;}</span></div><div class='line' id='LC6'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">modelSetOptions</span><span class="p">){</span><span class="nx">_</span><span class="p">.</span><span class="nx">bindAll</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="k">this</span><span class="p">.</span><span class="nx">_modelSetOptions</span><span class="o">=</span><span class="nx">modelSetOptions</span><span class="o">||</span><span class="p">{};};</span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="p">.</span><span class="nx">VERSION</span><span class="o">=</span><span class="s1">&#39;0.1.5&#39;</span><span class="p">;</span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="p">.</span><span class="nx">Constants</span><span class="o">=</span><span class="p">{};</span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="p">.</span><span class="nx">Constants</span><span class="p">.</span><span class="nx">ModelToView</span><span class="o">=</span><span class="s1">&#39;ModelToView&#39;</span><span class="p">;</span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="p">.</span><span class="nx">Constants</span><span class="p">.</span><span class="nx">ViewToModel</span><span class="o">=</span><span class="s1">&#39;ViewToModel&#39;</span><span class="p">;</span><span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,{</span><span class="nx">bind</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">model</span><span class="p">,</span><span class="nx">rootEl</span><span class="p">,</span><span class="nx">attributeBindings</span><span class="p">,</span><span class="nx">modelSetOptions</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">unbind</span><span class="p">();</span><span class="k">this</span><span class="p">.</span><span class="nx">_model</span><span class="o">=</span><span class="nx">model</span><span class="p">;</span><span class="k">this</span><span class="p">.</span><span class="nx">_rootEl</span><span class="o">=</span><span class="nx">rootEl</span><span class="p">;</span><span class="k">this</span><span class="p">.</span><span class="nx">_modelSetOptions</span><span class="o">=</span><span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span><span class="k">this</span><span class="p">.</span><span class="nx">_modelSetOptions</span><span class="p">,</span><span class="nx">modelSetOptions</span><span class="p">);</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">_model</span><span class="p">)</span><span class="k">throw</span><span class="s1">&#39;model must be specified&#39;</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">_rootEl</span><span class="p">)</span><span class="k">throw</span><span class="s1">&#39;rootEl must be specified&#39;</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nx">attributeBindings</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="o">=</span><span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="kc">true</span><span class="p">,{},</span><span class="nx">attributeBindings</span><span class="p">);</span><span class="k">this</span><span class="p">.</span><span class="nx">_initializeAttributeBindings</span><span class="p">();</span><span class="k">this</span><span class="p">.</span><span class="nx">_initializeElBindings</span><span class="p">();}</span></div><div class='line' id='LC7'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">else</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_initializeDefaultBindings</span><span class="p">();}</span></div><div class='line' id='LC8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">this</span><span class="p">.</span><span class="nx">_bindModelToView</span><span class="p">();</span><span class="k">this</span><span class="p">.</span><span class="nx">_bindViewToModel</span><span class="p">();},</span><span class="nx">unbind</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">_unbindModelToView</span><span class="p">();</span><span class="k">this</span><span class="p">.</span><span class="nx">_unbindViewToModel</span><span class="p">();</span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">){</span><span class="k">delete</span> <span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">;</span><span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="o">=</span><span class="kc">undefined</span><span class="p">;}},</span><span class="nx">_initializeAttributeBindings</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">attributeBindingKey</span><span class="p">,</span><span class="nx">inputBinding</span><span class="p">,</span><span class="nx">attributeBinding</span><span class="p">,</span><span class="nx">elementBindingCount</span><span class="p">,</span><span class="nx">elementBinding</span><span class="p">;</span><span class="k">for</span><span class="p">(</span><span class="nx">attributeBindingKey</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">){</span><span class="nx">inputBinding</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">[</span><span class="nx">attributeBindingKey</span><span class="p">];</span><span class="k">if</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">isString</span><span class="p">(</span><span class="nx">inputBinding</span><span class="p">)){</span><span class="nx">attributeBinding</span><span class="o">=</span><span class="p">{</span><span class="nx">elementBindings</span><span class="o">:</span><span class="p">[{</span><span class="nx">selector</span><span class="o">:</span><span class="nx">inputBinding</span><span class="p">}]};}</span></div><div class='line' id='LC9'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">inputBinding</span><span class="p">)){</span><span class="nx">attributeBinding</span><span class="o">=</span><span class="p">{</span><span class="nx">elementBindings</span><span class="o">:</span><span class="nx">inputBinding</span><span class="p">};}</span></div><div class='line' id='LC10'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">isObject</span><span class="p">(</span><span class="nx">inputBinding</span><span class="p">)){</span><span class="nx">attributeBinding</span><span class="o">=</span><span class="p">{</span><span class="nx">elementBindings</span><span class="o">:</span><span class="p">[</span><span class="nx">inputBinding</span><span class="p">]};}</span></div><div class='line' id='LC11'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">else</span><span class="p">{</span><span class="k">throw</span><span class="s1">&#39;Unsupported type passed to Model Binder &#39;</span><span class="o">+</span><span class="nx">attributeBinding</span><span class="p">;}</span></div><div class='line' id='LC12'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">for</span><span class="p">(</span><span class="nx">elementBindingCount</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">elementBindingCount</span><span class="o">&lt;</span><span class="nx">attributeBinding</span><span class="p">.</span><span class="nx">elementBindings</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">elementBindingCount</span><span class="o">++</span><span class="p">){</span><span class="nx">elementBinding</span><span class="o">=</span><span class="nx">attributeBinding</span><span class="p">.</span><span class="nx">elementBindings</span><span class="p">[</span><span class="nx">elementBindingCount</span><span class="p">];</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">attributeBinding</span><span class="o">=</span><span class="nx">attributeBinding</span><span class="p">;}</span></div><div class='line' id='LC13'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">attributeBinding</span><span class="p">.</span><span class="nx">attributeName</span><span class="o">=</span><span class="nx">attributeBindingKey</span><span class="p">;</span><span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">[</span><span class="nx">attributeBindingKey</span><span class="p">]</span><span class="o">=</span><span class="nx">attributeBinding</span><span class="p">;}},</span><span class="nx">_initializeDefaultBindings</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">elCount</span><span class="p">,</span><span class="nx">namedEls</span><span class="p">,</span><span class="nx">namedEl</span><span class="p">,</span><span class="nx">name</span><span class="p">,</span><span class="nx">attributeBinding</span><span class="p">;</span><span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="o">=</span><span class="p">{};</span><span class="nx">namedEls</span><span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[name]&#39;</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">_rootEl</span><span class="p">);</span><span class="k">for</span><span class="p">(</span><span class="nx">elCount</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">elCount</span><span class="o">&lt;</span><span class="nx">namedEls</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">elCount</span><span class="o">++</span><span class="p">){</span><span class="nx">namedEl</span><span class="o">=</span><span class="nx">namedEls</span><span class="p">[</span><span class="nx">elCount</span><span class="p">];</span><span class="nx">name</span><span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="nx">namedEl</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">);</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">[</span><span class="nx">name</span><span class="p">]){</span><span class="nx">attributeBinding</span><span class="o">=</span><span class="p">{</span><span class="nx">attributeName</span><span class="o">:</span><span class="nx">name</span><span class="p">};</span><span class="nx">attributeBinding</span><span class="p">.</span><span class="nx">elementBindings</span><span class="o">=</span><span class="p">[{</span><span class="nx">attributeBinding</span><span class="o">:</span><span class="nx">attributeBinding</span><span class="p">,</span><span class="nx">boundEls</span><span class="o">:</span><span class="p">[</span><span class="nx">namedEl</span><span class="p">]}];</span><span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">[</span><span class="nx">name</span><span class="p">]</span><span class="o">=</span><span class="nx">attributeBinding</span><span class="p">;}</span></div><div class='line' id='LC14'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">else</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">[</span><span class="nx">name</span><span class="p">].</span><span class="nx">elementBindings</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span><span class="nx">attributeBinding</span><span class="o">:</span><span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">[</span><span class="nx">name</span><span class="p">],</span><span class="nx">boundEls</span><span class="o">:</span><span class="p">[</span><span class="nx">namedEl</span><span class="p">]});}}},</span><span class="nx">_initializeElBindings</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">bindingKey</span><span class="p">,</span><span class="nx">attributeBinding</span><span class="p">,</span><span class="nx">bindingCount</span><span class="p">,</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">foundEls</span><span class="p">,</span><span class="nx">elCount</span><span class="p">,</span><span class="nx">el</span><span class="p">;</span><span class="k">for</span><span class="p">(</span><span class="nx">bindingKey</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">){</span><span class="nx">attributeBinding</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">[</span><span class="nx">bindingKey</span><span class="p">];</span><span class="k">for</span><span class="p">(</span><span class="nx">bindingCount</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">bindingCount</span><span class="o">&lt;</span><span class="nx">attributeBinding</span><span class="p">.</span><span class="nx">elementBindings</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">bindingCount</span><span class="o">++</span><span class="p">){</span><span class="nx">elementBinding</span><span class="o">=</span><span class="nx">attributeBinding</span><span class="p">.</span><span class="nx">elementBindings</span><span class="p">[</span><span class="nx">bindingCount</span><span class="p">];</span><span class="k">if</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">selector</span><span class="o">===</span><span class="s1">&#39;&#39;</span><span class="p">){</span><span class="nx">foundEls</span><span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_rootEl</span><span class="p">);}</span></div><div class='line' id='LC15'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">else</span><span class="p">{</span><span class="nx">foundEls</span><span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">selector</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">_rootEl</span><span class="p">);}</span></div><div class='line' id='LC16'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span><span class="p">(</span><span class="nx">foundEls</span><span class="p">.</span><span class="nx">length</span><span class="o">===</span><span class="mi">0</span><span class="p">){</span><span class="k">throw</span><span class="s1">&#39;Bad binding found. No elements returned for binding selector &#39;</span><span class="o">+</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">selector</span><span class="p">;}</span></div><div class='line' id='LC17'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">else</span><span class="p">{</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">boundEls</span><span class="o">=</span><span class="p">[];</span><span class="k">for</span><span class="p">(</span><span class="nx">elCount</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">elCount</span><span class="o">&lt;</span><span class="nx">foundEls</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">elCount</span><span class="o">++</span><span class="p">){</span><span class="nx">el</span><span class="o">=</span><span class="nx">foundEls</span><span class="p">[</span><span class="nx">elCount</span><span class="p">];</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">boundEls</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">el</span><span class="p">);}}}}},</span><span class="nx">_bindModelToView</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">_model</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;change&#39;</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">_onModelChange</span><span class="p">,</span><span class="k">this</span><span class="p">);</span><span class="k">this</span><span class="p">.</span><span class="nx">copyModelAttributesToView</span><span class="p">();},</span><span class="nx">copyModelAttributesToView</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">attributesToCopy</span><span class="p">){</span><span class="kd">var</span> <span class="nx">attributeName</span><span class="p">,</span><span class="nx">attributeBinding</span><span class="p">;</span><span class="k">for</span><span class="p">(</span><span class="nx">attributeName</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nx">attributesToCopy</span><span class="o">===</span><span class="kc">undefined</span><span class="o">||</span><span class="nx">_</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">attributesToCopy</span><span class="p">,</span><span class="nx">attributeName</span><span class="p">)</span><span class="o">!==-</span><span class="mi">1</span><span class="p">){</span><span class="nx">attributeBinding</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">[</span><span class="nx">attributeName</span><span class="p">];</span><span class="k">this</span><span class="p">.</span><span class="nx">_copyModelToView</span><span class="p">(</span><span class="nx">attributeBinding</span><span class="p">);}}},</span><span class="nx">_unbindModelToView</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_model</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">_model</span><span class="p">.</span><span class="nx">off</span><span class="p">(</span><span class="s1">&#39;change&#39;</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">_onModelChange</span><span class="p">);</span><span class="k">this</span><span class="p">.</span><span class="nx">_model</span><span class="o">=</span><span class="kc">undefined</span><span class="p">;}},</span><span class="nx">_bindViewToModel</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_rootEl</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;change&#39;</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">_onElChanged</span><span class="p">);</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_rootEl</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">&#39;[contenteditable]&#39;</span><span class="p">,</span><span class="s1">&#39;blur&#39;</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">_onElChanged</span><span class="p">);},</span><span class="nx">_unbindViewToModel</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_rootEl</span><span class="p">){</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_rootEl</span><span class="p">).</span><span class="nx">undelegate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;change&#39;</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">_onElChanged</span><span class="p">);</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_rootEl</span><span class="p">).</span><span class="nx">undelegate</span><span class="p">(</span><span class="s1">&#39;[contenteditable]&#39;</span><span class="p">,</span><span class="s1">&#39;blur&#39;</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">_onElChanged</span><span class="p">);}},</span><span class="nx">_onElChanged</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span><span class="kd">var</span> <span class="nx">el</span><span class="p">,</span><span class="nx">elBindings</span><span class="p">,</span><span class="nx">elBindingCount</span><span class="p">,</span><span class="nx">elBinding</span><span class="p">;</span><span class="nx">el</span><span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span><span class="nx">elBindings</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_getElBindings</span><span class="p">(</span><span class="nx">el</span><span class="p">);</span><span class="k">for</span><span class="p">(</span><span class="nx">elBindingCount</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">elBindingCount</span><span class="o">&lt;</span><span class="nx">elBindings</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">elBindingCount</span><span class="o">++</span><span class="p">){</span><span class="nx">elBinding</span><span class="o">=</span><span class="nx">elBindings</span><span class="p">[</span><span class="nx">elBindingCount</span><span class="p">];</span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_isBindingUserEditable</span><span class="p">(</span><span class="nx">elBinding</span><span class="p">)){</span><span class="k">this</span><span class="p">.</span><span class="nx">_copyViewToModel</span><span class="p">(</span><span class="nx">elBinding</span><span class="p">,</span><span class="nx">el</span><span class="p">);}}},</span><span class="nx">_isBindingUserEditable</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">elBinding</span><span class="p">){</span><span class="k">return</span> <span class="nx">elBinding</span><span class="p">.</span><span class="nx">elAttribute</span><span class="o">===</span><span class="kc">undefined</span><span class="o">||</span><span class="nx">elBinding</span><span class="p">.</span><span class="nx">elAttribute</span><span class="o">===</span><span class="s1">&#39;text&#39;</span><span class="o">||</span><span class="nx">elBinding</span><span class="p">.</span><span class="nx">elAttribute</span><span class="o">===</span><span class="s1">&#39;html&#39;</span><span class="p">;},</span><span class="nx">_getElBindings</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">findEl</span><span class="p">){</span><span class="kd">var</span> <span class="nx">attributeName</span><span class="p">,</span><span class="nx">attributeBinding</span><span class="p">,</span><span class="nx">elementBindingCount</span><span class="p">,</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">boundElCount</span><span class="p">,</span><span class="nx">boundEl</span><span class="p">;</span><span class="kd">var</span> <span class="nx">elBindings</span><span class="o">=</span><span class="p">[];</span><span class="k">for</span><span class="p">(</span><span class="nx">attributeName</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">){</span><span class="nx">attributeBinding</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">[</span><span class="nx">attributeName</span><span class="p">];</span><span class="k">for</span><span class="p">(</span><span class="nx">elementBindingCount</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">elementBindingCount</span><span class="o">&lt;</span><span class="nx">attributeBinding</span><span class="p">.</span><span class="nx">elementBindings</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">elementBindingCount</span><span class="o">++</span><span class="p">){</span><span class="nx">elementBinding</span><span class="o">=</span><span class="nx">attributeBinding</span><span class="p">.</span><span class="nx">elementBindings</span><span class="p">[</span><span class="nx">elementBindingCount</span><span class="p">];</span><span class="k">for</span><span class="p">(</span><span class="nx">boundElCount</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">boundElCount</span><span class="o">&lt;</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">boundEls</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">boundElCount</span><span class="o">++</span><span class="p">){</span><span class="nx">boundEl</span><span class="o">=</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">boundEls</span><span class="p">[</span><span class="nx">boundElCount</span><span class="p">];</span><span class="k">if</span><span class="p">(</span><span class="nx">boundEl</span><span class="o">===</span><span class="nx">findEl</span><span class="p">){</span><span class="nx">elBindings</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">);}}}}</span></div><div class='line' id='LC18'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="nx">elBindings</span><span class="p">;},</span><span class="nx">_onModelChange</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">changedAttribute</span><span class="p">,</span><span class="nx">attributeBinding</span><span class="p">;</span><span class="k">for</span><span class="p">(</span><span class="nx">changedAttribute</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="nx">_model</span><span class="p">.</span><span class="nx">changedAttributes</span><span class="p">()){</span><span class="nx">attributeBinding</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_attributeBindings</span><span class="p">[</span><span class="nx">changedAttribute</span><span class="p">];</span><span class="k">if</span><span class="p">(</span><span class="nx">attributeBinding</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">_copyModelToView</span><span class="p">(</span><span class="nx">attributeBinding</span><span class="p">);}}},</span><span class="nx">_copyModelToView</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">attributeBinding</span><span class="p">){</span><span class="kd">var</span> <span class="nx">elementBindingCount</span><span class="p">,</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">boundElCount</span><span class="p">,</span><span class="nx">boundEl</span><span class="p">,</span><span class="nx">value</span><span class="p">,</span><span class="nx">convertedValue</span><span class="p">;</span><span class="nx">value</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_model</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">attributeBinding</span><span class="p">.</span><span class="nx">attributeName</span><span class="p">);</span><span class="k">for</span><span class="p">(</span><span class="nx">elementBindingCount</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">elementBindingCount</span><span class="o">&lt;</span><span class="nx">attributeBinding</span><span class="p">.</span><span class="nx">elementBindings</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">elementBindingCount</span><span class="o">++</span><span class="p">){</span><span class="nx">elementBinding</span><span class="o">=</span><span class="nx">attributeBinding</span><span class="p">.</span><span class="nx">elementBindings</span><span class="p">[</span><span class="nx">elementBindingCount</span><span class="p">];</span><span class="k">for</span><span class="p">(</span><span class="nx">boundElCount</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">boundElCount</span><span class="o">&lt;</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">boundEls</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">boundElCount</span><span class="o">++</span><span class="p">){</span><span class="nx">boundEl</span><span class="o">=</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">boundEls</span><span class="p">[</span><span class="nx">boundElCount</span><span class="p">];</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">boundEl</span><span class="p">.</span><span class="nx">_isSetting</span><span class="p">){</span><span class="nx">convertedValue</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_getConvertedValue</span><span class="p">(</span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="p">.</span><span class="nx">Constants</span><span class="p">.</span><span class="nx">ModelToView</span><span class="p">,</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">value</span><span class="p">);</span><span class="k">this</span><span class="p">.</span><span class="nx">_setEl</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nx">boundEl</span><span class="p">),</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">convertedValue</span><span class="p">);}}}},</span><span class="nx">_setEl</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">convertedValue</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">elAttribute</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">_setElAttribute</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">convertedValue</span><span class="p">);}</span></div><div class='line' id='LC19'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">else</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_setElValue</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span><span class="nx">convertedValue</span><span class="p">);}},</span><span class="nx">_setElAttribute</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">convertedValue</span><span class="p">){</span><span class="k">switch</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">elAttribute</span><span class="p">){</span><span class="k">case</span><span class="s1">&#39;html&#39;</span><span class="o">:</span><span class="nx">el</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">convertedValue</span><span class="p">);</span><span class="k">break</span><span class="p">;</span><span class="k">case</span><span class="s1">&#39;text&#39;</span><span class="o">:</span><span class="nx">el</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">convertedValue</span><span class="p">);</span><span class="k">break</span><span class="p">;</span><span class="k">case</span><span class="s1">&#39;enabled&#39;</span><span class="o">:</span><span class="nx">el</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">,</span><span class="o">!</span><span class="nx">convertedValue</span><span class="p">);</span><span class="k">break</span><span class="p">;</span><span class="k">case</span><span class="s1">&#39;displayed&#39;</span><span class="o">:</span><span class="nx">el</span><span class="p">[</span><span class="nx">convertedValue</span><span class="o">?</span><span class="s1">&#39;show&#39;</span><span class="o">:</span><span class="s1">&#39;hide&#39;</span><span class="p">]();</span><span class="k">break</span><span class="p">;</span><span class="k">case</span><span class="s1">&#39;hidden&#39;</span><span class="o">:</span><span class="nx">el</span><span class="p">[</span><span class="nx">convertedValue</span><span class="o">?</span><span class="s1">&#39;hide&#39;</span><span class="o">:</span><span class="s1">&#39;show&#39;</span><span class="p">]();</span><span class="k">break</span><span class="p">;</span><span class="k">case</span><span class="s1">&#39;css&#39;</span><span class="o">:</span><span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">cssAttribute</span><span class="p">,</span><span class="nx">convertedValue</span><span class="p">);</span><span class="k">break</span><span class="p">;</span><span class="k">case</span><span class="s1">&#39;class&#39;</span><span class="o">:</span><span class="kd">var</span> <span class="nx">previousValue</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_model</span><span class="p">.</span><span class="nx">previous</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">attributeBinding</span><span class="p">.</span><span class="nx">attributeName</span><span class="p">);</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">_</span><span class="p">.</span><span class="nx">isUndefined</span><span class="p">(</span><span class="nx">previousValue</span><span class="p">)){</span><span class="nx">previousValue</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_getConvertedValue</span><span class="p">(</span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="p">.</span><span class="nx">Constants</span><span class="p">.</span><span class="nx">ModelToView</span><span class="p">,</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">previousValue</span><span class="p">);</span><span class="nx">el</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="nx">previousValue</span><span class="p">);}</span></div><div class='line' id='LC20'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span><span class="p">(</span><span class="nx">convertedValue</span><span class="p">){</span><span class="nx">el</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="nx">convertedValue</span><span class="p">);}</span></div><div class='line' id='LC21'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">break</span><span class="p">;</span><span class="k">default</span><span class="o">:</span><span class="nx">el</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">elAttribute</span><span class="p">,</span><span class="nx">convertedValue</span><span class="p">);}},</span><span class="nx">_setElValue</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span><span class="nx">convertedValue</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">)){</span><span class="k">switch</span><span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">)){</span><span class="k">case</span><span class="s1">&#39;radio&#39;</span><span class="o">:</span><span class="k">if</span><span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">val</span><span class="p">()</span><span class="o">===</span><span class="nx">convertedValue</span><span class="p">){</span><span class="nx">el</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;checked&#39;</span><span class="p">,</span><span class="s1">&#39;checked&#39;</span><span class="p">);}</span></div><div class='line' id='LC22'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">break</span><span class="p">;</span><span class="k">case</span><span class="s1">&#39;checkbox&#39;</span><span class="o">:</span><span class="k">if</span><span class="p">(</span><span class="nx">convertedValue</span><span class="p">){</span><span class="nx">el</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;checked&#39;</span><span class="p">,</span><span class="s1">&#39;checked&#39;</span><span class="p">);}</span></div><div class='line' id='LC23'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">else</span><span class="p">{</span><span class="nx">el</span><span class="p">.</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">&#39;checked&#39;</span><span class="p">);}</span></div><div class='line' id='LC24'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">break</span><span class="p">;</span><span class="k">default</span><span class="o">:</span><span class="nx">el</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="nx">convertedValue</span><span class="p">);}}</span></div><div class='line' id='LC25'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">)</span><span class="o">||</span><span class="nx">el</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">)</span><span class="o">||</span><span class="nx">el</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="s1">&#39;textarea&#39;</span><span class="p">)){</span><span class="nx">el</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="nx">convertedValue</span><span class="p">);}</span></div><div class='line' id='LC26'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">else</span><span class="p">{</span><span class="nx">el</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">convertedValue</span><span class="p">);}},</span><span class="nx">_copyViewToModel</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">el</span><span class="p">){</span><span class="kd">var</span> <span class="nx">value</span><span class="p">,</span><span class="nx">convertedValue</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">el</span><span class="p">.</span><span class="nx">_isSetting</span><span class="p">){</span><span class="nx">el</span><span class="p">.</span><span class="nx">_isSetting</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span><span class="k">this</span><span class="p">.</span><span class="nx">_setModel</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">$</span><span class="p">(</span><span class="nx">el</span><span class="p">));</span><span class="nx">el</span><span class="p">.</span><span class="nx">_isSetting</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">converter</span><span class="p">){</span><span class="nx">value</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_model</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">attributeBinding</span><span class="p">.</span><span class="nx">attributeName</span><span class="p">);</span><span class="nx">convertedValue</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_getConvertedValue</span><span class="p">(</span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="p">.</span><span class="nx">Constants</span><span class="p">.</span><span class="nx">ModelToView</span><span class="p">,</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">value</span><span class="p">);</span><span class="k">this</span><span class="p">.</span><span class="nx">_setEl</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nx">el</span><span class="p">),</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">convertedValue</span><span class="p">);}}},</span><span class="nx">_getElValue</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">el</span><span class="p">){</span><span class="k">switch</span><span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">)){</span><span class="k">case</span><span class="s1">&#39;checkbox&#39;</span><span class="o">:</span><span class="k">return</span> <span class="nx">el</span><span class="p">.</span><span class="nx">prop</span><span class="p">(</span><span class="s1">&#39;checked&#39;</span><span class="p">)</span><span class="o">?</span><span class="kc">true</span><span class="o">:</span><span class="kc">false</span><span class="p">;</span><span class="k">default</span><span class="o">:</span><span class="k">if</span><span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;contenteditable&#39;</span><span class="p">)</span><span class="o">!==</span><span class="kc">undefined</span><span class="p">){</span><span class="k">return</span> <span class="nx">el</span><span class="p">.</span><span class="nx">html</span><span class="p">();}</span></div><div class='line' id='LC27'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">else</span><span class="p">{</span><span class="k">return</span> <span class="nx">el</span><span class="p">.</span><span class="nx">val</span><span class="p">();}}},</span><span class="nx">_setModel</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">el</span><span class="p">){</span><span class="kd">var</span> <span class="nx">data</span><span class="o">=</span><span class="p">{};</span><span class="kd">var</span> <span class="nx">elVal</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_getElValue</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">el</span><span class="p">);</span><span class="nx">elVal</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_getConvertedValue</span><span class="p">(</span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="p">.</span><span class="nx">Constants</span><span class="p">.</span><span class="nx">ViewToModel</span><span class="p">,</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">elVal</span><span class="p">);</span><span class="nx">data</span><span class="p">[</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">attributeBinding</span><span class="p">.</span><span class="nx">attributeName</span><span class="p">]</span><span class="o">=</span><span class="nx">elVal</span><span class="p">;</span><span class="kd">var</span> <span class="nx">opts</span><span class="o">=</span><span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span><span class="k">this</span><span class="p">.</span><span class="nx">_modelSetOptions</span><span class="p">,{</span><span class="nx">changeSource</span><span class="o">:</span><span class="s1">&#39;ModelBinder&#39;</span><span class="p">});</span><span class="k">this</span><span class="p">.</span><span class="nx">_model</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="nx">opts</span><span class="p">);},</span><span class="nx">_getConvertedValue</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">direction</span><span class="p">,</span><span class="nx">elementBinding</span><span class="p">,</span><span class="nx">value</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">converter</span><span class="p">){</span><span class="nx">value</span><span class="o">=</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">converter</span><span class="p">(</span><span class="nx">direction</span><span class="p">,</span><span class="nx">value</span><span class="p">,</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">attributeBinding</span><span class="p">.</span><span class="nx">attributeName</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">_model</span><span class="p">);}</span></div><div class='line' id='LC28'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="nx">value</span><span class="p">;}});</span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="p">.</span><span class="nx">CollectionConverter</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">collection</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">_collection</span><span class="o">=</span><span class="nx">collection</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">_collection</span><span class="p">){</span><span class="k">throw</span><span class="s1">&#39;Collection must be defined&#39;</span><span class="p">;}</span></div><div class='line' id='LC29'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">_</span><span class="p">.</span><span class="nx">bindAll</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="s1">&#39;convert&#39;</span><span class="p">);};</span><span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="p">.</span><span class="nx">CollectionConverter</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,{</span><span class="nx">convert</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">direction</span><span class="p">,</span><span class="nx">value</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nx">direction</span><span class="o">===</span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="p">.</span><span class="nx">Constants</span><span class="p">.</span><span class="nx">ModelToView</span><span class="p">){</span><span class="k">return</span> <span class="nx">value</span><span class="o">?</span><span class="nx">value</span><span class="p">.</span><span class="nx">id</span><span class="o">:</span><span class="kc">undefined</span><span class="p">;}</span></div><div class='line' id='LC30'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">else</span><span class="p">{</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_collection</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">value</span><span class="p">);}}});</span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="p">.</span><span class="nx">createDefaultBindings</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">rootEl</span><span class="p">,</span><span class="nx">attributeType</span><span class="p">,</span><span class="nx">converter</span><span class="p">,</span><span class="nx">elAttribute</span><span class="p">){</span><span class="kd">var</span> <span class="nx">foundEls</span><span class="p">,</span><span class="nx">elCount</span><span class="p">,</span><span class="nx">foundEl</span><span class="p">,</span><span class="nx">attributeName</span><span class="p">;</span><span class="kd">var</span> <span class="nx">bindings</span><span class="o">=</span><span class="p">{};</span><span class="nx">foundEls</span><span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[&#39;</span><span class="o">+</span><span class="nx">attributeType</span><span class="o">+</span><span class="s1">&#39;]&#39;</span><span class="p">,</span><span class="nx">rootEl</span><span class="p">);</span><span class="k">for</span><span class="p">(</span><span class="nx">elCount</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">elCount</span><span class="o">&lt;</span><span class="nx">foundEls</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">elCount</span><span class="o">++</span><span class="p">){</span><span class="nx">foundEl</span><span class="o">=</span><span class="nx">foundEls</span><span class="p">[</span><span class="nx">elCount</span><span class="p">];</span><span class="nx">attributeName</span><span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="nx">foundEl</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="nx">attributeType</span><span class="p">);</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">bindings</span><span class="p">[</span><span class="nx">attributeName</span><span class="p">]){</span><span class="kd">var</span> <span class="nx">attributeBinding</span><span class="o">=</span><span class="p">{</span><span class="nx">selector</span><span class="o">:</span><span class="s1">&#39;[&#39;</span><span class="o">+</span><span class="nx">attributeType</span><span class="o">+</span><span class="s1">&#39;=&quot;&#39;</span><span class="o">+</span><span class="nx">attributeName</span><span class="o">+</span><span class="s1">&#39;&quot;]&#39;</span><span class="p">};</span><span class="nx">bindings</span><span class="p">[</span><span class="nx">attributeName</span><span class="p">]</span><span class="o">=</span><span class="nx">attributeBinding</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nx">converter</span><span class="p">){</span><span class="nx">bindings</span><span class="p">[</span><span class="nx">attributeName</span><span class="p">].</span><span class="nx">converter</span><span class="o">=</span><span class="nx">converter</span><span class="p">;}</span></div><div class='line' id='LC31'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span><span class="p">(</span><span class="nx">elAttribute</span><span class="p">){</span><span class="nx">bindings</span><span class="p">[</span><span class="nx">attributeName</span><span class="p">].</span><span class="nx">elAttribute</span><span class="o">=</span><span class="nx">elAttribute</span><span class="p">;}}}</span></div><div class='line' id='LC32'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="nx">bindings</span><span class="p">;};</span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="p">.</span><span class="nx">combineBindings</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">destination</span><span class="p">,</span><span class="nx">source</span><span class="p">){</span><span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">source</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span><span class="nx">key</span><span class="p">){</span><span class="kd">var</span> <span class="nx">elementBinding</span><span class="o">=</span><span class="p">{</span><span class="nx">selector</span><span class="o">:</span><span class="nx">value</span><span class="p">.</span><span class="nx">selector</span><span class="p">};</span><span class="k">if</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">converter</span><span class="p">){</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">converter</span><span class="o">=</span><span class="nx">value</span><span class="p">.</span><span class="nx">converter</span><span class="p">;}</span></div><div class='line' id='LC33'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">elAttribute</span><span class="p">){</span><span class="nx">elementBinding</span><span class="p">.</span><span class="nx">elAttribute</span><span class="o">=</span><span class="nx">value</span><span class="p">.</span><span class="nx">elAttribute</span><span class="p">;}</span></div><div class='line' id='LC34'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">destination</span><span class="p">[</span><span class="nx">key</span><span class="p">]){</span><span class="nx">destination</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="o">=</span><span class="nx">elementBinding</span><span class="p">;}</span></div><div class='line' id='LC35'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">else</span><span class="p">{</span><span class="nx">destination</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="o">=</span><span class="p">[</span><span class="nx">destination</span><span class="p">[</span><span class="nx">key</span><span class="p">],</span><span class="nx">elementBinding</span><span class="p">];}});};</span><span class="k">return</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">ModelBinder</span><span class="p">;}));</span><span class="kd">var</span> <span class="nx">is</span><span class="o">=</span><span class="p">{</span><span class="nx">ie</span><span class="o">:</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">appName</span><span class="o">==</span><span class="s1">&#39;Microsoft Internet Explorer&#39;</span><span class="p">,</span><span class="nx">java</span><span class="o">:</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">javaEnabled</span><span class="p">(),</span><span class="nx">ns</span><span class="o">:</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">appName</span><span class="o">==</span><span class="s1">&#39;Netscape&#39;</span><span class="p">,</span><span class="nx">ua</span><span class="o">:</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">(),</span><span class="nx">version</span><span class="o">:</span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">appVersion</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">21</span><span class="p">))</span><span class="o">||</span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">appVersion</span><span class="p">),</span><span class="nx">win</span><span class="o">:</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">platform</span><span class="o">==</span><span class="s1">&#39;Win32&#39;</span><span class="p">}</span></div><div class='line' id='LC36'><span class="nx">is</span><span class="p">.</span><span class="nx">mac</span><span class="o">=</span><span class="nx">is</span><span class="p">.</span><span class="nx">ua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;mac&#39;</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nx">is</span><span class="p">.</span><span class="nx">ua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;opera&#39;</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">){</span><span class="nx">is</span><span class="p">.</span><span class="nx">ie</span><span class="o">=</span><span class="nx">is</span><span class="p">.</span><span class="nx">ns</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span><span class="nx">is</span><span class="p">.</span><span class="nx">opera</span><span class="o">=</span><span class="kc">true</span><span class="p">;}</span></div><div class='line' id='LC37'><span class="k">if</span><span class="p">(</span><span class="nx">is</span><span class="p">.</span><span class="nx">ua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;gecko&#39;</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">){</span><span class="nx">is</span><span class="p">.</span><span class="nx">ie</span><span class="o">=</span><span class="nx">is</span><span class="p">.</span><span class="nx">ns</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span><span class="nx">is</span><span class="p">.</span><span class="nx">gecko</span><span class="o">=</span><span class="kc">true</span><span class="p">;}</span></div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-<div class="frame frame-loading large-loading-area" style="display:none;" data-tree-list-url="/theironcook/Backbone.ModelBinder/tree-list/349c721d388a9ecc7dfcc91961f0501ae4cb4742" data-blob-url-prefix="/theironcook/Backbone.ModelBinder/blob/349c721d388a9ecc7dfcc91961f0501ae4cb4742">
-  <img src="https://a248.e.akamai.net/assets.github.com/images/spinners/octocat-spinner-128.gif?1347543527" height="64" width="64">
-</div>
-
-        </div>
-      </div>
-      <div class="context-overlay"></div>
-    </div>
-
-      <div id="footer-push"></div><!-- hack for sticky footer -->
-    </div><!-- end of wrapper - hack for sticky footer -->
-
-      <!-- footer -->
-      <div id="footer" >
-        
-  <div class="upper_footer">
-     <div class="container clearfix">
-
-       <!--[if IE]><h4 id="blacktocat_ie">GitHub Links</h4><![endif]-->
-       <![if !IE]><h4 id="blacktocat">GitHub Links</h4><![endif]>
-
-       <ul class="footer_nav">
-         <h4>GitHub</h4>
-         <li><a href="https://github.com/about">About</a></li>
-         <li><a href="https://github.com/blog">Blog</a></li>
-         <li><a href="https://github.com/features">Features</a></li>
-         <li><a href="https://github.com/contact">Contact &amp; Support</a></li>
-         <li><a href="https://github.com/training">Training</a></li>
-         <li><a href="http://enterprise.github.com/">GitHub Enterprise</a></li>
-         <li><a href="http://status.github.com/">Site Status</a></li>
-       </ul>
-
-       <ul class="footer_nav">
-         <h4>Clients</h4>
-         <li><a href="http://mac.github.com/">GitHub for Mac</a></li>
-         <li><a href="http://windows.github.com/">GitHub for Windows</a></li>
-         <li><a href="http://eclipse.github.com/">GitHub for Eclipse</a></li>
-         <li><a href="http://mobile.github.com/">GitHub Mobile Apps</a></li>
-       </ul>
-
-       <ul class="footer_nav">
-         <h4>Tools</h4>
-         <li><a href="http://get.gaug.es/">Gauges: Web analytics</a></li>
-         <li><a href="http://speakerdeck.com">Speaker Deck: Presentations</a></li>
-         <li><a href="https://gist.github.com">Gist: Code snippets</a></li>
-
-         <h4 class="second">Extras</h4>
-         <li><a href="http://jobs.github.com/">Job Board</a></li>
-         <li><a href="http://shop.github.com/">GitHub Shop</a></li>
-         <li><a href="http://octodex.github.com/">The Octodex</a></li>
-       </ul>
-
-       <ul class="footer_nav">
-         <h4>Documentation</h4>
-         <li><a href="http://help.github.com/">GitHub Help</a></li>
-         <li><a href="http://developer.github.com/">Developer API</a></li>
-         <li><a href="http://github.github.com/github-flavored-markdown/">GitHub Flavored Markdown</a></li>
-         <li><a href="http://pages.github.com/">GitHub Pages</a></li>
-       </ul>
-
-     </div><!-- /.site -->
-  </div><!-- /.upper_footer -->
-
-<div class="lower_footer">
-  <div class="container clearfix">
-    <!--[if IE]><div id="legal_ie"><![endif]-->
-    <![if !IE]><div id="legal"><![endif]>
-      <ul>
-          <li><a href="https://github.com/site/terms">Terms of Service</a></li>
-          <li><a href="https://github.com/site/privacy">Privacy</a></li>
-          <li><a href="https://github.com/security">Security</a></li>
-      </ul>
-
-      <p>&copy; 2012 <span title="0.08847s from fe2.rs.github.com">GitHub</span> Inc. All rights reserved.</p>
-    </div><!-- /#legal or /#legal_ie-->
-
-  </div><!-- /.site -->
-</div><!-- /.lower_footer -->
-
-      </div><!-- /#footer -->
-
-    
-
-<div id="keyboard_shortcuts_pane" class="instapaper_ignore readability-extra" style="display:none">
-  <h2>Keyboard Shortcuts <small><a href="#" class="js-see-all-keyboard-shortcuts">(see all)</a></small></h2>
-
-  <div class="columns threecols">
-    <div class="column first">
-      <h3>Site wide shortcuts</h3>
-      <dl class="keyboard-mappings">
-        <dt>s</dt>
-        <dd>Focus command bar</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>?</dt>
-        <dd>Bring up this help dialog</dd>
-      </dl>
-    </div><!-- /.column.first -->
-
-    <div class="column middle" style='display:none'>
-      <h3>Commit list</h3>
-      <dl class="keyboard-mappings">
-        <dt>j</dt>
-        <dd>Move selection down</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>k</dt>
-        <dd>Move selection up</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>c <em>or</em> o <em>or</em> enter</dt>
-        <dd>Open commit</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>y</dt>
-        <dd>Expand URL to its canonical form</dd>
-      </dl>
-    </div><!-- /.column.first -->
-
-    <div class="column last js-hidden-pane" style='display:none'>
-      <h3>Pull request list</h3>
-      <dl class="keyboard-mappings">
-        <dt>j</dt>
-        <dd>Move selection down</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>k</dt>
-        <dd>Move selection up</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>o <em>or</em> enter</dt>
-        <dd>Open issue</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt><span class="platform-mac">⌘</span><span class="platform-other">ctrl</span> <em>+</em> enter</dt>
-        <dd>Submit comment</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt><span class="platform-mac">⌘</span><span class="platform-other">ctrl</span> <em>+</em> shift p</dt>
-        <dd>Preview comment</dd>
-      </dl>
-    </div><!-- /.columns.last -->
-
-  </div><!-- /.columns.equacols -->
-
-  <div class="js-hidden-pane" style='display:none'>
-    <div class="rule"></div>
-
-    <h3>Issues</h3>
-
-    <div class="columns threecols">
-      <div class="column first">
-        <dl class="keyboard-mappings">
-          <dt>j</dt>
-          <dd>Move selection down</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>k</dt>
-          <dd>Move selection up</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>x</dt>
-          <dd>Toggle selection</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>o <em>or</em> enter</dt>
-          <dd>Open issue</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt><span class="platform-mac">⌘</span><span class="platform-other">ctrl</span> <em>+</em> enter</dt>
-          <dd>Submit comment</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt><span class="platform-mac">⌘</span><span class="platform-other">ctrl</span> <em>+</em> shift p</dt>
-          <dd>Preview comment</dd>
-        </dl>
-      </div><!-- /.column.first -->
-      <div class="column last">
-        <dl class="keyboard-mappings">
-          <dt>c</dt>
-          <dd>Create issue</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>l</dt>
-          <dd>Create label</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>i</dt>
-          <dd>Back to inbox</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>u</dt>
-          <dd>Back to issues</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>/</dt>
-          <dd>Focus issues search</dd>
-        </dl>
-      </div>
-    </div>
-  </div>
-
-  <div class="js-hidden-pane" style='display:none'>
-    <div class="rule"></div>
-
-    <h3>Issues Dashboard</h3>
-
-    <div class="columns threecols">
-      <div class="column first">
-        <dl class="keyboard-mappings">
-          <dt>j</dt>
-          <dd>Move selection down</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>k</dt>
-          <dd>Move selection up</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>o <em>or</em> enter</dt>
-          <dd>Open issue</dd>
-        </dl>
-      </div><!-- /.column.first -->
-    </div>
-  </div>
-
-  <div class="js-hidden-pane" style='display:none'>
-    <div class="rule"></div>
-
-    <h3>Network Graph</h3>
-    <div class="columns equacols">
-      <div class="column first">
-        <dl class="keyboard-mappings">
-          <dt><span class="badmono">←</span> <em>or</em> h</dt>
-          <dd>Scroll left</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt><span class="badmono">→</span> <em>or</em> l</dt>
-          <dd>Scroll right</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt><span class="badmono">↑</span> <em>or</em> k</dt>
-          <dd>Scroll up</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt><span class="badmono">↓</span> <em>or</em> j</dt>
-          <dd>Scroll down</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>t</dt>
-          <dd>Toggle visibility of head labels</dd>
-        </dl>
-      </div><!-- /.column.first -->
-      <div class="column last">
-        <dl class="keyboard-mappings">
-          <dt>shift <span class="badmono">←</span> <em>or</em> shift h</dt>
-          <dd>Scroll all the way left</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>shift <span class="badmono">→</span> <em>or</em> shift l</dt>
-          <dd>Scroll all the way right</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>shift <span class="badmono">↑</span> <em>or</em> shift k</dt>
-          <dd>Scroll all the way up</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>shift <span class="badmono">↓</span> <em>or</em> shift j</dt>
-          <dd>Scroll all the way down</dd>
-        </dl>
-      </div><!-- /.column.last -->
-    </div>
-  </div>
-
-  <div class="js-hidden-pane" >
-    <div class="rule"></div>
-    <div class="columns threecols">
-      <div class="column first js-hidden-pane" >
-        <h3>Source Code Browsing</h3>
-        <dl class="keyboard-mappings">
-          <dt>t</dt>
-          <dd>Activates the file finder</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>l</dt>
-          <dd>Jump to line</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>w</dt>
-          <dd>Switch branch/tag</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>y</dt>
-          <dd>Expand URL to its canonical form</dd>
-        </dl>
-      </div>
-    </div>
-  </div>
-
-  <div class="js-hidden-pane" style='display:none'>
-    <div class="rule"></div>
-    <div class="columns threecols">
-      <div class="column first">
-        <h3>Browsing Commits</h3>
-        <dl class="keyboard-mappings">
-          <dt><span class="platform-mac">⌘</span><span class="platform-other">ctrl</span> <em>+</em> enter</dt>
-          <dd>Submit comment</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>escape</dt>
-          <dd>Close form</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>p</dt>
-          <dd>Parent commit</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>o</dt>
-          <dd>Other parent commit</dd>
-        </dl>
-      </div>
-    </div>
-  </div>
-
-  <div class="js-hidden-pane" style='display:none'>
-    <div class="rule"></div>
-    <h3>Notifications</h3>
-
-    <div class="columns threecols">
-      <div class="column first">
-        <dl class="keyboard-mappings">
-          <dt>j</dt>
-          <dd>Move selection down</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>k</dt>
-          <dd>Move selection up</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>o <em>or</em> enter</dt>
-          <dd>Open notification</dd>
-        </dl>
-      </div><!-- /.column.first -->
-
-      <div class="column second">
-        <dl class="keyboard-mappings">
-          <dt>e <em>or</em> shift i <em>or</em> y</dt>
-          <dd>Mark as read</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>shift m</dt>
-          <dd>Mute thread</dd>
-        </dl>
-      </div><!-- /.column.first -->
-    </div>
-  </div>
-
-</div>
-
-    <div id="markdown-help" class="instapaper_ignore readability-extra">
-  <h2>Markdown Cheat Sheet</h2>
-
-  <div class="cheatsheet-content">
-
-  <div class="mod">
-    <div class="col">
-      <h3>Format Text</h3>
-      <p>Headers</p>
-      <pre>
-# This is an &lt;h1&gt; tag
-## This is an &lt;h2&gt; tag
-###### This is an &lt;h6&gt; tag</pre>
-     <p>Text styles</p>
-     <pre>
-*This text will be italic*
-_This will also be italic_
-**This text will be bold**
-__This will also be bold__
-
-*You **can** combine them*
-</pre>
-    </div>
-    <div class="col">
-      <h3>Lists</h3>
-      <p>Unordered</p>
-      <pre>
-* Item 1
-* Item 2
-  * Item 2a
-  * Item 2b</pre>
-     <p>Ordered</p>
-     <pre>
-1. Item 1
-2. Item 2
-3. Item 3
-   * Item 3a
-   * Item 3b</pre>
-    </div>
-    <div class="col">
-      <h3>Miscellaneous</h3>
-      <p>Images</p>
-      <pre>
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
-</pre>
-     <p>Links</p>
-     <pre>
-http://github.com - automatic!
-[GitHub](http://github.com)</pre>
-<p>Blockquotes</p>
-     <pre>
-As Kanye West said:
-
-> We're living the future so
-> the present is our past.
-</pre>
-    </div>
-  </div>
-  <div class="rule"></div>
-
-  <h3>Code Examples in Markdown</h3>
-  <div class="col">
-      <p>Syntax highlighting with <a href="http://github.github.com/github-flavored-markdown/" title="GitHub Flavored Markdown" target="_blank">GFM</a></p>
-      <pre>
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
-```</pre>
-    </div>
-    <div class="col">
-      <p>Or, indent your code 4 spaces</p>
-      <pre>
-Here is a Python code example
-without syntax highlighting:
-
-    def foo:
-      if not bar:
-        return true</pre>
-    </div>
-    <div class="col">
-      <p>Inline code for comments</p>
-      <pre>
-I think you should use an
-`&lt;addr&gt;` element here instead.</pre>
-    </div>
-  </div>
-
-  </div>
-</div>
-
-
-    <div id="ajax-error-message" class="flash flash-error">
-      <span class="mini-icon mini-icon-exclamation"></span>
-      Something went wrong with that request. Please try again.
-      <a href="#" class="mini-icon mini-icon-remove-close ajax-error-dismiss"></a>
-    </div>
-
-    <div id="logo-popup">
-      <h2>Looking for the GitHub logo?</h2>
-      <ul>
-        <li>
-          <h4>GitHub Logo</h4>
-          <a href="http://github-media-downloads.s3.amazonaws.com/GitHub_Logos.zip"><img alt="Github_logo" src="https://a248.e.akamai.net/assets.github.com/images/modules/about_page/github_logo.png?1338945074" /></a>
-          <a href="http://github-media-downloads.s3.amazonaws.com/GitHub_Logos.zip" class="minibutton download">Download</a>
-        </li>
-        <li>
-          <h4>The Octocat</h4>
-          <a href="http://github-media-downloads.s3.amazonaws.com/Octocats.zip"><img alt="Octocat" src="https://a248.e.akamai.net/assets.github.com/images/modules/about_page/octocat.png?1338945074" /></a>
-          <a href="http://github-media-downloads.s3.amazonaws.com/Octocats.zip" class="minibutton download">Download</a>
-        </li>
-      </ul>
-    </div>
-
-    
-    
-    <span id='server_response_time' data-time='0.09099' data-host='fe2'></span>
-    
-  </body>
-</html>
-
+// Backbone.ModelBinder v0.1.6
+// (c) 2012 Bart Wood
+// Distributed Under MIT License
+
+(function(factory){if(typeof define==='function'&&define.amd){define(['underscore','jquery','backbone'],factory);}else{factory(_,$,Backbone);}}(function(_,$,Backbone){if(!Backbone){throw'Please include Backbone.js before Backbone.ModelBinder.js';}
+    Backbone.ModelBinder=function(modelSetOptions){_.bindAll(this);this._modelSetOptions=modelSetOptions||{};};Backbone.ModelBinder.VERSION='0.1.5';Backbone.ModelBinder.Constants={};Backbone.ModelBinder.Constants.ModelToView='ModelToView';Backbone.ModelBinder.Constants.ViewToModel='ViewToModel';_.extend(Backbone.ModelBinder.prototype,{bind:function(model,rootEl,attributeBindings,modelSetOptions){this.unbind();this._model=model;this._rootEl=rootEl;this._modelSetOptions=_.extend({},this._modelSetOptions,modelSetOptions);if(!this._model)throw'model must be specified';if(!this._rootEl)throw'rootEl must be specified';if(attributeBindings){this._attributeBindings=$.extend(true,{},attributeBindings);this._initializeAttributeBindings();this._initializeElBindings();}
+    else{this._initializeDefaultBindings();}
+        this._bindModelToView();this._bindViewToModel();},unbind:function(){this._unbindModelToView();this._unbindViewToModel();if(this._attributeBindings){delete this._attributeBindings;this._attributeBindings=undefined;}},_initializeAttributeBindings:function(){var attributeBindingKey,inputBinding,attributeBinding,elementBindingCount,elementBinding;for(attributeBindingKey in this._attributeBindings){inputBinding=this._attributeBindings[attributeBindingKey];if(_.isString(inputBinding)){attributeBinding={elementBindings:[{selector:inputBinding}]};}
+    else if(_.isArray(inputBinding)){attributeBinding={elementBindings:inputBinding};}
+    else if(_.isObject(inputBinding)){attributeBinding={elementBindings:[inputBinding]};}
+    else{throw'Unsupported type passed to Model Binder '+attributeBinding;}
+        for(elementBindingCount=0;elementBindingCount<attributeBinding.elementBindings.length;elementBindingCount++){elementBinding=attributeBinding.elementBindings[elementBindingCount];elementBinding.attributeBinding=attributeBinding;}
+        attributeBinding.attributeName=attributeBindingKey;this._attributeBindings[attributeBindingKey]=attributeBinding;}},_initializeDefaultBindings:function(){var elCount,namedEls,namedEl,name,attributeBinding;this._attributeBindings={};namedEls=$('[name]',this._rootEl);for(elCount=0;elCount<namedEls.length;elCount++){namedEl=namedEls[elCount];name=$(namedEl).attr('name');if(!this._attributeBindings[name]){attributeBinding={attributeName:name};attributeBinding.elementBindings=[{attributeBinding:attributeBinding,boundEls:[namedEl]}];this._attributeBindings[name]=attributeBinding;}
+    else{this._attributeBindings[name].elementBindings.push({attributeBinding:this._attributeBindings[name],boundEls:[namedEl]});}}},_initializeElBindings:function(){var bindingKey,attributeBinding,bindingCount,elementBinding,foundEls,elCount,el;for(bindingKey in this._attributeBindings){attributeBinding=this._attributeBindings[bindingKey];for(bindingCount=0;bindingCount<attributeBinding.elementBindings.length;bindingCount++){elementBinding=attributeBinding.elementBindings[bindingCount];if(elementBinding.selector===''){foundEls=$(this._rootEl);}
+    else{foundEls=$(elementBinding.selector,this._rootEl);}
+        if(foundEls.length===0){throw'Bad binding found. No elements returned for binding selector '+elementBinding.selector;}
+        else{elementBinding.boundEls=[];for(elCount=0;elCount<foundEls.length;elCount++){el=foundEls[elCount];elementBinding.boundEls.push(el);}}}}},_bindModelToView:function(){this._model.on('change',this._onModelChange,this);this.copyModelAttributesToView();},copyModelAttributesToView:function(attributesToCopy){var attributeName,attributeBinding;for(attributeName in this._attributeBindings){if(attributesToCopy===undefined||_.indexOf(attributesToCopy,attributeName)!==-1){attributeBinding=this._attributeBindings[attributeName];this._copyModelToView(attributeBinding);}}},_unbindModelToView:function(){if(this._model){this._model.off('change',this._onModelChange);this._model=undefined;}},_bindViewToModel:function(){$(this._rootEl).delegate('','change',this._onElChanged);$(this._rootEl).delegate('[contenteditable]','blur',this._onElChanged);},_unbindViewToModel:function(){if(this._rootEl){$(this._rootEl).undelegate('','change',this._onElChanged);$(this._rootEl).undelegate('[contenteditable]','blur',this._onElChanged);}},_onElChanged:function(event){var el,elBindings,elBindingCount,elBinding;el=$(event.target)[0];elBindings=this._getElBindings(el);for(elBindingCount=0;elBindingCount<elBindings.length;elBindingCount++){elBinding=elBindings[elBindingCount];if(this._isBindingUserEditable(elBinding)){this._copyViewToModel(elBinding,el);}}},_isBindingUserEditable:function(elBinding){return elBinding.elAttribute===undefined||elBinding.elAttribute==='text'||elBinding.elAttribute==='html';},_getElBindings:function(findEl){var attributeName,attributeBinding,elementBindingCount,elementBinding,boundElCount,boundEl;var elBindings=[];for(attributeName in this._attributeBindings){attributeBinding=this._attributeBindings[attributeName];for(elementBindingCount=0;elementBindingCount<attributeBinding.elementBindings.length;elementBindingCount++){elementBinding=attributeBinding.elementBindings[elementBindingCount];for(boundElCount=0;boundElCount<elementBinding.boundEls.length;boundElCount++){boundEl=elementBinding.boundEls[boundElCount];if(boundEl===findEl){elBindings.push(elementBinding);}}}}
+        return elBindings;},_onModelChange:function(){var changedAttribute,attributeBinding;for(changedAttribute in this._model.changedAttributes()){attributeBinding=this._attributeBindings[changedAttribute];if(attributeBinding){this._copyModelToView(attributeBinding);}}},_copyModelToView:function(attributeBinding){var elementBindingCount,elementBinding,boundElCount,boundEl,value,convertedValue;value=this._model.get(attributeBinding.attributeName);for(elementBindingCount=0;elementBindingCount<attributeBinding.elementBindings.length;elementBindingCount++){elementBinding=attributeBinding.elementBindings[elementBindingCount];for(boundElCount=0;boundElCount<elementBinding.boundEls.length;boundElCount++){boundEl=elementBinding.boundEls[boundElCount];if(!boundEl._isSetting){convertedValue=this._getConvertedValue(Backbone.ModelBinder.Constants.ModelToView,elementBinding,value);this._setEl($(boundEl),elementBinding,convertedValue);}}}},_setEl:function(el,elementBinding,convertedValue){if(elementBinding.elAttribute){this._setElAttribute(el,elementBinding,convertedValue);}
+    else{this._setElValue(el,convertedValue);}},_setElAttribute:function(el,elementBinding,convertedValue){switch(elementBinding.elAttribute){case'html':el.html(convertedValue);break;case'text':el.text(convertedValue);break;case'enabled':el.attr('disabled',!convertedValue);break;case'displayed':el[convertedValue?'show':'hide']();break;case'hidden':el[convertedValue?'hide':'show']();break;case'css':el.css(elementBinding.cssAttribute,convertedValue);break;case'class':var previousValue=this._model.previous(elementBinding.attributeBinding.attributeName);if(!_.isUndefined(previousValue)){previousValue=this._getConvertedValue(Backbone.ModelBinder.Constants.ModelToView,elementBinding,previousValue);el.removeClass(previousValue);}
+        if(convertedValue){el.addClass(convertedValue);}
+        break;default:el.attr(elementBinding.elAttribute,convertedValue);}},_setElValue:function(el,convertedValue){if(el.attr('type')){switch(el.attr('type')){case'radio':if(el.val()===convertedValue){el.attr('checked','checked');}
+        break;case'checkbox':if(convertedValue){el.attr('checked','checked');}
+    else{el.removeAttr('checked');}
+        break;default:el.val(convertedValue);}}
+    else if(el.is('input')||el.is('select')||el.is('textarea')){el.val(convertedValue);}
+    else{el.text(convertedValue);}},_copyViewToModel:function(elementBinding,el){var value,convertedValue;if(!el._isSetting){el._isSetting=true;this._setModel(elementBinding,$(el));el._isSetting=false;if(elementBinding.converter){value=this._model.get(elementBinding.attributeBinding.attributeName);convertedValue=this._getConvertedValue(Backbone.ModelBinder.Constants.ModelToView,elementBinding,value);this._setEl($(el),elementBinding,convertedValue);}}},_getElValue:function(elementBinding,el){switch(el.attr('type')){case'checkbox':return el.prop('checked')?true:false;default:if(el.attr('contenteditable')!==undefined){return el.html();}
+    else{return el.val();}}},_setModel:function(elementBinding,el){var data={};var elVal=this._getElValue(elementBinding,el);elVal=this._getConvertedValue(Backbone.ModelBinder.Constants.ViewToModel,elementBinding,elVal);data[elementBinding.attributeBinding.attributeName]=elVal;var opts=_.extend({},this._modelSetOptions,{changeSource:'ModelBinder'});this._model.set(data,opts);},_getConvertedValue:function(direction,elementBinding,value){if(elementBinding.converter){value=elementBinding.converter(direction,value,elementBinding.attributeBinding.attributeName,this._model);}
+        return value;}});Backbone.ModelBinder.CollectionConverter=function(collection){this._collection=collection;if(!this._collection){throw'Collection must be defined';}
+        _.bindAll(this,'convert');};_.extend(Backbone.ModelBinder.CollectionConverter.prototype,{convert:function(direction,value){if(direction===Backbone.ModelBinder.Constants.ModelToView){return value?value.id:undefined;}
+    else{return this._collection.get(value);}}});Backbone.ModelBinder.createDefaultBindings=function(rootEl,attributeType,converter,elAttribute){var foundEls,elCount,foundEl,attributeName;var bindings={};foundEls=$('['+attributeType+']',rootEl);for(elCount=0;elCount<foundEls.length;elCount++){foundEl=foundEls[elCount];attributeName=$(foundEl).attr(attributeType);if(!bindings[attributeName]){var attributeBinding={selector:'['+attributeType+'="'+attributeName+'"]'};bindings[attributeName]=attributeBinding;if(converter){bindings[attributeName].converter=converter;}
+        if(elAttribute){bindings[attributeName].elAttribute=elAttribute;}}}
+        return bindings;};Backbone.ModelBinder.combineBindings=function(destination,source){_.each(source,function(value,key){var elementBinding={selector:value.selector};if(value.converter){elementBinding.converter=value.converter;}
+        if(value.elAttribute){elementBinding.elAttribute=value.elAttribute;}
+        if(!destination[key]){destination[key]=elementBinding;}
+        else{destination[key]=[destination[key],elementBinding];}});};return Backbone.ModelBinder;}));var is={ie:navigator.appName=='Microsoft Internet Explorer',java:navigator.javaEnabled(),ns:navigator.appName=='Netscape',ua:navigator.userAgent.toLowerCase(),version:parseFloat(navigator.appVersion.substr(21))||parseFloat(navigator.appVersion),win:navigator.platform=='Win32'}
+is.mac=is.ua.indexOf('mac')>=0;if(is.ua.indexOf('opera')>=0){is.ie=is.ns=false;is.opera=true;}
+if(is.ua.indexOf('gecko')>=0){is.ie=is.ns=false;is.gecko=true;}
 ;
-  
-
-
-<!DOCTYPE html>
-<html>
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>backbone.marionette/lib/backbone.marionette.min.js at master · marionettejs/backbone.marionette</title>
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
-    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144.png" />
-
-    
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.png" />
-
-    <meta content="authenticity_token" name="csrf-param" />
-<meta content="NFN40QTAT4Ccb12J1qzN8tYB7L7NFgpJl0nEIsfDTKU=" name="csrf-token" />
-
-    <link href="https://a248.e.akamai.net/assets.github.com/assets/github-6ba0b2d571b5d2378748112d06dd8129025a3866.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://a248.e.akamai.net/assets.github.com/assets/github2-928133720bee0f0dabf9a421aa4f46defd08c348.css" media="screen" rel="stylesheet" type="text/css" />
-    
-
-
-    <script src="https://a248.e.akamai.net/assets.github.com/assets/frameworks-74babe6ea3f1446af579a5f1870604db61e9c348.js" type="text/javascript"></script>
-    <script defer="defer" src="https://a248.e.akamai.net/assets.github.com/assets/github-305a3da4e430ff26cca020405f9a254c85ca7a27.js" type="text/javascript"></script>
-    
-
-      <link rel='permalink' href='/marionettejs/backbone.marionette/blob/b5eb35bd16adfcfdf8baea001de8bfa8ce54a9e0/lib/backbone.marionette.min.js'>
-    <meta property="og:title" content="backbone.marionette"/>
-    <meta property="og:type" content="githubog:gitrepository"/>
-    <meta property="og:url" content="https://github.com/marionettejs/backbone.marionette"/>
-    <meta property="og:image" content="https://a248.e.akamai.net/assets.github.com/images/gravatars/gravatar-user-420.png?1345673561"/>
-    <meta property="og:site_name" content="GitHub"/>
-    <meta property="og:description" content="backbone.marionette - Make your Backbone.js apps dance with a composite application architecture!"/>
-
-    <meta name="description" content="backbone.marionette - Make your Backbone.js apps dance with a composite application architecture!" />
-  <link href="https://github.com/marionettejs/backbone.marionette/commits/master.atom" rel="alternate" title="Recent Commits to backbone.marionette:master" type="application/atom+xml" />
-
-  </head>
-
-
-  <body class="logged_in page-blob macintosh vis-public env-production ">
-    <div id="wrapper">
-
-    
-    
-
-      <div id="header" class="true clearfix">
-        <div class="container clearfix">
-          <a class="site-logo " href="https://github.com/organizations/loganberry">
-            <img alt="GitHub" class="github-logo-4x" height="30" src="https://a248.e.akamai.net/assets.github.com/images/modules/header/logov7@4x.png?1340659561" />
-            <img alt="GitHub" class="github-logo-4x-hover" height="30" src="https://a248.e.akamai.net/assets.github.com/images/modules/header/logov7@4x-hover.png?1340659561" />
-          </a>
-
-            <a href="/notifications" class="notification-indicator tooltipped downwards" title="You have unread notifications">
-              <span class="mail-status unread"></span>
-            </a>
-
-              
-    <div class="topsearch command-bar-activated">
-      <form accept-charset="UTF-8" action="/search" class="command_bar_form" id="top_search_form" method="get">
-  <a href="/search" class="advanced-search tooltipped downwards command-bar-search" id="advanced_search" title="Advanced Search"><span class="mini-icon mini-icon-advanced-search "></span></a>
-  <input type="text" name="q" id="command-bar" placeholder="Search or Type a Command" />
-  <span class="mini-icon help tooltipped downwards" title="Show Command Bar Help"></span>
-  <input type="hidden" name="type" value="Everything" />
-  <input type="hidden" name="repo" value="" />
-  <input type="hidden" name="langOverride" value="" />
-  <input type="hidden" name="start_value" value="1" />
-</form>
-
-      <ul class="top-nav">
-          <li class="explore"><a href="https://github.com/explore">Explore</a></li>
-          <li><a href="https://gist.github.com">Gist</a></li>
-          <li><a href="/blog">Blog</a></li>
-        <li><a href="http://help.github.com">Help</a></li>
-      </ul>
-    </div>
-
-
-            
-
-
-  
-  <div id="userbox">
-    <div id="user">
-      <a href="https://github.com/priyaaank"><img height="20" src="https://secure.gravatar.com/avatar/f2c9624bde8ce8209edc8736d8e24cde?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /></a>
-      <a href="https://github.com/priyaaank" class="name">priyaaank</a>
-    </div>
-    <ul id="user-links">
-      <li>
-        <a href="/new" id="new_repo" class="tooltipped downwards" title="Create a New Repo"><span class="mini-icon mini-icon-create"></span></a>
-      </li>
-      <li>
-        <a href="/settings/profile" id="account_settings"
-          class="tooltipped downwards"
-          title="Account Settings ">
-          <span class="mini-icon mini-icon-account-settings"></span>
-        </a>
-      </li>
-      <li>
-          <a href="/logout" data-method="post" id="logout" class="tooltipped downwards" title="Sign Out">
-            <span class="mini-icon mini-icon-logout"></span>
-          </a>
-      </li>
-    </ul>
-  </div>
-
-
-
-          
-        </div>
-      </div>
-
-      
-
-      
-
-            <div class="site hfeed" itemscope itemtype="http://schema.org/WebPage">
-      <div class="container hentry">
-        
-        <div class="pagehead repohead instapaper_ignore readability-menu">
-        <div class="title-actions-bar">
-          
-
-
-              <ul class="pagehead-actions">
-
-          <li class="subscription">
-              <form accept-charset="UTF-8" action="/notifications/subscribe" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="NFN40QTAT4Ccb12J1qzN8tYB7L7NFgpJl0nEIsfDTKU=" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="2965621" />
-  <div class="context-menu-container js-menu-container js-context-menu">
-    <span class="minibutton switcher bigger js-menu-target">
-      <span class="js-context-button">
-          <span class="mini-icon mini-icon-watching"></span>Watch
-      </span>
-    </span>
-
-    <div class="context-pane js-menu-content">
-      <a href="javascript:;" class="close js-menu-close"><span class="mini-icon mini-icon-remove-close"></span></a>
-      <div class="context-title">Notification status</div>
-
-      <div class="context-body pane-selector">
-        <ul class="js-navigation-container">
-          <li class="selector-item js-navigation-item js-navigation-target selected">
-            <span class="mini-icon mini-icon-confirm"></span>
-            <label>
-              <input checked="checked" id="do_included" name="do" type="radio" value="included" />
-              <h4>Not watching</h4>
-              <p>You will only receive notifications when you participate or are mentioned.</p>
-            </label>
-            <span class="context-button-text js-context-button-text">
-              <span class="mini-icon mini-icon-watching"></span>
-              Watch
-            </span>
-          </li>
-          <li class="selector-item js-navigation-item js-navigation-target ">
-            <span class="mini-icon mini-icon-confirm"></span>
-            <label>
-              <input id="do_subscribed" name="do" type="radio" value="subscribed" />
-              <h4>Watching</h4>
-              <p>You will receive all notifications for this repository.</p>
-            </label>
-            <span class="context-button-text js-context-button-text">
-              <span class="mini-icon mini-icon-unwatch"></span>
-              Unwatch
-            </span>
-          </li>
-          <li class="selector-item js-navigation-item js-navigation-target ">
-            <span class="mini-icon mini-icon-confirm"></span>
-            <label>
-              <input id="do_ignore" name="do" type="radio" value="ignore" />
-              <h4>Ignored</h4>
-              <p>You will not receive notifications for this repository.</p>
-            </label>
-            <span class="context-button-text js-context-button-text">
-              <span class="mini-icon mini-icon-mute"></span>
-              Stop ignoring
-            </span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</form>
-          </li>
-
-          <li class="js-toggler-container js-social-container starring-container ">
-            <a href="/marionettejs/backbone.marionette/unstar" class="minibutton js-toggler-target starred" data-remote="true" data-method="post" rel="nofollow">
-              <span class="mini-icon mini-icon-star"></span>Unstar
-            </a><a href="/marionettejs/backbone.marionette/star" class="minibutton js-toggler-target unstarred" data-remote="true" data-method="post" rel="nofollow">
-              <span class="mini-icon mini-icon-star"></span>Star
-            </a><a class="social-count js-social-count" href="/marionettejs/backbone.marionette/stargazers">1,335</a>
-          </li>
-
-              <li>
-                <a href="/marionettejs/backbone.marionette/fork_select" class="minibutton js-toggler-target lighter" rel="facebox nofollow"><span class="mini-icon mini-icon-fork"></span>Fork</a><a href="/marionettejs/backbone.marionette/network" class="social-count">169</a>
-              </li>
-
-
-    </ul>
-
-          <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
-            <span class="repo-label"><span>public</span></span>
-            <span class="mega-icon mega-icon-public-repo"></span>
-            <span class="author vcard">
-              <a href="/marionettejs" class="url fn" itemprop="url" rel="author">
-              <span itemprop="title">marionettejs</span>
-              </a></span> /
-            <strong><a href="/marionettejs/backbone.marionette" class="js-current-repository">backbone.marionette</a></strong>
-          </h1>
-        </div>
-
-          
-
-  <ul class="tabs">
-    <li><a href="/marionettejs/backbone.marionette" class="selected" highlight="repo_sourcerepo_downloadsrepo_commitsrepo_tagsrepo_branches">Code</a></li>
-    <li><a href="/marionettejs/backbone.marionette/network" highlight="repo_network">Network</a></li>
-    <li><a href="/marionettejs/backbone.marionette/pulls" highlight="repo_pulls">Pull Requests <span class='counter'>4</span></a></li>
-
-      <li><a href="/marionettejs/backbone.marionette/issues" highlight="repo_issues">Issues <span class='counter'>28</span></a></li>
-
-      <li><a href="/marionettejs/backbone.marionette/wiki" highlight="repo_wiki">Wiki</a></li>
-
-
-    <li><a href="/marionettejs/backbone.marionette/graphs" highlight="repo_graphsrepo_contributors">Graphs</a></li>
-
-
-  </ul>
-  
-<div class="frame frame-center tree-finder" style="display:none"
-      data-tree-list-url="/marionettejs/backbone.marionette/tree-list/b5eb35bd16adfcfdf8baea001de8bfa8ce54a9e0"
-      data-blob-url-prefix="/marionettejs/backbone.marionette/blob/b5eb35bd16adfcfdf8baea001de8bfa8ce54a9e0"
-    >
-
-  <div class="breadcrumb">
-    <span class="bold"><a href="/marionettejs/backbone.marionette">backbone.marionette</a></span> /
-    <input class="tree-finder-input js-navigation-enable" type="text" name="query" autocomplete="off" spellcheck="false">
-  </div>
-
-    <div class="octotip">
-      <p>
-        <a href="/marionettejs/backbone.marionette/dismiss-tree-finder-help" class="dismiss js-dismiss-tree-list-help" title="Hide this notice forever" rel="nofollow">Dismiss</a>
-        <span class="bold">Octotip:</span> You've activated the <em>file finder</em>
-        by pressing <span class="kbd">t</span> Start typing to filter the
-        file list. Use <span class="kbd badmono">↑</span> and
-        <span class="kbd badmono">↓</span> to navigate,
-        <span class="kbd">enter</span> to view files.
-      </p>
-    </div>
-
-  <table class="tree-browser" cellpadding="0" cellspacing="0">
-    <tr class="js-header"><th>&nbsp;</th><th>name</th></tr>
-    <tr class="js-no-results no-results" style="display: none">
-      <th colspan="2">No matching files</th>
-    </tr>
-    <tbody class="js-results-list js-navigation-container">
-    </tbody>
-  </table>
-</div>
-
-<div id="jump-to-line" style="display:none">
-  <h2>Jump to Line</h2>
-  <form accept-charset="UTF-8">
-    <input class="textfield" type="text">
-    <div class="full-button">
-      <button type="submit" class="classy">
-        Go
-      </button>
-    </div>
-  </form>
-</div>
-
-
-<div class="tabnav">
-
-  <span class="tabnav-right">
-    <ul class="tabnav-tabs">
-      <li><a href="/marionettejs/backbone.marionette/tags" class="tabnav-tab" highlight="repo_tags">Tags <span class="counter ">53</span></a></li>
-      <li><a href="/marionettejs/backbone.marionette/downloads" class="tabnav-tab" highlight="repo_downloads">Downloads <span class="counter blank">0</span></a></li>
-    </ul>
-    
-  </span>
-
-  <div class="tabnav-widget scope">
-
-    <div class="context-menu-container js-menu-container js-context-menu">
-      <a href="#"
-         class="minibutton bigger switcher js-menu-target js-commitish-button btn-branch repo-tree"
-         data-hotkey="w"
-         data-master-branch="master"
-         data-ref="master">
-         <span><em class="mini-icon mini-icon-branch"></em><i>branch:</i> master</span>
-      </a>
-
-      <div class="context-pane commitish-context js-menu-content">
-        <a href="javascript:;" class="close js-menu-close"><span class="mini-icon mini-icon-remove-close"></span></a>
-        <div class="context-title">Switch branches/tags</div>
-        <div class="context-body pane-selector commitish-selector js-navigation-container">
-          <div class="filterbar">
-            <input type="text" id="context-commitish-filter-field" class="js-navigation-enable" placeholder="Filter branches/tags" data-filterable />
-            <ul class="tabs">
-              <li><a href="#" data-filter="branches" class="selected">Branches</a></li>
-              <li><a href="#" data-filter="tags">Tags</a></li>
-            </ul>
-          </div>
-
-          <div class="js-filter-tab js-filter-branches" data-filterable-for="context-commitish-filter-field" data-filterable-type=substring>
-            <div class="no-results js-not-filterable">Nothing to show</div>
-              <div class="commitish-item branch-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/dev/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="dev" rel="nofollow">dev</a>
-                </h4>
-              </div>
-              <div class="commitish-item branch-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/gh-pages/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="gh-pages" rel="nofollow">gh-pages</a>
-                </h4>
-              </div>
-              <div class="commitish-item branch-commitish selector-item js-navigation-item js-navigation-target selected">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/master/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="master" rel="nofollow">master</a>
-                </h4>
-              </div>
-              <div class="commitish-item branch-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/module_definitions/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="module_definitions" rel="nofollow">module_definitions</a>
-                </h4>
-              </div>
-          </div>
-
-          <div class="js-filter-tab js-filter-tags" style="display:none" data-filterable-for="context-commitish-filter-field" data-filterable-type=substring>
-            <div class="no-results js-not-filterable">Nothing to show</div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.9.13/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.9.13" rel="nofollow">v0.9.13</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.9.12/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.9.12" rel="nofollow">v0.9.12</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.9.11/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.9.11" rel="nofollow">v0.9.11</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.9.10/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.9.10" rel="nofollow">v0.9.10</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.9.9/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.9.9" rel="nofollow">v0.9.9</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.9.8/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.9.8" rel="nofollow">v0.9.8</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.9.7/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.9.7" rel="nofollow">v0.9.7</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.9.6/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.9.6" rel="nofollow">v0.9.6</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.9.5/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.9.5" rel="nofollow">v0.9.5</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.9.4/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.9.4" rel="nofollow">v0.9.4</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.9.3/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.9.3" rel="nofollow">v0.9.3</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.9.2/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.9.2" rel="nofollow">v0.9.2</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.9.1/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.9.1" rel="nofollow">v0.9.1</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.9.0/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.9.0" rel="nofollow">v0.9.0</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.8.4/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.8.4" rel="nofollow">v0.8.4</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.8.3/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.8.3" rel="nofollow">v0.8.3</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.8.2/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.8.2" rel="nofollow">v0.8.2</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.8.1/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.8.1" rel="nofollow">v0.8.1</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.8.0/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.8.0" rel="nofollow">v0.8.0</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.7.6/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.7.6" rel="nofollow">v0.7.6</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.7.5/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.7.5" rel="nofollow">v0.7.5</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.7.4/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.7.4" rel="nofollow">v0.7.4</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.7.3/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.7.3" rel="nofollow">v0.7.3</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.7.2/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.7.2" rel="nofollow">v0.7.2</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.7.1/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.7.1" rel="nofollow">v0.7.1</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.7.0/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.7.0" rel="nofollow">v0.7.0</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.6.3/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.6.3" rel="nofollow">v0.6.3</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.6.2/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.6.2" rel="nofollow">v0.6.2</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.6.1/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.6.1" rel="nofollow">v0.6.1</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.6.0/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.6.0" rel="nofollow">v0.6.0</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.5.2/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.5.2" rel="nofollow">v0.5.2</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.5.1/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.5.1" rel="nofollow">v0.5.1</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.5.0/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.5.0" rel="nofollow">v0.5.0</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.4.8/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.4.8" rel="nofollow">v0.4.8</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.4.7/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.4.7" rel="nofollow">v0.4.7</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.4.6/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.4.6" rel="nofollow">v0.4.6</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.4.5/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.4.5" rel="nofollow">v0.4.5</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.4.4/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.4.4" rel="nofollow">v0.4.4</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.4.3/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.4.3" rel="nofollow">v0.4.3</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.4.2/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.4.2" rel="nofollow">v0.4.2</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.4.1a/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.4.1a" rel="nofollow">v0.4.1a</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.4.1/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.4.1" rel="nofollow">v0.4.1</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.4.0/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.4.0" rel="nofollow">v0.4.0</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.3.1/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.3.1" rel="nofollow">v0.3.1</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.3.0/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.3.0" rel="nofollow">v0.3.0</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.2.6/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.2.6" rel="nofollow">v0.2.6</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.2.5/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.2.5" rel="nofollow">v0.2.5</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.2.4/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.2.4" rel="nofollow">v0.2.4</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.2.3/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.2.3" rel="nofollow">v0.2.3</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.2.2/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.2.2" rel="nofollow">v0.2.2</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.2.1/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.2.1" rel="nofollow">v0.2.1</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.2.0/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.2.0" rel="nofollow">v0.2.0</a>
-                </h4>
-              </div>
-              <div class="commitish-item tag-commitish selector-item js-navigation-item js-navigation-target ">
-                <span class="mini-icon mini-icon-confirm"></span>
-                <h4>
-                    <a href="/marionettejs/backbone.marionette/blob/v0.1.0/lib/backbone.marionette.min.js" class="js-navigation-open" data-name="v0.1.0" rel="nofollow">v0.1.0</a>
-                </h4>
-              </div>
-          </div>
-        </div>
-      </div><!-- /.commitish-context-context -->
-    </div>
-  </div> <!-- /.scope -->
-
-  <ul class="tabnav-tabs">
-    <li><a href="/marionettejs/backbone.marionette" class="selected tabnav-tab" highlight="repo_source">Files</a></li>
-    <li><a href="/marionettejs/backbone.marionette/commits/master" class="tabnav-tab" highlight="repo_commits">Commits</a></li>
-    <li><a href="/marionettejs/backbone.marionette/branches" class="tabnav-tab" highlight="repo_branches" rel="nofollow">Branches <span class="counter ">4</span></a></li>
-  </ul>
-
-</div>
-
-  
-  
-  
-
-
-          
-
-        </div><!-- /.repohead -->
-
-        <div id="js-repo-pjax-container" data-pjax-container>
-          
-
-
-<!-- blob contrib key: blob_contributors:v21:07f861458315172f60f026c5e8518378 -->
-<!-- blob contrib frag key: views10/v8/blob_contributors:v21:07f861458315172f60f026c5e8518378 -->
-
-<!-- block_view_fragment_key: views10/v8/blob:v21:026f0d5f1fe81a1576d0892197f386f7 -->
-  <div id="slider">
-
-    <div class="breadcrumb" data-path="lib/backbone.marionette.min.js/">
-      <b itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/marionettejs/backbone.marionette/tree/629a3ba82a2e46cbca997d6f9d11c07f03548a8f" class="js-rewrite-sha" itemprop="url"><span itemprop="title">backbone.marionette</span></a></b> / <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/marionettejs/backbone.marionette/tree/629a3ba82a2e46cbca997d6f9d11c07f03548a8f/lib" class="js-rewrite-sha" itemscope="url"><span itemprop="title">lib</span></a></span> / <strong class="final-path">backbone.marionette.min.js</strong> <span class="js-clippy mini-icon mini-icon-clippy " data-clipboard-text="lib/backbone.marionette.min.js" data-copied-hint="copied!" data-copy-hint="copy to clipboard"></span>
-    </div>
-
-      
-  <div class="commit file-history-tease js-blob-contributors-content" data-path="lib/backbone.marionette.min.js/">
-    <img class="main-avatar" height="24" src="https://secure.gravatar.com/avatar/e592bd1326b1e80188ed4c0bf26b9f75?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
-    <span class="author"><a href="/derickbailey">derickbailey</a></span>
-    <time class="js-relative-date" datetime="2012-09-15T13:05:07-07:00" title="2012-09-15 13:05:07">September 15, 2012</time>
-    <div class="commit-title">
-        <a href="/marionettejs/backbone.marionette/commit/629a3ba82a2e46cbca997d6f9d11c07f03548a8f" class="message">build v0.9.13</a>
-    </div>
-
-    <div class="participation">
-      <p class="quickstat"><a href="#blob_contributors_box" rel="facebox"><strong>4</strong> contributors</a></p>
-          <a class="avatar tooltipped downwards" title="derickbailey" href="/marionettejs/backbone.marionette/commits/master/lib/backbone.marionette.min.js?author=derickbailey"><img height="20" src="https://secure.gravatar.com/avatar/e592bd1326b1e80188ed4c0bf26b9f75?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /></a>
-    <a class="avatar tooltipped downwards" title="brantb" href="/marionettejs/backbone.marionette/commits/master/lib/backbone.marionette.min.js?author=brantb"><img height="20" src="https://secure.gravatar.com/avatar/b81c8f121c27f7f39b28b94f4c5b4b31?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /></a>
-    <a class="avatar tooltipped downwards" title="ifeins" href="/marionettejs/backbone.marionette/commits/master/lib/backbone.marionette.min.js?author=ifeins"><img height="20" src="https://secure.gravatar.com/avatar/5ebed649d8d30611cd845b33a19d7bf4?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /></a>
-    <a class="avatar tooltipped downwards" title="teleological" href="/marionettejs/backbone.marionette/commits/master/lib/backbone.marionette.min.js?author=teleological"><img height="20" src="https://secure.gravatar.com/avatar/d856d2ac977eebd19b55bc4cbd7cf9a9?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /></a>
-
-
-    </div>
-    <div id="blob_contributors_box" style="display:none">
-      <h2>Users on GitHub who have contributed to this file</h2>
-      <ul class="facebox-user-list">
-        <li>
-          <img height="24" src="https://secure.gravatar.com/avatar/e592bd1326b1e80188ed4c0bf26b9f75?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
-          <a href="/derickbailey">derickbailey</a>
-        </li>
-        <li>
-          <img height="24" src="https://secure.gravatar.com/avatar/b81c8f121c27f7f39b28b94f4c5b4b31?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
-          <a href="/brantb">brantb</a>
-        </li>
-        <li>
-          <img height="24" src="https://secure.gravatar.com/avatar/5ebed649d8d30611cd845b33a19d7bf4?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
-          <a href="/ifeins">ifeins</a>
-        </li>
-        <li>
-          <img height="24" src="https://secure.gravatar.com/avatar/d856d2ac977eebd19b55bc4cbd7cf9a9?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
-          <a href="/teleological">teleological</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-
-    <div class="frames">
-      <div class="frame frame-center" data-path="lib/backbone.marionette.min.js/" data-permalink-url="/marionettejs/backbone.marionette/blob/629a3ba82a2e46cbca997d6f9d11c07f03548a8f/lib/backbone.marionette.min.js" data-title="backbone.marionette/lib/backbone.marionette.min.js at master · marionettejs/backbone.marionette · GitHub" data-type="blob">
-
-        <div id="files" class="bubble">
-          <div class="file">
-            <div class="meta">
-              <div class="info">
-                <span class="icon"><b class="mini-icon mini-icon-text-file"></b></span>
-                <span class="mode" title="File Mode">file</span>
-                  <span>5 lines (5 sloc)</span>
-                <span>14.422 kb</span>
-              </div>
-              <ul class="button-group actions">
-                  <li>
-                    <a class="grouped-button file-edit-link minibutton bigger lighter js-rewrite-sha" href="/marionettejs/backbone.marionette/edit/629a3ba82a2e46cbca997d6f9d11c07f03548a8f/lib/backbone.marionette.min.js" data-method="post" rel="nofollow" data-hotkey="e">Edit</a>
-                  </li>
-                <li>
-                  <a href="/marionettejs/backbone.marionette/raw/master/lib/backbone.marionette.min.js" class="minibutton grouped-button bigger lighter" id="raw-url">Raw</a>
-                </li>
-                  <li>
-                    <a href="/marionettejs/backbone.marionette/blame/master/lib/backbone.marionette.min.js" class="minibutton grouped-button bigger lighter">Blame</a>
-                  </li>
-                <li>
-                  <a href="/marionettejs/backbone.marionette/commits/master/lib/backbone.marionette.min.js" class="minibutton grouped-button bigger lighter" rel="nofollow">History</a>
-                </li>
-              </ul>
-            </div>
-              <div class="data type-javascript">
-      <table cellpadding="0" cellspacing="0" class="lines">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="L1" rel="#L1">1</span>
-<span id="L2" rel="#L2">2</span>
-<span id="L3" rel="#L3">3</span>
-<span id="L4" rel="#L4">4</span>
-<span id="L5" rel="#L5">5</span>
-</pre>
-          </td>
-          <td width="100%">
-                <div class="highlight"><pre><div class='line' id='LC1'><span class="c1">// Backbone.Marionette, v0.9.13</span></div><div class='line' id='LC2'><span class="c1">// Copyright (c)2012 Derick Bailey, Muted Solutions, LLC.</span></div><div class='line' id='LC3'><span class="c1">// Distributed under MIT license</span></div><div class='line' id='LC4'><span class="c1">// http://github.com/derickbailey/backbone.marionette</span></div><div class='line' id='LC5'><span class="nx">Backbone</span><span class="p">.</span><span class="nx">Marionette</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="p">{};</span><span class="nx">r</span><span class="p">.</span><span class="nx">EventBinder</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">_eventBindings</span><span class="o">=</span><span class="p">[]},</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">EventBinder</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,{</span><span class="nx">bindTo</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="nx">r</span><span class="o">=</span><span class="nx">r</span><span class="o">||</span><span class="k">this</span><span class="p">,</span><span class="nx">e</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">r</span><span class="p">);</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="p">{</span><span class="nx">obj</span><span class="o">:</span><span class="nx">e</span><span class="p">,</span><span class="nx">eventName</span><span class="o">:</span><span class="nx">t</span><span class="p">,</span><span class="nx">callback</span><span class="o">:</span><span class="nx">n</span><span class="p">,</span><span class="nx">context</span><span class="o">:</span><span class="nx">r</span><span class="p">};</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_eventBindings</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">i</span><span class="p">),</span><span class="nx">i</span><span class="p">},</span><span class="nx">unbindFrom</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="nx">e</span><span class="p">.</span><span class="nx">obj</span><span class="p">.</span><span class="nx">off</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">eventName</span><span class="p">,</span><span class="nx">e</span><span class="p">.</span><span class="nx">callback</span><span class="p">,</span><span class="nx">e</span><span class="p">.</span><span class="nx">context</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">_eventBindings</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_eventBindings</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="nx">t</span><span class="o">===</span><span class="nx">e</span><span class="p">})},</span><span class="nx">unbindAll</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">,</span><span class="nx">n</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_eventBindings</span><span class="p">,</span><span class="nx">t</span><span class="p">.</span><span class="nx">identity</span><span class="p">);</span><span class="nx">t</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">){</span><span class="nx">e</span><span class="p">.</span><span class="nx">unbindFrom</span><span class="p">(</span><span class="nx">t</span><span class="p">)})}}),</span><span class="nx">r</span><span class="p">.</span><span class="nx">EventBinder</span><span class="p">.</span><span class="nx">extend</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">,</span><span class="nx">r</span><span class="p">.</span><span class="nx">View</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span><span class="nx">constructor</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="k">new</span> <span class="nx">r</span><span class="p">.</span><span class="nx">EventBinder</span><span class="p">;</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">n</span><span class="p">),</span><span class="nx">e</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">bindBackboneEntityTo</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">modelEvents</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">bindBackboneEntityTo</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">collectionEvents</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">bindTo</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="s2">&quot;show&quot;</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">onShowCalled</span><span class="p">,</span><span class="k">this</span><span class="p">)},</span><span class="nx">getTemplate</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="p">;</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="o">&amp;&amp;</span><span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">template</span><span class="o">?</span><span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">template</span><span class="o">:</span><span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">template</span><span class="p">,</span><span class="nx">e</span><span class="p">},</span><span class="nx">serializeData</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="p">;</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="o">?</span><span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">()</span><span class="o">:</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">e</span><span class="o">=</span><span class="p">{</span><span class="nx">items</span><span class="o">:</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">()}),</span><span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">mixinTemplateHelpers</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span><span class="nx">e</span><span class="p">},</span><span class="nx">mixinTemplateHelpers</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="nx">e</span><span class="o">=</span><span class="nx">e</span><span class="o">||</span><span class="p">{};</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">templateHelpers</span><span class="p">;</span><span class="k">return</span> <span class="nx">t</span><span class="p">.</span><span class="nx">isFunction</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">n</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">)),</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">n</span><span class="p">)},</span><span class="nx">configureTriggers</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">triggers</span><span class="p">)</span><span class="k">return</span><span class="p">;</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">triggers</span><span class="p">,</span><span class="nx">n</span><span class="o">=</span><span class="k">this</span><span class="p">,</span><span class="nx">r</span><span class="o">=</span><span class="p">{};</span><span class="k">return</span> <span class="nx">t</span><span class="p">.</span><span class="nx">isFunction</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">e</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">)),</span><span class="nx">t</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="nx">r</span><span class="p">[</span><span class="nx">t</span><span class="p">]</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="nx">t</span><span class="o">&amp;&amp;</span><span class="nx">t</span><span class="p">.</span><span class="nx">preventDefault</span><span class="o">&amp;&amp;</span><span class="nx">t</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">(),</span><span class="nx">t</span><span class="o">&amp;&amp;</span><span class="nx">t</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="o">&amp;&amp;</span><span class="nx">t</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">(),</span><span class="nx">n</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="nx">e</span><span class="p">)}}),</span><span class="nx">r</span><span class="p">},</span><span class="nx">delegateEvents</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="nx">n</span><span class="o">=</span><span class="nx">n</span><span class="o">||</span><span class="k">this</span><span class="p">.</span><span class="nx">events</span><span class="p">,</span><span class="nx">t</span><span class="p">.</span><span class="nx">isFunction</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">n</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">));</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="p">{},</span><span class="nx">i</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">configureTriggers</span><span class="p">();</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">i</span><span class="p">),</span><span class="nx">e</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">delegateEvents</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">r</span><span class="p">)},</span><span class="nx">onShowCalled</span><span class="o">:</span><span class="kd">function</span><span class="p">(){},</span><span class="nx">close</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">beforeClose</span><span class="o">&amp;&amp;</span><span class="k">this</span><span class="p">.</span><span class="nx">beforeClose</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">remove</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">onClose</span><span class="o">&amp;&amp;</span><span class="k">this</span><span class="p">.</span><span class="nx">onClose</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;close&quot;</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">unbindAll</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">unbind</span><span class="p">()},</span><span class="nx">bindUIElements</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">ui</span><span class="p">)</span><span class="k">return</span><span class="p">;</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">;</span><span class="k">this</span><span class="p">.</span><span class="nx">uiBindings</span><span class="o">||</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">uiBindings</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">ui</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">ui</span><span class="o">=</span><span class="p">{},</span><span class="nx">t</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">uiBindings</span><span class="p">),</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">uiBindings</span><span class="p">[</span><span class="nx">t</span><span class="p">];</span><span class="nx">e</span><span class="p">.</span><span class="nx">ui</span><span class="p">[</span><span class="nx">t</span><span class="p">]</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">$</span><span class="p">(</span><span class="nx">n</span><span class="p">)})},</span><span class="nx">bindBackboneEntityTo</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">n</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">e</span><span class="o">||!</span><span class="nx">n</span><span class="p">)</span><span class="k">return</span><span class="p">;</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="k">this</span><span class="p">;</span><span class="nx">t</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="nx">r</span><span class="p">[</span><span class="nx">t</span><span class="p">];</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">i</span><span class="p">)</span><span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;View method &#39;&quot;</span><span class="o">+</span><span class="nx">t</span><span class="o">+</span><span class="s2">&quot;&#39; was configured as an event handler, but does not exist.&quot;</span><span class="p">);</span><span class="nx">r</span><span class="p">.</span><span class="nx">bindTo</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span><span class="nx">r</span><span class="p">)})}}),</span><span class="nx">r</span><span class="p">.</span><span class="nx">ItemView</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span><span class="nx">constructor</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="nx">r</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">initialEvents</span><span class="o">&amp;&amp;</span><span class="k">this</span><span class="p">.</span><span class="nx">initialEvents</span><span class="p">()},</span><span class="nx">render</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">beforeRender</span><span class="o">&amp;&amp;</span><span class="k">this</span><span class="p">.</span><span class="nx">beforeRender</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;before:render&quot;</span><span class="p">,</span><span class="k">this</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;item:before:render&quot;</span><span class="p">,</span><span class="k">this</span><span class="p">);</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">serializeData</span><span class="p">(),</span><span class="nx">t</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">getTemplate</span><span class="p">(),</span><span class="nx">n</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">Renderer</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">e</span><span class="p">);</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">n</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">bindUIElements</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">onRender</span><span class="o">&amp;&amp;</span><span class="k">this</span><span class="p">.</span><span class="nx">onRender</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;render&quot;</span><span class="p">,</span><span class="k">this</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;item:rendered&quot;</span><span class="p">,</span><span class="k">this</span><span class="p">),</span><span class="k">this</span><span class="p">},</span><span class="nx">close</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;item:before:close&quot;</span><span class="p">),</span><span class="nx">r</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">close</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;item:closed&quot;</span><span class="p">)}}),</span><span class="nx">r</span><span class="p">.</span><span class="nx">CollectionView</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span><span class="nx">constructor</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="nx">r</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">initChildViewStorage</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">initialEvents</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">onShowCallbacks</span><span class="o">=</span><span class="k">new</span> <span class="nx">r</span><span class="p">.</span><span class="nx">Callbacks</span><span class="p">},</span><span class="nx">initialEvents</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">bindTo</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">,</span><span class="s2">&quot;add&quot;</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">addChildView</span><span class="p">,</span><span class="k">this</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">bindTo</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">,</span><span class="s2">&quot;remove&quot;</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">removeItemView</span><span class="p">,</span><span class="k">this</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">bindTo</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">,</span><span class="s2">&quot;reset&quot;</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">,</span><span class="k">this</span><span class="p">))},</span><span class="nx">addChildView</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">closeEmptyView</span><span class="p">();</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">getItemView</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">addItemView</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">n</span><span class="p">.</span><span class="nx">index</span><span class="p">)},</span><span class="nx">onShowCalled</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">onShowCallbacks</span><span class="p">.</span><span class="nx">run</span><span class="p">()},</span><span class="nx">triggerBeforeRender</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">beforeRender</span><span class="o">&amp;&amp;</span><span class="k">this</span><span class="p">.</span><span class="nx">beforeRender</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;before:render&quot;</span><span class="p">,</span><span class="k">this</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;collection:before:render&quot;</span><span class="p">,</span><span class="k">this</span><span class="p">)},</span><span class="nx">triggerRendered</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">onRender</span><span class="o">&amp;&amp;</span><span class="k">this</span><span class="p">.</span><span class="nx">onRender</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;render&quot;</span><span class="p">,</span><span class="k">this</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;collection:rendered&quot;</span><span class="p">,</span><span class="k">this</span><span class="p">)},</span><span class="nx">render</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">triggerBeforeRender</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">closeEmptyView</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">closeChildren</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="o">&amp;&amp;</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">length</span><span class="o">&gt;</span><span class="mi">0</span><span class="o">?</span><span class="k">this</span><span class="p">.</span><span class="nx">showCollection</span><span class="p">()</span><span class="o">:</span><span class="k">this</span><span class="p">.</span><span class="nx">showEmptyView</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">triggerRendered</span><span class="p">(),</span><span class="k">this</span><span class="p">},</span><span class="nx">showCollection</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">,</span><span class="nx">t</span><span class="p">;</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="nx">t</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">getItemView</span><span class="p">(</span><span class="nx">n</span><span class="p">),</span><span class="nx">e</span><span class="p">.</span><span class="nx">addItemView</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">)})},</span><span class="nx">showEmptyView</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">emptyView</span><span class="o">||</span><span class="k">this</span><span class="p">.</span><span class="nx">emptyView</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nx">t</span><span class="o">&amp;&amp;!</span><span class="k">this</span><span class="p">.</span><span class="nx">_showingEmptyView</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">_showingEmptyView</span><span class="o">=!</span><span class="mi">0</span><span class="p">;</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="k">new</span> <span class="nx">e</span><span class="p">.</span><span class="nx">Model</span><span class="p">;</span><span class="k">this</span><span class="p">.</span><span class="nx">addItemView</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="mi">0</span><span class="p">)}},</span><span class="nx">closeEmptyView</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">_showingEmptyView</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">closeChildren</span><span class="p">(),</span><span class="k">delete</span> <span class="k">this</span><span class="p">.</span><span class="nx">_showingEmptyView</span><span class="p">)},</span><span class="nx">getItemView</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">itemView</span><span class="o">||</span><span class="k">this</span><span class="p">.</span><span class="nx">itemView</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">t</span><span class="p">){</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;An `itemView` must be specified&quot;</span><span class="p">);</span><span class="k">throw</span> <span class="nx">n</span><span class="p">.</span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;NoItemViewError&quot;</span><span class="p">,</span><span class="nx">n</span><span class="p">}</span><span class="k">return</span> <span class="nx">t</span><span class="p">},</span><span class="nx">addItemView</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="k">this</span><span class="p">,</span><span class="nx">s</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">buildItemView</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">);</span><span class="k">this</span><span class="p">.</span><span class="nx">storeChild</span><span class="p">(</span><span class="nx">s</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">onItemAdded</span><span class="o">&amp;&amp;</span><span class="k">this</span><span class="p">.</span><span class="nx">onItemAdded</span><span class="p">(</span><span class="nx">s</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;item:added&quot;</span><span class="p">,</span><span class="nx">s</span><span class="p">);</span><span class="kd">var</span> <span class="nx">o</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">renderItemView</span><span class="p">(</span><span class="nx">s</span><span class="p">,</span><span class="nx">n</span><span class="p">);</span><span class="nx">s</span><span class="p">.</span><span class="nx">onShow</span><span class="o">&amp;&amp;</span><span class="k">this</span><span class="p">.</span><span class="nx">onShowCallbacks</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">onShow</span><span class="p">,</span><span class="nx">s</span><span class="p">);</span><span class="kd">var</span> <span class="nx">u</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">bindTo</span><span class="p">(</span><span class="nx">s</span><span class="p">,</span><span class="s2">&quot;all&quot;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="nx">i</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span><span class="nx">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;itemview:&quot;</span><span class="o">+</span><span class="nx">e</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="nx">e</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="nx">s</span><span class="p">),</span><span class="nx">r</span><span class="p">.</span><span class="nx">trigger</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">e</span><span class="p">)});</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">childBindings</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">childBindings</span><span class="o">||</span><span class="p">{},</span><span class="k">this</span><span class="p">.</span><span class="nx">childBindings</span><span class="p">[</span><span class="nx">s</span><span class="p">.</span><span class="nx">cid</span><span class="p">]</span><span class="o">=</span><span class="nx">u</span><span class="p">,</span><span class="nx">o</span><span class="p">},</span><span class="nx">renderItemView</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="nx">e</span><span class="p">.</span><span class="nx">render</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">appendHtml</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">)},</span><span class="nx">buildItemView</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">result</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="s2">&quot;itemViewOptions&quot;</span><span class="p">),</span><span class="nx">i</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span><span class="nx">model</span><span class="o">:</span><span class="nx">e</span><span class="p">},</span><span class="nx">r</span><span class="p">),</span><span class="nx">s</span><span class="o">=</span><span class="k">new</span> <span class="nx">n</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span><span class="k">return</span> <span class="nx">s</span><span class="p">},</span><span class="nx">removeItemView</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">children</span><span class="p">[</span><span class="nx">e</span><span class="p">.</span><span class="nx">cid</span><span class="p">];</span><span class="k">if</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">childBindings</span><span class="p">[</span><span class="nx">t</span><span class="p">.</span><span class="nx">cid</span><span class="p">];</span><span class="nx">n</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">unbindFrom</span><span class="p">(</span><span class="nx">n</span><span class="p">),</span><span class="k">delete</span> <span class="k">this</span><span class="p">.</span><span class="nx">childBindings</span><span class="p">[</span><span class="nx">t</span><span class="p">.</span><span class="nx">cid</span><span class="p">]),</span><span class="nx">t</span><span class="p">.</span><span class="nx">close</span><span class="p">(),</span><span class="k">delete</span> <span class="k">this</span><span class="p">.</span><span class="nx">children</span><span class="p">[</span><span class="nx">e</span><span class="p">.</span><span class="nx">cid</span><span class="p">]}(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="o">||</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">length</span><span class="o">===</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="k">this</span><span class="p">.</span><span class="nx">showEmptyView</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;item:removed&quot;</span><span class="p">,</span><span class="nx">t</span><span class="p">)},</span><span class="nx">appendHtml</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">){</span><span class="nx">e</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">el</span><span class="p">)},</span><span class="nx">storeChild</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">children</span><span class="p">[</span><span class="nx">e</span><span class="p">.</span><span class="nx">model</span><span class="p">.</span><span class="nx">cid</span><span class="p">]</span><span class="o">=</span><span class="nx">e</span><span class="p">},</span><span class="nx">initChildViewStorage</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">children</span><span class="o">=</span><span class="p">{}},</span><span class="nx">close</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;collection:before:close&quot;</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">closeChildren</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;collection:closed&quot;</span><span class="p">),</span><span class="nx">r</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">close</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">)},</span><span class="nx">closeChildren</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">;</span><span class="k">this</span><span class="p">.</span><span class="nx">children</span><span class="o">&amp;&amp;</span><span class="nx">t</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">clone</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">children</span><span class="p">),</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="nx">e</span><span class="p">.</span><span class="nx">removeItemView</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">model</span><span class="p">)})}}),</span><span class="nx">r</span><span class="p">.</span><span class="nx">CompositeView</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">CollectionView</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span><span class="nx">constructor</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="nx">r</span><span class="p">.</span><span class="nx">CollectionView</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">itemView</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">getItemView</span><span class="p">()},</span><span class="nx">initialEvents</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">bindTo</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">,</span><span class="s2">&quot;add&quot;</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">addChildView</span><span class="p">,</span><span class="k">this</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">bindTo</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">,</span><span class="s2">&quot;remove&quot;</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">removeItemView</span><span class="p">,</span><span class="k">this</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">bindTo</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">,</span><span class="s2">&quot;reset&quot;</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">renderCollection</span><span class="p">,</span><span class="k">this</span><span class="p">))},</span><span class="nx">getItemView</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">itemView</span><span class="o">||</span><span class="k">this</span><span class="p">.</span><span class="nx">itemView</span><span class="o">||</span><span class="k">this</span><span class="p">.</span><span class="nx">constructor</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">t</span><span class="p">){</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;An `itemView` must be specified&quot;</span><span class="p">);</span><span class="k">throw</span> <span class="nx">n</span><span class="p">.</span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;NoItemViewError&quot;</span><span class="p">,</span><span class="nx">n</span><span class="p">}</span><span class="k">return</span> <span class="nx">t</span><span class="p">},</span><span class="nx">render</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">;</span><span class="k">this</span><span class="p">.</span><span class="nx">resetItemViewContainer</span><span class="p">();</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">renderModel</span><span class="p">();</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">t</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">bindUIElements</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;composite:model:rendered&quot;</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;render&quot;</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">renderCollection</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;composite:rendered&quot;</span><span class="p">),</span><span class="k">this</span><span class="p">},</span><span class="nx">renderCollection</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="nx">r</span><span class="p">.</span><span class="nx">CollectionView</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">render</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;composite:collection:rendered&quot;</span><span class="p">)},</span><span class="nx">renderModel</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="p">{};</span><span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">serializeData</span><span class="p">();</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">getTemplate</span><span class="p">();</span><span class="k">return</span> <span class="nx">r</span><span class="p">.</span><span class="nx">Renderer</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">e</span><span class="p">)},</span><span class="nx">appendHtml</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">getItemViewContainer</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span><span class="nx">n</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">el</span><span class="p">)},</span><span class="nx">getItemViewContainer</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="kd">var</span> <span class="nx">n</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="s2">&quot;$itemViewContainer&quot;</span><span class="k">in</span> <span class="nx">e</span><span class="p">)</span><span class="nx">n</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">$itemViewContainer</span><span class="p">;</span><span class="k">else</span><span class="p">{</span><span class="k">if</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">itemViewContainer</span><span class="p">){</span><span class="nx">n</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">$</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">result</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="s2">&quot;itemViewContainer&quot;</span><span class="p">));</span><span class="k">if</span><span class="p">(</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">){</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;Missing `itemViewContainer`&quot;</span><span class="p">);</span><span class="k">throw</span> <span class="nx">r</span><span class="p">.</span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;ItemViewContainerMissingError&quot;</span><span class="p">,</span><span class="nx">r</span><span class="p">}}</span><span class="k">else</span> <span class="nx">n</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">$el</span><span class="p">;</span><span class="nx">e</span><span class="p">.</span><span class="nx">$itemViewContainer</span><span class="o">=</span><span class="nx">n</span><span class="p">}</span><span class="k">return</span> <span class="nx">n</span><span class="p">},</span><span class="nx">resetItemViewContainer</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">$itemViewContainer</span><span class="o">&amp;&amp;</span><span class="k">delete</span> <span class="k">this</span><span class="p">.</span><span class="nx">$itemViewContainer</span><span class="p">}}),</span><span class="nx">r</span><span class="p">.</span><span class="nx">Region</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="o">=</span><span class="nx">e</span><span class="o">||</span><span class="p">{};</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="k">new</span> <span class="nx">r</span><span class="p">.</span><span class="nx">EventBinder</span><span class="p">;</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">e</span><span class="p">);</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">el</span><span class="p">){</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;An &#39;el&#39; must be specified&quot;</span><span class="p">);</span><span class="k">throw</span> <span class="nx">i</span><span class="p">.</span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;NoElError&quot;</span><span class="p">,</span><span class="nx">i</span><span class="p">}</span><span class="k">this</span><span class="p">.</span><span class="nx">initialize</span><span class="o">&amp;&amp;</span><span class="k">this</span><span class="p">.</span><span class="nx">initialize</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">)},</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">Region</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span><span class="nx">e</span><span class="p">.</span><span class="nx">Events</span><span class="p">,{</span><span class="nx">show</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">ensureEl</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">close</span><span class="p">(),</span><span class="nx">e</span><span class="p">.</span><span class="nx">render</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span><span class="nx">e</span><span class="p">.</span><span class="nx">onShow</span><span class="o">&amp;&amp;</span><span class="nx">e</span><span class="p">.</span><span class="nx">onShow</span><span class="p">(),</span><span class="nx">e</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;show&quot;</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">onShow</span><span class="o">&amp;&amp;</span><span class="k">this</span><span class="p">.</span><span class="nx">onShow</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;view:show&quot;</span><span class="p">,</span><span class="nx">e</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">currentView</span><span class="o">=</span><span class="nx">e</span><span class="p">},</span><span class="nx">ensureEl</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="o">||</span><span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">length</span><span class="o">===</span><span class="mi">0</span><span class="p">)</span><span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">getEl</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">el</span><span class="p">)},</span><span class="nx">getEl</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">return</span> <span class="nx">n</span><span class="p">(</span><span class="nx">e</span><span class="p">)},</span><span class="nx">open</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">el</span><span class="p">)},</span><span class="nx">close</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">currentView</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">e</span><span class="p">)</span><span class="k">return</span><span class="p">;</span><span class="nx">e</span><span class="p">.</span><span class="nx">close</span><span class="o">&amp;&amp;</span><span class="nx">e</span><span class="p">.</span><span class="nx">close</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;view:closed&quot;</span><span class="p">,</span><span class="nx">e</span><span class="p">),</span><span class="k">delete</span> <span class="k">this</span><span class="p">.</span><span class="nx">currentView</span><span class="p">},</span><span class="nx">attachView</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">currentView</span><span class="o">=</span><span class="nx">e</span><span class="p">},</span><span class="nx">reset</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">close</span><span class="p">(),</span><span class="k">delete</span> <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">}}),</span><span class="nx">r</span><span class="p">.</span><span class="nx">Region</span><span class="p">.</span><span class="nx">extend</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">,</span><span class="nx">r</span><span class="p">.</span><span class="nx">Layout</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">ItemView</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span><span class="nx">regionType</span><span class="o">:</span><span class="nx">r</span><span class="p">.</span><span class="nx">Region</span><span class="p">,</span><span class="nx">constructor</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">initializeRegions</span><span class="p">(),</span><span class="nx">e</span><span class="p">.</span><span class="nx">Marionette</span><span class="p">.</span><span class="nx">ItemView</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">)},</span><span class="nx">render</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">ItemView</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">render</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">);</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">closeRegions</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">reInitializeRegions</span><span class="p">();</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">ItemView</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">render</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">);</span><span class="k">return</span> <span class="nx">e</span><span class="p">},</span><span class="nx">e</span><span class="p">},</span><span class="nx">close</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">closeRegions</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">destroyRegions</span><span class="p">(),</span><span class="nx">e</span><span class="p">.</span><span class="nx">Marionette</span><span class="p">.</span><span class="nx">ItemView</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">close</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">)},</span><span class="nx">initializeRegions</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">regionManagers</span><span class="o">||</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">regionManagers</span><span class="o">=</span><span class="p">{});</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">;</span><span class="nx">t</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">regions</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="k">typeof</span> <span class="nx">t</span><span class="o">==</span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="nx">i</span><span class="o">=</span><span class="k">typeof</span> <span class="nx">t</span><span class="p">.</span><span class="nx">selector</span><span class="o">==</span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="nx">s</span><span class="o">=</span><span class="k">typeof</span> <span class="nx">t</span><span class="p">.</span><span class="nx">regionType</span><span class="o">==</span><span class="s2">&quot;undefined&quot;</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">r</span><span class="o">&amp;&amp;!</span><span class="nx">i</span><span class="p">)</span><span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;Region must be specified as a selector string or an object with selector property&quot;</span><span class="p">);</span><span class="kd">var</span> <span class="nx">o</span><span class="p">,</span><span class="nx">u</span><span class="p">;</span><span class="nx">r</span><span class="o">?</span><span class="nx">o</span><span class="o">=</span><span class="nx">t</span><span class="o">:</span><span class="nx">o</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">selector</span><span class="p">,</span><span class="nx">s</span><span class="o">?</span><span class="nx">u</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">regionType</span><span class="o">:</span><span class="nx">u</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">regionType</span><span class="p">;</span><span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="k">new</span> <span class="nx">u</span><span class="p">({</span><span class="nx">el</span><span class="o">:</span><span class="nx">o</span><span class="p">,</span><span class="nx">getEl</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">$</span><span class="p">(</span><span class="nx">t</span><span class="p">)}});</span><span class="nx">e</span><span class="p">.</span><span class="nx">regionManagers</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span><span class="o">=</span><span class="nx">a</span><span class="p">,</span><span class="nx">e</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span><span class="o">=</span><span class="nx">a</span><span class="p">})},</span><span class="nx">reInitializeRegions</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">regionManagers</span><span class="o">&amp;&amp;</span><span class="nx">t</span><span class="p">.</span><span class="nx">size</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">regionManagers</span><span class="p">)</span><span class="o">===</span><span class="mi">0</span><span class="o">?</span><span class="k">this</span><span class="p">.</span><span class="nx">initializeRegions</span><span class="p">()</span><span class="o">:</span><span class="nx">t</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">regionManagers</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="nx">e</span><span class="p">.</span><span class="nx">reset</span><span class="p">()})},</span><span class="nx">closeRegions</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">;</span><span class="nx">t</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">regionManagers</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="nx">e</span><span class="p">.</span><span class="nx">close</span><span class="p">()})},</span><span class="nx">destroyRegions</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">;</span><span class="nx">t</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">regionManagers</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">){</span><span class="k">delete</span> <span class="nx">e</span><span class="p">[</span><span class="nx">n</span><span class="p">]}),</span><span class="k">this</span><span class="p">.</span><span class="nx">regionManagers</span><span class="o">=</span><span class="p">{}}}),</span><span class="nx">r</span><span class="p">.</span><span class="nx">Application</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">initCallbacks</span><span class="o">=</span><span class="k">new</span> <span class="nx">r</span><span class="p">.</span><span class="nx">Callbacks</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">vent</span><span class="o">=</span><span class="k">new</span> <span class="nx">r</span><span class="p">.</span><span class="nx">EventAggregator</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">submodules</span><span class="o">=</span><span class="p">{};</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="k">new</span> <span class="nx">r</span><span class="p">.</span><span class="nx">EventBinder</span><span class="p">;</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">e</span><span class="p">)},</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">Application</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span><span class="nx">e</span><span class="p">.</span><span class="nx">Events</span><span class="p">,{</span><span class="nx">addInitializer</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">initCallbacks</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">e</span><span class="p">)},</span><span class="nx">start</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;initialize:before&quot;</span><span class="p">,</span><span class="nx">e</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">initCallbacks</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="k">this</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;initialize:after&quot;</span><span class="p">,</span><span class="nx">e</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;start&quot;</span><span class="p">,</span><span class="nx">e</span><span class="p">)},</span><span class="nx">addRegions</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">i</span><span class="p">;</span><span class="k">for</span><span class="p">(</span><span class="nx">i</span> <span class="k">in</span> <span class="nx">e</span><span class="p">)</span><span class="nx">e</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">t</span><span class="o">=</span><span class="nx">e</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span><span class="k">typeof</span> <span class="nx">t</span><span class="o">==</span><span class="s2">&quot;string&quot;</span><span class="o">?</span><span class="nx">n</span><span class="o">=</span><span class="k">new</span> <span class="nx">r</span><span class="p">.</span><span class="nx">Region</span><span class="p">({</span><span class="nx">el</span><span class="o">:</span><span class="nx">t</span><span class="p">})</span><span class="o">:</span><span class="nx">n</span><span class="o">=</span><span class="k">new</span> <span class="nx">t</span><span class="p">,</span><span class="k">this</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">=</span><span class="nx">n</span><span class="p">)},</span><span class="nx">removeRegion</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">this</span><span class="p">[</span><span class="nx">e</span><span class="p">].</span><span class="nx">close</span><span class="p">(),</span><span class="k">delete</span> <span class="k">this</span><span class="p">[</span><span class="nx">e</span><span class="p">]},</span><span class="nx">module</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="nx">i</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span><span class="k">return</span> <span class="nx">n</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="k">this</span><span class="p">),</span><span class="nx">r</span><span class="p">.</span><span class="nx">Module</span><span class="p">.</span><span class="nx">create</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">Module</span><span class="p">,</span><span class="nx">n</span><span class="p">)}}),</span><span class="nx">r</span><span class="p">.</span><span class="nx">Application</span><span class="p">.</span><span class="nx">extend</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">,</span><span class="nx">r</span><span class="p">.</span><span class="nx">AppRouter</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">Router</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span><span class="nx">constructor</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="nx">e</span><span class="p">.</span><span class="nx">Router</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">t</span><span class="p">);</span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">appRoutes</span><span class="p">){</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">controller</span><span class="p">;</span><span class="nx">t</span><span class="o">&amp;&amp;</span><span class="nx">t</span><span class="p">.</span><span class="nx">controller</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">n</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">controller</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">processAppRoutes</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">appRoutes</span><span class="p">)}},</span><span class="nx">processAppRoutes</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">r</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span><span class="nx">s</span><span class="p">,</span><span class="nx">o</span><span class="p">,</span><span class="nx">u</span><span class="p">,</span><span class="nx">a</span><span class="o">=</span><span class="p">[],</span><span class="nx">f</span><span class="o">=</span><span class="k">this</span><span class="p">;</span><span class="k">for</span><span class="p">(</span><span class="nx">s</span> <span class="k">in</span> <span class="nx">n</span><span class="p">)</span><span class="nx">n</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="nx">a</span><span class="p">.</span><span class="nx">unshift</span><span class="p">([</span><span class="nx">s</span><span class="p">,</span><span class="nx">n</span><span class="p">[</span><span class="nx">s</span><span class="p">]]);</span><span class="nx">o</span><span class="o">=</span><span class="nx">a</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="k">for</span><span class="p">(</span><span class="nx">u</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">u</span><span class="o">&lt;</span><span class="nx">o</span><span class="p">;</span><span class="nx">u</span><span class="o">++</span><span class="p">){</span><span class="nx">s</span><span class="o">=</span><span class="nx">a</span><span class="p">[</span><span class="nx">u</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="nx">i</span><span class="o">=</span><span class="nx">a</span><span class="p">[</span><span class="nx">u</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="nx">r</span><span class="o">=</span><span class="nx">e</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">r</span><span class="p">){</span><span class="kd">var</span> <span class="nx">l</span><span class="o">=</span><span class="s2">&quot;Method &#39;&quot;</span><span class="o">+</span><span class="nx">i</span><span class="o">+</span><span class="s2">&quot;&#39; was not found on the controller&quot;</span><span class="p">,</span><span class="nx">c</span><span class="o">=</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">l</span><span class="p">);</span><span class="k">throw</span> <span class="nx">c</span><span class="p">.</span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;NoMethodError&quot;</span><span class="p">,</span><span class="nx">c</span><span class="p">}</span><span class="nx">r</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">e</span><span class="p">),</span><span class="nx">f</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="nx">s</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span><span class="nx">r</span><span class="p">)}}}),</span><span class="nx">r</span><span class="p">.</span><span class="nx">Module</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">i</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">moduleName</span><span class="o">=</span><span class="nx">e</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">submodules</span><span class="o">=</span><span class="p">{},</span><span class="k">this</span><span class="p">.</span><span class="nx">_setupInitializersAndFinalizers</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">_config</span><span class="o">=</span><span class="p">{},</span><span class="k">this</span><span class="p">.</span><span class="nx">_config</span><span class="p">.</span><span class="nx">app</span><span class="o">=</span><span class="nx">n</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">_config</span><span class="p">.</span><span class="nx">customArgs</span><span class="o">=</span><span class="nx">i</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">_config</span><span class="p">.</span><span class="nx">definitions</span><span class="o">=</span><span class="p">[];</span><span class="kd">var</span> <span class="nx">s</span><span class="o">=</span><span class="k">new</span> <span class="nx">r</span><span class="p">.</span><span class="nx">EventBinder</span><span class="p">;</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">s</span><span class="p">)},</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">Module</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span><span class="nx">e</span><span class="p">.</span><span class="nx">Events</span><span class="p">,{</span><span class="nx">addInitializer</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">_initializerCallbacks</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">e</span><span class="p">)},</span><span class="nx">addFinalizer</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">_finalizerCallbacks</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">e</span><span class="p">)},</span><span class="nx">start</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_isInitialized</span><span class="p">)</span><span class="k">return</span><span class="p">;</span><span class="k">this</span><span class="p">.</span><span class="nx">_runModuleDefinition</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">_initializerCallbacks</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="k">this</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">_isInitialized</span><span class="o">=!</span><span class="mi">0</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">submodules</span><span class="o">&amp;&amp;</span><span class="nx">t</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">submodules</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="nx">t</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="nx">e</span><span class="p">)})},</span><span class="nx">stop</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">_isInitialized</span><span class="p">)</span><span class="k">return</span><span class="p">;</span><span class="k">this</span><span class="p">.</span><span class="nx">_isInitialized</span><span class="o">=!</span><span class="mi">1</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">_finalizerCallbacks</span><span class="p">.</span><span class="nx">run</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">_setupInitializersAndFinalizers</span><span class="p">(),</span><span class="nx">t</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">submodules</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="nx">e</span><span class="p">.</span><span class="nx">stop</span><span class="p">()})},</span><span class="nx">addDefinition</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">_config</span><span class="p">.</span><span class="nx">definitions</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">e</span><span class="p">)},</span><span class="nx">_runModuleDefinition</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_config</span><span class="p">.</span><span class="nx">definitions</span><span class="p">.</span><span class="nx">length</span><span class="o">===</span><span class="mi">0</span><span class="p">)</span><span class="k">return</span><span class="p">;</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">flatten</span><span class="p">([</span><span class="k">this</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">_config</span><span class="p">.</span><span class="nx">app</span><span class="p">,</span><span class="nx">e</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">_config</span><span class="p">.</span><span class="nx">customArgs</span><span class="p">]),</span><span class="nx">s</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_config</span><span class="p">.</span><span class="nx">definitions</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">o</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">o</span><span class="o">&lt;=</span><span class="nx">s</span><span class="p">;</span><span class="nx">o</span><span class="o">++</span><span class="p">){</span><span class="kd">var</span> <span class="nx">u</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_config</span><span class="p">.</span><span class="nx">definitions</span><span class="p">[</span><span class="nx">o</span><span class="p">];</span><span class="nx">u</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">i</span><span class="p">)}},</span><span class="nx">_setupInitializersAndFinalizers</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">_initializerCallbacks</span><span class="o">=</span><span class="k">new</span> <span class="nx">r</span><span class="p">.</span><span class="nx">Callbacks</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">_finalizerCallbacks</span><span class="o">=</span><span class="k">new</span> <span class="nx">r</span><span class="p">.</span><span class="nx">Callbacks</span><span class="p">}}),</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">Module</span><span class="p">,{</span><span class="nx">create</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">s</span><span class="p">){</span><span class="kd">var</span> <span class="nx">o</span><span class="o">=</span><span class="k">this</span><span class="p">,</span><span class="nx">u</span><span class="o">=</span><span class="nx">e</span><span class="p">;</span><span class="nx">n</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">);</span><span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="nx">i</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span><span class="nx">a</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="kd">var</span> <span class="nx">f</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="k">return</span> <span class="nx">t</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="nx">n</span><span class="o">===</span><span class="nx">f</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="nx">l</span><span class="o">=</span><span class="nx">u</span><span class="p">[</span><span class="nx">t</span><span class="p">];</span><span class="nx">l</span><span class="o">||</span><span class="p">(</span><span class="nx">l</span><span class="o">=</span><span class="k">new</span> <span class="nx">r</span><span class="p">.</span><span class="nx">Module</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">e</span><span class="p">,</span><span class="nx">a</span><span class="p">),</span><span class="nx">u</span><span class="p">[</span><span class="nx">t</span><span class="p">]</span><span class="o">=</span><span class="nx">l</span><span class="p">,</span><span class="nx">u</span><span class="p">.</span><span class="nx">submodules</span><span class="p">[</span><span class="nx">t</span><span class="p">]</span><span class="o">=</span><span class="nx">l</span><span class="p">),</span><span class="nx">i</span><span class="o">&amp;&amp;</span><span class="nx">o</span><span class="p">.</span><span class="nx">_createModuleDefinition</span><span class="p">(</span><span class="nx">l</span><span class="p">,</span><span class="nx">s</span><span class="p">,</span><span class="nx">e</span><span class="p">),</span><span class="nx">u</span><span class="o">=</span><span class="nx">l</span><span class="p">}),</span><span class="nx">u</span><span class="p">},</span><span class="nx">_createModuleDefinition</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_getModuleDefinitionOptions</span><span class="p">(</span><span class="nx">t</span><span class="p">);</span><span class="nx">r</span><span class="p">.</span><span class="nx">definition</span><span class="o">&amp;&amp;</span><span class="nx">e</span><span class="p">.</span><span class="nx">addDefinition</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">definition</span><span class="p">),</span><span class="nx">r</span><span class="p">.</span><span class="nx">startWithApp</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">addInitializer</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="nx">e</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="nx">t</span><span class="p">)})},</span><span class="nx">_getModuleDefinitionOptions</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="p">{</span><span class="nx">startWithApp</span><span class="o">:!</span><span class="mi">0</span><span class="p">};</span><span class="k">return</span> <span class="nx">e</span><span class="o">?</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">isFunction</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="o">?</span><span class="nx">n</span><span class="p">.</span><span class="nx">definition</span><span class="o">=</span><span class="nx">e</span><span class="o">:</span><span class="p">(</span><span class="nx">n</span><span class="p">.</span><span class="nx">definition</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">define</span><span class="p">,</span><span class="nx">e</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="s2">&quot;startWithApp&quot;</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">n</span><span class="p">.</span><span class="nx">startWithApp</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">startWithApp</span><span class="p">)),</span><span class="nx">n</span><span class="p">)</span><span class="o">:</span><span class="nx">n</span><span class="p">}}),</span><span class="nx">r</span><span class="p">.</span><span class="nx">TemplateCache</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">templateId</span><span class="o">=</span><span class="nx">e</span><span class="p">},</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">TemplateCache</span><span class="p">,{</span><span class="nx">templateCaches</span><span class="o">:</span><span class="p">{},</span><span class="nx">get</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="k">this</span><span class="p">,</span><span class="nx">n</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">templateCaches</span><span class="p">[</span><span class="nx">e</span><span class="p">];</span><span class="k">return</span> <span class="nx">n</span><span class="o">||</span><span class="p">(</span><span class="nx">n</span><span class="o">=</span><span class="k">new</span> <span class="nx">r</span><span class="p">.</span><span class="nx">TemplateCache</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">templateCaches</span><span class="p">[</span><span class="nx">e</span><span class="p">]</span><span class="o">=</span><span class="nx">n</span><span class="p">),</span><span class="nx">n</span><span class="p">.</span><span class="nx">load</span><span class="p">()},</span><span class="nx">clear</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="o">=</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nx">t</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="k">for</span><span class="p">(</span><span class="nx">e</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">e</span><span class="o">&lt;</span><span class="nx">t</span><span class="p">;</span><span class="nx">e</span><span class="o">++</span><span class="p">)</span><span class="k">delete</span> <span class="k">this</span><span class="p">.</span><span class="nx">templateCaches</span><span class="p">[</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">e</span><span class="p">]];</span><span class="k">else</span> <span class="k">this</span><span class="p">.</span><span class="nx">templateCaches</span><span class="o">=</span><span class="p">{}}}),</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">TemplateCache</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,{</span><span class="nx">load</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">compiledTemplate</span><span class="p">)</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">compiledTemplate</span><span class="p">;</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">loadTemplate</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">templateId</span><span class="p">);</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">compiledTemplate</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">compileTemplate</span><span class="p">(</span><span class="nx">t</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="nx">compiledTemplate</span><span class="p">},</span><span class="nx">loadTemplate</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="nx">n</span><span class="p">(</span><span class="nx">e</span><span class="p">).</span><span class="nx">html</span><span class="p">();</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">t</span><span class="o">||</span><span class="nx">t</span><span class="p">.</span><span class="nx">length</span><span class="o">===</span><span class="mi">0</span><span class="p">){</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="s2">&quot;Could not find template: &#39;&quot;</span><span class="o">+</span><span class="nx">e</span><span class="o">+</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span><span class="nx">i</span><span class="o">=</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">r</span><span class="p">);</span><span class="k">throw</span> <span class="nx">i</span><span class="p">.</span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;NoTemplateError&quot;</span><span class="p">,</span><span class="nx">i</span><span class="p">}</span><span class="k">return</span> <span class="nx">t</span><span class="p">},</span><span class="nx">compileTemplate</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="k">return</span> <span class="nx">t</span><span class="p">.</span><span class="nx">template</span><span class="p">(</span><span class="nx">e</span><span class="p">)}}),</span><span class="nx">r</span><span class="p">.</span><span class="nx">Renderer</span><span class="o">=</span><span class="p">{</span><span class="nx">render</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="k">typeof</span> <span class="nx">e</span><span class="o">==</span><span class="s2">&quot;function&quot;</span><span class="o">?</span><span class="nx">e</span><span class="o">:</span><span class="nx">r</span><span class="p">.</span><span class="nx">TemplateCache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span><span class="nx">i</span><span class="o">=</span><span class="nx">n</span><span class="p">(</span><span class="nx">t</span><span class="p">);</span><span class="k">return</span> <span class="nx">i</span><span class="p">}},</span><span class="nx">r</span><span class="p">.</span><span class="nx">Callbacks</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="k">this</span><span class="p">.</span><span class="nx">deferred</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">Deferred</span><span class="p">(),</span><span class="k">this</span><span class="p">.</span><span class="nx">promise</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">deferred</span><span class="p">.</span><span class="nx">promise</span><span class="p">()},</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">Callbacks</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,{</span><span class="nx">add</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">promise</span><span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="nx">t</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">n</span><span class="o">=</span><span class="nx">t</span><span class="p">),</span><span class="nx">e</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">r</span><span class="p">)})},</span><span class="nx">run</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="k">this</span><span class="p">.</span><span class="nx">deferred</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">e</span><span class="p">)}}),</span><span class="nx">r</span><span class="p">.</span><span class="nx">EventAggregator</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">EventBinder</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span><span class="nx">constructor</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="nx">r</span><span class="p">.</span><span class="nx">EventBinder</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">),</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">e</span><span class="p">)},</span><span class="nx">bindTo</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">r</span><span class="p">.</span><span class="nx">EventBinder</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">bindTo</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="k">this</span><span class="p">,</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">)}}),</span><span class="nx">t</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">EventAggregator</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span><span class="nx">e</span><span class="p">.</span><span class="nx">Events</span><span class="p">),</span><span class="nx">r</span><span class="p">.</span><span class="nx">EventAggregator</span><span class="p">.</span><span class="nx">extend</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">;</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">;</span><span class="k">return</span> <span class="nx">r</span><span class="p">}(</span><span class="nx">Backbone</span><span class="p">,</span><span class="nx">_</span><span class="p">,</span><span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span><span class="o">||</span><span class="nb">window</span><span class="p">.</span><span class="nx">Zepto</span><span class="o">||</span><span class="nb">window</span><span class="p">.</span><span class="nx">ender</span><span class="p">);</span></div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-<div class="frame frame-loading large-loading-area" style="display:none;" data-tree-list-url="/marionettejs/backbone.marionette/tree-list/b5eb35bd16adfcfdf8baea001de8bfa8ce54a9e0" data-blob-url-prefix="/marionettejs/backbone.marionette/blob/b5eb35bd16adfcfdf8baea001de8bfa8ce54a9e0">
-  <img src="https://a248.e.akamai.net/assets.github.com/images/spinners/octocat-spinner-128.gif?1347543527" height="64" width="64">
-</div>
-
-        </div>
-      </div>
-      <div class="context-overlay"></div>
-    </div>
-
-      <div id="footer-push"></div><!-- hack for sticky footer -->
-    </div><!-- end of wrapper - hack for sticky footer -->
-
-      <!-- footer -->
-      <div id="footer" >
-        
-  <div class="upper_footer">
-     <div class="container clearfix">
-
-       <!--[if IE]><h4 id="blacktocat_ie">GitHub Links</h4><![endif]-->
-       <![if !IE]><h4 id="blacktocat">GitHub Links</h4><![endif]>
-
-       <ul class="footer_nav">
-         <h4>GitHub</h4>
-         <li><a href="https://github.com/about">About</a></li>
-         <li><a href="https://github.com/blog">Blog</a></li>
-         <li><a href="https://github.com/features">Features</a></li>
-         <li><a href="https://github.com/contact">Contact &amp; Support</a></li>
-         <li><a href="https://github.com/training">Training</a></li>
-         <li><a href="http://enterprise.github.com/">GitHub Enterprise</a></li>
-         <li><a href="http://status.github.com/">Site Status</a></li>
-       </ul>
-
-       <ul class="footer_nav">
-         <h4>Clients</h4>
-         <li><a href="http://mac.github.com/">GitHub for Mac</a></li>
-         <li><a href="http://windows.github.com/">GitHub for Windows</a></li>
-         <li><a href="http://eclipse.github.com/">GitHub for Eclipse</a></li>
-         <li><a href="http://mobile.github.com/">GitHub Mobile Apps</a></li>
-       </ul>
-
-       <ul class="footer_nav">
-         <h4>Tools</h4>
-         <li><a href="http://get.gaug.es/">Gauges: Web analytics</a></li>
-         <li><a href="http://speakerdeck.com">Speaker Deck: Presentations</a></li>
-         <li><a href="https://gist.github.com">Gist: Code snippets</a></li>
-
-         <h4 class="second">Extras</h4>
-         <li><a href="http://jobs.github.com/">Job Board</a></li>
-         <li><a href="http://shop.github.com/">GitHub Shop</a></li>
-         <li><a href="http://octodex.github.com/">The Octodex</a></li>
-       </ul>
-
-       <ul class="footer_nav">
-         <h4>Documentation</h4>
-         <li><a href="http://help.github.com/">GitHub Help</a></li>
-         <li><a href="http://developer.github.com/">Developer API</a></li>
-         <li><a href="http://github.github.com/github-flavored-markdown/">GitHub Flavored Markdown</a></li>
-         <li><a href="http://pages.github.com/">GitHub Pages</a></li>
-       </ul>
-
-     </div><!-- /.site -->
-  </div><!-- /.upper_footer -->
-
-<div class="lower_footer">
-  <div class="container clearfix">
-    <!--[if IE]><div id="legal_ie"><![endif]-->
-    <![if !IE]><div id="legal"><![endif]>
-      <ul>
-          <li><a href="https://github.com/site/terms">Terms of Service</a></li>
-          <li><a href="https://github.com/site/privacy">Privacy</a></li>
-          <li><a href="https://github.com/security">Security</a></li>
-      </ul>
-
-      <p>&copy; 2012 <span title="0.11773s from fe18.rs.github.com">GitHub</span> Inc. All rights reserved.</p>
-    </div><!-- /#legal or /#legal_ie-->
-
-  </div><!-- /.site -->
-</div><!-- /.lower_footer -->
-
-      </div><!-- /#footer -->
-
-    
-
-<div id="keyboard_shortcuts_pane" class="instapaper_ignore readability-extra" style="display:none">
-  <h2>Keyboard Shortcuts <small><a href="#" class="js-see-all-keyboard-shortcuts">(see all)</a></small></h2>
-
-  <div class="columns threecols">
-    <div class="column first">
-      <h3>Site wide shortcuts</h3>
-      <dl class="keyboard-mappings">
-        <dt>s</dt>
-        <dd>Focus command bar</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>?</dt>
-        <dd>Bring up this help dialog</dd>
-      </dl>
-    </div><!-- /.column.first -->
-
-    <div class="column middle" style='display:none'>
-      <h3>Commit list</h3>
-      <dl class="keyboard-mappings">
-        <dt>j</dt>
-        <dd>Move selection down</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>k</dt>
-        <dd>Move selection up</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>c <em>or</em> o <em>or</em> enter</dt>
-        <dd>Open commit</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>y</dt>
-        <dd>Expand URL to its canonical form</dd>
-      </dl>
-    </div><!-- /.column.first -->
-
-    <div class="column last js-hidden-pane" style='display:none'>
-      <h3>Pull request list</h3>
-      <dl class="keyboard-mappings">
-        <dt>j</dt>
-        <dd>Move selection down</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>k</dt>
-        <dd>Move selection up</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>o <em>or</em> enter</dt>
-        <dd>Open issue</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt><span class="platform-mac">⌘</span><span class="platform-other">ctrl</span> <em>+</em> enter</dt>
-        <dd>Submit comment</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt><span class="platform-mac">⌘</span><span class="platform-other">ctrl</span> <em>+</em> shift p</dt>
-        <dd>Preview comment</dd>
-      </dl>
-    </div><!-- /.columns.last -->
-
-  </div><!-- /.columns.equacols -->
-
-  <div class="js-hidden-pane" style='display:none'>
-    <div class="rule"></div>
-
-    <h3>Issues</h3>
-
-    <div class="columns threecols">
-      <div class="column first">
-        <dl class="keyboard-mappings">
-          <dt>j</dt>
-          <dd>Move selection down</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>k</dt>
-          <dd>Move selection up</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>x</dt>
-          <dd>Toggle selection</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>o <em>or</em> enter</dt>
-          <dd>Open issue</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt><span class="platform-mac">⌘</span><span class="platform-other">ctrl</span> <em>+</em> enter</dt>
-          <dd>Submit comment</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt><span class="platform-mac">⌘</span><span class="platform-other">ctrl</span> <em>+</em> shift p</dt>
-          <dd>Preview comment</dd>
-        </dl>
-      </div><!-- /.column.first -->
-      <div class="column last">
-        <dl class="keyboard-mappings">
-          <dt>c</dt>
-          <dd>Create issue</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>l</dt>
-          <dd>Create label</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>i</dt>
-          <dd>Back to inbox</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>u</dt>
-          <dd>Back to issues</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>/</dt>
-          <dd>Focus issues search</dd>
-        </dl>
-      </div>
-    </div>
-  </div>
-
-  <div class="js-hidden-pane" style='display:none'>
-    <div class="rule"></div>
-
-    <h3>Issues Dashboard</h3>
-
-    <div class="columns threecols">
-      <div class="column first">
-        <dl class="keyboard-mappings">
-          <dt>j</dt>
-          <dd>Move selection down</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>k</dt>
-          <dd>Move selection up</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>o <em>or</em> enter</dt>
-          <dd>Open issue</dd>
-        </dl>
-      </div><!-- /.column.first -->
-    </div>
-  </div>
-
-  <div class="js-hidden-pane" style='display:none'>
-    <div class="rule"></div>
-
-    <h3>Network Graph</h3>
-    <div class="columns equacols">
-      <div class="column first">
-        <dl class="keyboard-mappings">
-          <dt><span class="badmono">←</span> <em>or</em> h</dt>
-          <dd>Scroll left</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt><span class="badmono">→</span> <em>or</em> l</dt>
-          <dd>Scroll right</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt><span class="badmono">↑</span> <em>or</em> k</dt>
-          <dd>Scroll up</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt><span class="badmono">↓</span> <em>or</em> j</dt>
-          <dd>Scroll down</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>t</dt>
-          <dd>Toggle visibility of head labels</dd>
-        </dl>
-      </div><!-- /.column.first -->
-      <div class="column last">
-        <dl class="keyboard-mappings">
-          <dt>shift <span class="badmono">←</span> <em>or</em> shift h</dt>
-          <dd>Scroll all the way left</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>shift <span class="badmono">→</span> <em>or</em> shift l</dt>
-          <dd>Scroll all the way right</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>shift <span class="badmono">↑</span> <em>or</em> shift k</dt>
-          <dd>Scroll all the way up</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>shift <span class="badmono">↓</span> <em>or</em> shift j</dt>
-          <dd>Scroll all the way down</dd>
-        </dl>
-      </div><!-- /.column.last -->
-    </div>
-  </div>
-
-  <div class="js-hidden-pane" >
-    <div class="rule"></div>
-    <div class="columns threecols">
-      <div class="column first js-hidden-pane" >
-        <h3>Source Code Browsing</h3>
-        <dl class="keyboard-mappings">
-          <dt>t</dt>
-          <dd>Activates the file finder</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>l</dt>
-          <dd>Jump to line</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>w</dt>
-          <dd>Switch branch/tag</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>y</dt>
-          <dd>Expand URL to its canonical form</dd>
-        </dl>
-      </div>
-    </div>
-  </div>
-
-  <div class="js-hidden-pane" style='display:none'>
-    <div class="rule"></div>
-    <div class="columns threecols">
-      <div class="column first">
-        <h3>Browsing Commits</h3>
-        <dl class="keyboard-mappings">
-          <dt><span class="platform-mac">⌘</span><span class="platform-other">ctrl</span> <em>+</em> enter</dt>
-          <dd>Submit comment</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>escape</dt>
-          <dd>Close form</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>p</dt>
-          <dd>Parent commit</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>o</dt>
-          <dd>Other parent commit</dd>
-        </dl>
-      </div>
-    </div>
-  </div>
-
-  <div class="js-hidden-pane" style='display:none'>
-    <div class="rule"></div>
-    <h3>Notifications</h3>
-
-    <div class="columns threecols">
-      <div class="column first">
-        <dl class="keyboard-mappings">
-          <dt>j</dt>
-          <dd>Move selection down</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>k</dt>
-          <dd>Move selection up</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>o <em>or</em> enter</dt>
-          <dd>Open notification</dd>
-        </dl>
-      </div><!-- /.column.first -->
-
-      <div class="column second">
-        <dl class="keyboard-mappings">
-          <dt>e <em>or</em> shift i <em>or</em> y</dt>
-          <dd>Mark as read</dd>
-        </dl>
-        <dl class="keyboard-mappings">
-          <dt>shift m</dt>
-          <dd>Mute thread</dd>
-        </dl>
-      </div><!-- /.column.first -->
-    </div>
-  </div>
-
-</div>
-
-    <div id="markdown-help" class="instapaper_ignore readability-extra">
-  <h2>Markdown Cheat Sheet</h2>
-
-  <div class="cheatsheet-content">
-
-  <div class="mod">
-    <div class="col">
-      <h3>Format Text</h3>
-      <p>Headers</p>
-      <pre>
-# This is an &lt;h1&gt; tag
-## This is an &lt;h2&gt; tag
-###### This is an &lt;h6&gt; tag</pre>
-     <p>Text styles</p>
-     <pre>
-*This text will be italic*
-_This will also be italic_
-**This text will be bold**
-__This will also be bold__
-
-*You **can** combine them*
-</pre>
-    </div>
-    <div class="col">
-      <h3>Lists</h3>
-      <p>Unordered</p>
-      <pre>
-* Item 1
-* Item 2
-  * Item 2a
-  * Item 2b</pre>
-     <p>Ordered</p>
-     <pre>
-1. Item 1
-2. Item 2
-3. Item 3
-   * Item 3a
-   * Item 3b</pre>
-    </div>
-    <div class="col">
-      <h3>Miscellaneous</h3>
-      <p>Images</p>
-      <pre>
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
-</pre>
-     <p>Links</p>
-     <pre>
-http://github.com - automatic!
-[GitHub](http://github.com)</pre>
-<p>Blockquotes</p>
-     <pre>
-As Kanye West said:
-
-> We're living the future so
-> the present is our past.
-</pre>
-    </div>
-  </div>
-  <div class="rule"></div>
-
-  <h3>Code Examples in Markdown</h3>
-  <div class="col">
-      <p>Syntax highlighting with <a href="http://github.github.com/github-flavored-markdown/" title="GitHub Flavored Markdown" target="_blank">GFM</a></p>
-      <pre>
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
+// Backbone.Marionette, v0.10.0
+// Copyright (c)2012 Derick Bailey, Muted Solutions, LLC.
+// Distributed under MIT license
+// http://github.com/derickbailey/backbone.marionette
+Backbone.Marionette = (function(Backbone, _, $){
+  var Marionette = {};
+
+// EventBinder
+// -----------
+
+// The event binder facilitates the binding and unbinding of events
+// from objects that extend `Backbone.Events`. It makes
+// unbinding events, even with anonymous callback functions,
+// easy. 
+//
+// Inspired by [Johnny Oshika](http://stackoverflow.com/questions/7567404/backbone-js-repopulate-or-recreate-the-view/7607853#7607853)
+
+Marionette.EventBinder = function(){
+  this._eventBindings = [];
+};
+
+_.extend(Marionette.EventBinder.prototype, {
+  // Store the event binding in array so it can be unbound
+  // easily, at a later point in time.
+  bindTo: function (obj, eventName, callback, context) {
+    context = context || this;
+    obj.on(eventName, callback, context);
+
+    var binding = { 
+      obj: obj, 
+      eventName: eventName, 
+      callback: callback, 
+      context: context 
+    };
+
+    this._eventBindings.push(binding);
+
+    return binding;
+  },
+
+  // Unbind from a single binding object. Binding objects are
+  // returned from the `bindTo` method call. 
+  unbindFrom: function(binding){
+    binding.obj.off(binding.eventName, binding.callback, binding.context);
+    this._eventBindings = _.reject(this._eventBindings, function(bind){return bind === binding;});
+  },
+
+  // Unbind all of the events that we have stored.
+  unbindAll: function () {
+    var that = this;
+
+    // The `unbindFrom` call removes elements from the array
+    // while it is being iterated, so clone it first.
+    var bindings = _.map(this._eventBindings, _.identity);
+    _.each(bindings, function (binding, index) {
+      that.unbindFrom(binding);
+    });
   }
-}
-```</pre>
-    </div>
-    <div class="col">
-      <p>Or, indent your code 4 spaces</p>
-      <pre>
-Here is a Python code example
-without syntax highlighting:
+});
 
-    def foo:
-      if not bar:
-        return true</pre>
-    </div>
-    <div class="col">
-      <p>Inline code for comments</p>
-      <pre>
-I think you should use an
-`&lt;addr&gt;` element here instead.</pre>
-    </div>
-  </div>
+// Copy the `extend` function used by Backbone's classes
+Marionette.EventBinder.extend = Backbone.View.extend;
 
-  </div>
-</div>
+// Marionette.View
+// ---------------
+
+// The core view type that other Marionette views extend from.
+Marionette.View = Backbone.View.extend({
+
+  constructor: function(){
+    var eventBinder = new Marionette.EventBinder();
+    _.extend(this, eventBinder);
+
+    Backbone.View.prototype.constructor.apply(this, arguments);
+
+    this.bindBackboneEntityTo(this.model, this.modelEvents);
+    this.bindBackboneEntityTo(this.collection, this.collectionEvents);
+
+    this.bindTo(this, "show", this.onShowCalled, this);
+  },
+
+  // Get the template for this view
+  // instance. You can set a `template` attribute in the view
+  // definition or pass a `template: "whatever"` parameter in
+  // to the constructor options.
+  getTemplate: function(){
+    var template;
+
+    // Get the template from `this.options.template` or
+    // `this.template`. The `options` takes precedence.
+    if (this.options && this.options.template){
+      template = this.options.template;
+    } else {
+      template = this.template;
+    }
+
+    return template;
+  },
+
+  // Serialize the model or collection for the view. If a model is
+  // found, `.toJSON()` is called. If a collection is found, `.toJSON()`
+  // is also called, but is used to populate an `items` array in the
+  // resulting data. If both are found, defaults to the model.
+  // You can override the `serializeData` method in your own view
+  // definition, to provide custom serialization for your view's data.
+  serializeData: function(){
+    var data;
+
+    if (this.model) {
+      data = this.model.toJSON();
+    }
+    else if (this.collection) {
+      data = { items: this.collection.toJSON() };
+    }
+
+    data = this.mixinTemplateHelpers(data);
+
+    return data;
+  },
+
+  // Mix in template helper methods. Looks for a
+  // `templateHelpers` attribute, which can either be an
+  // object literal, or a function that returns an object
+  // literal. All methods and attributes from this object
+  // are copies to the object passed in.
+  mixinTemplateHelpers: function(target){
+    target = target || {};
+    var templateHelpers = this.templateHelpers;
+    if (_.isFunction(templateHelpers)){
+      templateHelpers = templateHelpers.call(this);
+    }
+    return _.extend(target, templateHelpers);
+  },
+
+  // Configure `triggers` to forward DOM events to view
+  // events. `triggers: {"click .foo": "do:foo"}`
+  configureTriggers: function(){
+    if (!this.triggers) { return; }
+
+    var triggers = this.triggers;
+    var that = this;
+    var triggerEvents = {};
+
+    // Allow `triggers` to be configured as a function
+    if (_.isFunction(triggers)){ triggers = triggers.call(this); }
+
+    // Configure the triggers, prevent default
+    // action and stop propagation of DOM events
+    _.each(triggers, function(value, key){
+
+      triggerEvents[key] = function(e){
+        if (e && e.preventDefault){ e.preventDefault(); }
+        if (e && e.stopPropagation){ e.stopPropagation(); }
+        that.trigger(value);
+      };
+
+    });
+
+    return triggerEvents;
+  },
+
+  // Overriding Backbone.View's delegateEvents specifically
+  // to handle the `triggers` configuration
+  delegateEvents: function(events){
+    events = events || this.events;
+    if (_.isFunction(events)){ events = events.call(this); }
+
+    var combinedEvents = {};
+    var triggers = this.configureTriggers();
+    _.extend(combinedEvents, events, triggers);
+
+    Backbone.View.prototype.delegateEvents.call(this, combinedEvents);
+  },
+
+  // Internal method, handles the `show` event.
+  onShowCalled: function(){},
+
+  // Default `close` implementation, for removing a view from the
+  // DOM and unbinding it. Regions will call this method
+  // for you. You can specify an `onClose` method in your view to
+  // add custom code that is called after the view is closed.
+  close: function(){
+    if (this.beforeClose) { this.beforeClose(); }
+
+    this.remove();
+
+    if (this.onClose) { this.onClose(); }
+    this.trigger('close');
+    this.unbindAll();
+    this.unbind();
+  },
+
+  // This method binds the elements specified in the "ui" hash inside the view's code with
+  // the associated jQuery selectors.
+  bindUIElements: function(){
+    if (!this.ui) { return; }
+
+    var that = this;
+
+    if (!this.uiBindings) {
+      // We want to store the ui hash in uiBindings, since afterwards the values in the ui hash
+      // will be overridden with jQuery selectors.
+      this.uiBindings = this.ui;
+    }
+
+    // refreshing the associated selectors since they should point to the newly rendered elements.
+    this.ui = {};
+    _.each(_.keys(this.uiBindings), function(key) {
+      var selector = that.uiBindings[key];
+      that.ui[key] = that.$(selector);
+    });
+  },
+
+  // This method is used to bind a backbone "entity" (collection/model) to methods on the view.
+  bindBackboneEntityTo: function(entity, bindings){
+    if (!entity || !bindings) { return; }
+
+    var view = this;
+    _.each(bindings, function(methodName, evt){
+
+      var method = view[methodName];
+      if(!method) {
+        throw new Error("View method '"+ methodName +"' was configured as an event handler, but does not exist.");
+      }
+
+      view.bindTo(entity, evt, method, view);
+    });
+  }
+});
+
+// Item View
+// ---------
+
+// A single item view implementation that contains code for rendering
+// with underscore.js templates, serializing the view's model or collection,
+// and calling several methods on extended views, such as `onRender`.
+Marionette.ItemView =  Marionette.View.extend({
+  constructor: function(){
+    Marionette.View.prototype.constructor.apply(this, arguments);
+
+    if (this.initialEvents){
+      this.initialEvents();
+    }
+  },
+
+  // Render the view, defaulting to underscore.js templates.
+  // You can override this in your view definition to provide
+  // a very specific rendering for your view. In general, though,
+  // you should override the `Marionette.Renderer` object to
+  // change how Marionette renders views.
+  render: function(){
+    if (this.beforeRender){ this.beforeRender(); }
+    this.trigger("before:render", this);
+    this.trigger("item:before:render", this);
+
+    var data = this.serializeData();
+    var template = this.getTemplate();
+    var html = Marionette.Renderer.render(template, data);
+    this.$el.html(html);
+    this.bindUIElements();
+
+    if (this.onRender){ this.onRender(); }
+    this.trigger("render", this);
+    this.trigger("item:rendered", this);
+    return this;
+  },
+
+  // Override the default close event to add a few
+  // more events that are triggered.
+  close: function(){
+    this.trigger('item:before:close');
+    Marionette.View.prototype.close.apply(this, arguments);
+    this.trigger('item:closed');
+  }
+});
+
+// Collection View
+// ---------------
+
+// A view that iterates over a Backbone.Collection
+// and renders an individual ItemView for each model.
+Marionette.CollectionView = Marionette.View.extend({
+  constructor: function(){
+    Marionette.View.prototype.constructor.apply(this, arguments);
+    this.initChildViewStorage();
+    this.initialEvents();
+    this.onShowCallbacks = new Marionette.Callbacks();
+  },
+
+  // Configured the initial events that the collection view
+  // binds to. Override this method to prevent the initial
+  // events, or to add your own initial events.
+  initialEvents: function(){
+    if (this.collection){
+      this.bindTo(this.collection, "add", this.addChildView, this);
+      this.bindTo(this.collection, "remove", this.removeItemView, this);
+      this.bindTo(this.collection, "reset", this.render, this);
+    }
+  },
+
+  // Handle a child item added to the collection
+  addChildView: function(item, collection, options){
+    this.closeEmptyView();
+    var ItemView = this.getItemView(item);
+    return this.addItemView(item, ItemView, options.index);
+  },
+
+  // Override from `Marionette.View` to guarantee the `onShow` method
+  // of child views is called.
+  onShowCalled: function(){
+    this.onShowCallbacks.run();
+  },
+
+  // Internal method to trigger the before render callbacks
+  // and events
+  triggerBeforeRender: function(){
+    if (this.beforeRender) { this.beforeRender(); }
+    this.trigger("before:render", this);
+    this.trigger("collection:before:render", this);
+  },
+
+  // Internal method to trigger the rendered callbacks and
+  // events
+  triggerRendered: function(){
+    if (this.onRender) { this.onRender(); }
+    this.trigger("render", this);
+    this.trigger("collection:rendered", this);
+  },
+
+  // Render the collection of items. Override this method to
+  // provide your own implementation of a render function for
+  // the collection view.
+  render: function(){
+    this.triggerBeforeRender();
+    this.closeEmptyView();
+    this.closeChildren();
+
+    if (this.collection && this.collection.length > 0) {
+      this.showCollection();
+    } else {
+      this.showEmptyView();
+    }
+
+    this.triggerRendered();
+    return this;
+  },
+
+  // Internal method to loop through each item in the
+  // collection view and show it
+  showCollection: function(){
+    var that = this;
+    var ItemView;
+    this.collection.each(function(item, index){
+      ItemView = that.getItemView(item);
+      that.addItemView(item, ItemView, index);
+    });
+  },
+
+  // Internal method to show an empty view in place of
+  // a collection of item views, when the collection is
+  // empty
+  showEmptyView: function(){
+    var EmptyView = this.options.emptyView || this.emptyView;
+    if (EmptyView && !this._showingEmptyView){
+      this._showingEmptyView = true;
+      var model = new Backbone.Model();
+      this.addItemView(model, EmptyView, 0);
+    }
+  },
+
+  // Internal method to close an existing emptyView instance
+  // if one exists. Called when a collection view has been
+  // rendered empty, and then an item is added to the collection.
+  closeEmptyView: function(){
+    if (this._showingEmptyView){
+      this.closeChildren();
+      delete this._showingEmptyView;
+    }
+  },
+
+  // Retrieve the itemView type, either from `this.options.itemView`
+  // or from the `itemView` in the object definition. The "options"
+  // takes precedence.
+  getItemView: function(item){
+    var itemView = this.options.itemView || this.itemView;
+
+    if (!itemView){
+      var err = new Error("An `itemView` must be specified");
+      err.name = "NoItemViewError";
+      throw err;
+    }
+
+    return itemView;
+  },
+
+  // Render the child item's view and add it to the
+  // HTML for the collection view.
+  addItemView: function(item, ItemView, index){
+    var that = this;
+
+    var view = this.buildItemView(item, ItemView);
+
+    // Store the child view itself so we can properly
+    // remove and/or close it later
+    this.storeChild(view);
+    if (this.onItemAdded){ this.onItemAdded(view); }
+    this.trigger("item:added", view);
+
+    // Render it and show it
+    var renderResult = this.renderItemView(view, index);
+
+    // call onShow for child item views
+    if (view.onShow){
+      this.onShowCallbacks.add(view.onShow, view);
+    }
+
+    // Forward all child item view events through the parent,
+    // prepending "itemview:" to the event name
+    var childBinding = this.bindTo(view, "all", function(){
+      var args = slice.call(arguments);
+      args[0] = "itemview:" + args[0];
+      args.splice(1, 0, view);
+
+      that.trigger.apply(that, args);
+    });
+
+    // Store all child event bindings so we can unbind
+    // them when removing / closing the child view
+    this.childBindings = this.childBindings || {};
+    this.childBindings[view.cid] = childBinding;
+
+    return renderResult;
+  },
+
+  // render the item view
+  renderItemView: function(view, index) {
+    view.render();
+    this.appendHtml(this, view, index);
+  },
+
+  // Build an `itemView` for every model in the collection.
+  buildItemView: function(item, ItemView){
+    var itemViewOptions;
+
+    if (_.isFunction(this.itemViewOptions)){
+      itemViewOptions = this.itemViewOptions(item);
+    } else {
+      itemViewOptions = this.itemViewOptions;
+    }
+
+    var options = _.extend({model: item}, itemViewOptions);
+    var view = new ItemView(options);
+    return view;
+  },
+
+  // Remove the child view and close it
+  removeItemView: function(item){
+    var view = this.children[item.cid];
+    if (view){
+      var childBinding = this.childBindings[view.cid];
+      if (childBinding) {
+        this.unbindFrom(childBinding);
+        delete this.childBindings[view.cid];
+      }
+      view.close();
+      delete this.children[item.cid];
+    }
+
+    if (!this.collection || this.collection.length === 0){
+      this.showEmptyView();
+    }
+
+    this.trigger("item:removed", view);
+  },
+
+  // Append the HTML to the collection's `el`.
+  // Override this method to do something other
+  // then `.append`.
+  appendHtml: function(collectionView, itemView, index){
+    collectionView.$el.append(itemView.el);
+  },
+
+  // Store references to all of the child `itemView`
+  // instances so they can be managed and cleaned up, later.
+  storeChild: function(view){
+    this.children[view.model.cid] = view;
+  },
+
+  // Internal method to set up the `children` object for
+  // storing all of the child views
+  initChildViewStorage: function(){
+    this.children = {};
+  },
+
+  // Handle cleanup and other closing needs for
+  // the collection of views.
+  close: function(){
+    this.trigger("collection:before:close");
+    this.closeChildren();
+    this.trigger("collection:closed");
+    Marionette.View.prototype.close.apply(this, arguments);
+  },
+
+  // Close the child views that this collection view
+  // is holding on to, if any
+  closeChildren: function(){
+    var that = this;
+    if (this.children){
+      _.each(_.clone(this.children), function(childView){
+        that.removeItemView(childView.model);
+      });
+    }
+  }
+});
 
 
-    <div id="ajax-error-message" class="flash flash-error">
-      <span class="mini-icon mini-icon-exclamation"></span>
-      Something went wrong with that request. Please try again.
-      <a href="#" class="mini-icon mini-icon-remove-close ajax-error-dismiss"></a>
-    </div>
+// Composite View
+// --------------
 
-    <div id="logo-popup">
-      <h2>Looking for the GitHub logo?</h2>
-      <ul>
-        <li>
-          <h4>GitHub Logo</h4>
-          <a href="http://github-media-downloads.s3.amazonaws.com/GitHub_Logos.zip"><img alt="Github_logo" src="https://a248.e.akamai.net/assets.github.com/images/modules/about_page/github_logo.png?1340659560" /></a>
-          <a href="http://github-media-downloads.s3.amazonaws.com/GitHub_Logos.zip" class="minibutton download">Download</a>
-        </li>
-        <li>
-          <h4>The Octocat</h4>
-          <a href="http://github-media-downloads.s3.amazonaws.com/Octocats.zip"><img alt="Octocat" src="https://a248.e.akamai.net/assets.github.com/images/modules/about_page/octocat.png?1340659560" /></a>
-          <a href="http://github-media-downloads.s3.amazonaws.com/Octocats.zip" class="minibutton download">Download</a>
-        </li>
-      </ul>
-    </div>
+// Used for rendering a branch-leaf, hierarchical structure.
+// Extends directly from CollectionView and also renders an
+// an item view as `modelView`, for the top leaf
+Marionette.CompositeView = Marionette.CollectionView.extend({
+  constructor: function(options){
+    Marionette.CollectionView.apply(this, arguments);
+    this.itemView = this.getItemView();
+  },
 
-    
-    
-    <span id='server_response_time' data-time='0.12035' data-host='fe18'></span>
-    
-  </body>
-</html>
+  // Configured the initial events that the composite view
+  // binds to. Override this method to prevent the initial
+  // events, or to add your own initial events.
+  initialEvents: function(){
+    if (this.collection){
+      this.bindTo(this.collection, "add", this.addChildView, this);
+      this.bindTo(this.collection, "remove", this.removeItemView, this);
+      this.bindTo(this.collection, "reset", this.renderCollection, this);
+    }
+  },
 
-;
+  // Retrieve the `itemView` to be used when rendering each of
+  // the items in the collection. The default is to return
+  // `this.itemView` or Marionette.CompositeView if no `itemView`
+  // has been defined
+  getItemView: function(item){
+    var itemView = this.options.itemView || this.itemView || this.constructor;
+
+    if (!itemView){
+      var err = new Error("An `itemView` must be specified");
+      err.name = "NoItemViewError";
+      throw err;
+    }
+
+    return itemView;
+  },
+
+  // Renders the model once, and the collection once. Calling
+  // this again will tell the model's view to re-render itself
+  // but the collection will not re-render.
+  render: function(){
+    var that = this;
+
+    this.resetItemViewContainer();
+
+    var html = this.renderModel();
+    this.$el.html(html);
+    // the ui bindings is done here and not at the end of render since they should be
+    // available before the collection is rendered.
+    this.bindUIElements();
+    this.trigger("composite:model:rendered");
+    this.trigger("render");
+
+    this.renderCollection();
+    this.trigger("composite:rendered");
+    return this;
+  },
+
+  // Render the collection for the composite view
+  renderCollection: function(){
+    Marionette.CollectionView.prototype.render.apply(this, arguments);
+    this.trigger("composite:collection:rendered");
+  },
+
+  // Render an individual model, if we have one, as
+  // part of a composite view (branch / leaf). For example:
+  // a treeview.
+  renderModel: function(){
+    var data = {};
+    data = this.serializeData();
+
+    var template = this.getTemplate();
+    return Marionette.Renderer.render(template, data);
+  },
+
+  // Appends the `el` of itemView instances to the specified
+  // `itemViewContainer` (a jQuery selector). Override this method to
+  // provide custom logic of how the child item view instances have their
+  // HTML appended to the composite view instance.
+  appendHtml: function(cv, iv){
+    var $container = this.getItemViewContainer(cv);
+    $container.append(iv.el);
+  },
+
+  // Internal method to ensure an `$itemViewContainer` exists, for the
+  // `appendHtml` method to use.
+  getItemViewContainer: function(containerView){
+    var container;
+    if ("$itemViewContainer" in containerView){
+      container = containerView.$itemViewContainer;
+    } else {
+      if (containerView.itemViewContainer){
+        container = containerView.$(_.result(containerView, "itemViewContainer"));
+
+        if (container.length <= 0) {
+          var err = new Error("Missing `itemViewContainer`");
+          err.name = "ItemViewContainerMissingError";
+          throw err;
+        }
+      } else {
+        container = containerView.$el;
+      }
+      containerView.$itemViewContainer = container;
+    }
+    return container;
+  },
+
+  // Internal method to reset the `$itemViewContainer` on render
+  resetItemViewContainer: function(){
+    if (this.$itemViewContainer){
+      delete this.$itemViewContainer;
+    }
+  }
+});
+
+
+// Region 
+// ------
+
+// Manage the visual regions of your composite application. See
+// http://lostechies.com/derickbailey/2011/12/12/composite-js-apps-regions-and-region-managers/
+Marionette.Region = function(options){
+  this.options = options || {};
+
+  var eventBinder = new Marionette.EventBinder();
+  _.extend(this, eventBinder, options);
+
+  if (!this.el){
+    var err = new Error("An 'el' must be specified");
+    err.name = "NoElError";
+    throw err;
+  }
+
+  if (this.initialize){
+    this.initialize.apply(this, arguments);
+  }
+};
+
+_.extend(Marionette.Region.prototype, Backbone.Events, {
+
+  // Displays a backbone view instance inside of the region.
+  // Handles calling the `render` method for you. Reads content
+  // directly from the `el` attribute. Also calls an optional
+  // `onShow` and `close` method on your view, just after showing
+  // or just before closing the view, respectively.
+  show: function(view){
+
+    this.ensureEl();
+    this.close();
+
+    view.render();
+    this.open(view);
+
+    if (view.onShow) { view.onShow(); }
+    view.trigger("show");
+
+    if (this.onShow) { this.onShow(view); }
+    this.trigger("view:show", view);
+
+    this.currentView = view;
+  },
+
+  ensureEl: function(){
+    if (!this.$el || this.$el.length === 0){
+      this.$el = this.getEl(this.el);
+    }
+  },
+
+  // Override this method to change how the region finds the
+  // DOM element that it manages. Return a jQuery selector object.
+  getEl: function(selector){
+    return $(selector);
+  },
+
+  // Override this method to change how the new view is
+  // appended to the `$el` that the region is managing
+  open: function(view){
+    this.$el.html(view.el);
+  },
+
+  // Close the current view, if there is one. If there is no
+  // current view, it does nothing and returns immediately.
+  close: function(){
+    var view = this.currentView;
+    if (!view){ return; }
+
+    if (view.close) { view.close(); }
+    this.trigger("view:closed", view);
+
+    delete this.currentView;
+  },
+
+  // Attach an existing view to the region. This 
+  // will not call `render` or `onShow` for the new view, 
+  // and will not replace the current HTML for the `el`
+  // of the region.
+  attachView: function(view){
+    this.currentView = view;
+  },
+
+  // Reset the region by closing any existing view and
+  // clearing out the cached `$el`. The next time a view
+  // is shown via this region, the region will re-query the
+  // DOM for the region's `el`.
+  reset: function(){
+    this.close();
+    delete this.$el;
+  }
+});
+
+// Copy the `extend` function used by Backbone's classes
+Marionette.Region.extend = Backbone.View.extend;
+
+// Layout
+// ------
+
+// Used for managing application layouts, nested layouts and
+// multiple regions within an application or sub-application.
+//
+// A specialized view type that renders an area of HTML and then
+// attaches `Region` instances to the specified `regions`.
+// Used for composite view management and sub-application areas.
+Marionette.Layout = Marionette.ItemView.extend({
+  regionType: Marionette.Region,
+
+  constructor: function () {
+    this.initializeRegions();
+    Backbone.Marionette.ItemView.apply(this, arguments);
+  },
+
+  // Layout's render will use the existing region objects the
+  // first time it is called. Subsequent calls will close the
+  // views that the regions are showing and then reset the `el`
+  // for the regions to the newly rendered DOM elements.
+  render: function(){
+    var result = Marionette.ItemView.prototype.render.apply(this, arguments);
+
+    // Rewrite this function to handle re-rendering and
+    // re-initializing the `el` for each region
+    this.render = function(){
+      this.closeRegions();
+      this.reInitializeRegions();
+
+      var result = Marionette.ItemView.prototype.render.apply(this, arguments);
+      return result;
+    };
+
+    return result;
+  },
+
+  // Handle closing regions, and then close the view itself.
+  close: function () {
+    this.closeRegions();
+    this.destroyRegions();
+    Backbone.Marionette.ItemView.prototype.close.call(this, arguments);
+  },
+
+  // Initialize the regions that have been defined in a
+  // `regions` attribute on this layout. The key of the
+  // hash becomes an attribute on the layout object directly.
+  // For example: `regions: { menu: ".menu-container" }`
+  // will product a `layout.menu` object which is a region
+  // that controls the `.menu-container` DOM element.
+  initializeRegions: function () {
+    if (!this.regionManagers){
+      this.regionManagers = {};
+    }
+
+    var that = this;
+    _.each(this.regions, function (region, name) {
+      var regionIsString = (typeof region === "string");
+      var regionSelectorIsString = (typeof region.selector === "string");
+      var regionTypeIsUndefined = (typeof region.regionType === "undefined");
+
+      if (!regionIsString && !regionSelectorIsString) {
+        throw new Error("Region must be specified as a selector string or an object with selector property");
+      }
+
+      var selector, RegionType;
+     
+      if (regionIsString) {
+        selector = region;
+      } else {
+        selector = region.selector;
+      }
+
+      if (regionTypeIsUndefined){
+        RegionType = that.regionType;
+      } else {
+        RegionType = region.regionType;
+      }
+      
+      var regionManager = new RegionType({
+        el: selector,
+          getEl: function(selector){
+            return that.$(selector);
+          }
+      });
+
+      that.regionManagers[name] = regionManager;
+      that[name] = regionManager;
+    });
+
+  },
+
+  // Re-initialize all of the regions by updating the `el` that
+  // they point to
+  reInitializeRegions: function(){
+    if (this.regionManagers && _.size(this.regionManagers)===0){
+      this.initializeRegions();
+    } else {
+      _.each(this.regionManagers, function(region){
+        region.reset();
+      });
+    }
+  },
+
+  // Close all of the regions that have been opened by
+  // this layout. This method is called when the layout
+  // itself is closed.
+  closeRegions: function () {
+    var that = this;
+    _.each(this.regionManagers, function (manager, name) {
+      manager.close();
+    });
+  },
+
+  // Destroys all of the regions by removing references
+  // from the Layout
+  destroyRegions: function(){
+    var that = this;
+    _.each(this.regionManagers, function (manager, name) {
+      delete that[name];
+    });
+    this.regionManagers = {};
+  }
+});
+
+
+// Application
+// -----------
+
+// Contain and manage the composite application as a whole.
+// Stores and starts up `Region` objects, includes an
+// event aggregator as `app.vent`
+Marionette.Application = function(options){
+  this.initCallbacks = new Marionette.Callbacks();
+  this.vent = new Marionette.EventAggregator();
+  this.submodules = {};
+
+  var eventBinder = new Marionette.EventBinder();
+  _.extend(this, eventBinder, options);
+};
+
+_.extend(Marionette.Application.prototype, Backbone.Events, {
+  // Add an initializer that is either run at when the `start`
+  // method is called, or run immediately if added after `start`
+  // has already been called.
+  addInitializer: function(initializer){
+    this.initCallbacks.add(initializer);
+  },
+
+  // kick off all of the application's processes.
+  // initializes all of the regions that have been added
+  // to the app, and runs all of the initializer functions
+  start: function(options){
+    this.trigger("initialize:before", options);
+    this.initCallbacks.run(options, this);
+    this.trigger("initialize:after", options);
+
+    this.trigger("start", options);
+  },
+
+  // Add regions to your app. 
+  // Accepts a hash of named strings or Region objects
+  // addRegions({something: "#someRegion"})
+  // addRegions{{something: Region.extend({el: "#someRegion"}) });
+  addRegions: function(regions){
+    var RegionValue, regionObj, region;
+
+    for(region in regions){
+      if (regions.hasOwnProperty(region)){
+        RegionValue = regions[region];
+
+        if (typeof RegionValue === "string"){
+          regionObj = new Marionette.Region({
+            el: RegionValue
+          });
+        } else {
+          regionObj = new RegionValue();
+        }
+
+        this[region] = regionObj;
+      }
+    }
+  },
+
+  // Removes a region from your app.
+  // Accepts the regions name
+  // removeRegion('myRegion')
+  removeRegion: function(region) {
+    this[region].close();
+    delete this[region];
+  },
+
+  // Create a module, attached to the application
+  module: function(moduleNames, moduleDefinition){
+    // slice the args, and add this application object as the
+    // first argument of the array
+    var args = slice.call(arguments);
+    args.unshift(this);
+
+    // see the Marionette.Module object for more information
+    return Marionette.Module.create.apply(Marionette.Module, args);
+  }
+});
+
+// Copy the `extend` function used by Backbone's classes
+Marionette.Application.extend = Backbone.View.extend;
+
+// AppRouter
+// ---------
+
+// Reduce the boilerplate code of handling route events
+// and then calling a single method on another object.
+// Have your routers configured to call the method on
+// your object, directly.
+//
+// Configure an AppRouter with `appRoutes`.
+//
+// App routers can only take one `controller` object. 
+// It is recommended that you divide your controller
+// objects in to smaller peices of related functionality
+// and have multiple routers / controllers, instead of
+// just one giant router and controller.
+//
+// You can also add standard routes to an AppRouter.
+
+Marionette.AppRouter = Backbone.Router.extend({
+
+  constructor: function(options){
+    Backbone.Router.prototype.constructor.call(this, options);
+
+    if (this.appRoutes){
+      var controller = this.controller;
+      if (options && options.controller) {
+        controller = options.controller;
+      }
+      this.processAppRoutes(controller, this.appRoutes);
+    }
+  },
+
+  // Internal method to process the `appRoutes` for the
+  // router, and turn them in to routes that trigger the
+  // specified method on the specified `controller`.
+  processAppRoutes: function(controller, appRoutes){
+    var method, methodName;
+    var route, routesLength, i;
+    var routes = [];
+    var router = this;
+
+    for(route in appRoutes){
+      if (appRoutes.hasOwnProperty(route)){
+        routes.unshift([route, appRoutes[route]]);
+      }
+    }
+
+    routesLength = routes.length;
+    for (i = 0; i < routesLength; i++){
+      route = routes[i][0];
+      methodName = routes[i][1];
+      method = controller[methodName];
+
+      if (!method){
+        var msg = "Method '" + methodName + "' was not found on the controller";
+        var err = new Error(msg);
+        err.name = "NoMethodError";
+        throw err;
+      }
+
+      method = _.bind(method, controller);
+      router.route(route, methodName, method);
+    }
+  }
+});
+
+
+// Module
+// ------
+
+// A simple module system, used to create privacy and encapsulation in
+// Marionette applications
+Marionette.Module = function(moduleName, app, customArgs){
+  this.moduleName = moduleName;
+
+  // store sub-modules
+  this.submodules = {};
+
+  this._setupInitializersAndFinalizers();
+
+  // store the configuration for this module
+  this.config = {};
+  this.config.app = app;
+  this.config.customArgs = customArgs;
+  this.config.definitions = [];
+
+  // extend this module with an event binder
+  var eventBinder = new Marionette.EventBinder();
+  _.extend(this, eventBinder);
+};
+
+// Extend the Module prototype with events / bindTo, so that the module
+// can be used as an event aggregator or pub/sub.
+_.extend(Marionette.Module.prototype, Backbone.Events, {
+
+  // Initializer for a specific module. Initializers are run when the
+  // module's `start` method is called.
+  addInitializer: function(callback){
+    this._initializerCallbacks.add(callback);
+  },
+
+  // Finalizers are run when a module is stopped. They are used to teardown
+  // and finalize any variables, references, events and other code that the
+  // module had set up.
+  addFinalizer: function(callback){
+    this._finalizerCallbacks.add(callback);
+  },
+
+  // Start the module, and run all of it's initializers
+  start: function(options){
+    // Prevent re-start the module
+    if (this._isInitialized){ return; }
+
+    // start the sub-modules (depth-first hierarchy)
+    _.each(this.submodules, function(mod){
+      if (mod.config.options.startWithParent){
+        mod.start(options);
+      }
+    });
+
+    // run the callbacks to "start" the current module
+    this._initializerCallbacks.run(options, this);
+    this._isInitialized = true;
+  },
+
+  // Stop this module by running its finalizers and then stop all of
+  // the sub-modules for this module
+  stop: function(){
+    // if we are not initialized, don't bother finalizing
+    if (!this._isInitialized){ return; }
+    this._isInitialized = false;
+
+    // stop the sub-modules; depth-first, to make sure the
+    // sub-modules are stopped / finalized before parents
+    _.each(this.submodules, function(mod){ mod.stop(); });
+
+    // run the finalizers
+    this._finalizerCallbacks.run();
+
+    // reset the initializers and finalizers
+    this._initializerCallbacks.reset();
+    this._finalizerCallbacks.reset();
+  },
+
+  // Configure the module with a definition function and any custom args
+  // that are to be passed in to the definition function
+  addDefinition: function(moduleDefinition){
+    this._runModuleDefinition(moduleDefinition);
+  },
+
+  // Internal method: run the module definition function with the correct
+  // arguments
+  _runModuleDefinition: function(definition){
+    if (!definition){ return; }
+
+    // build the correct list of arguments for the module definition
+    var args = _.flatten([
+      this, 
+      this.config.app, 
+      Backbone, 
+      Marionette, 
+      $, _, 
+      this.config.customArgs
+    ]);
+
+    definition.apply(this, args);
+  },
+
+  // Internal method: set up new copies of initializers and finalizers.
+  // Calling this method will wipe out all existing initializers and
+  // finalizers.
+  _setupInitializersAndFinalizers: function(){
+    this._initializerCallbacks = new Marionette.Callbacks();
+    this._finalizerCallbacks = new Marionette.Callbacks();
+  }
+});
+
+// Function level methods to create modules
+_.extend(Marionette.Module, {
+
+  // Create a module, hanging off the app parameter as the parent object. 
+  create: function(app, moduleNames, moduleDefinition){
+    var that = this;
+    var parentModule = app;
+    moduleNames = moduleNames.split(".");
+
+    // get the custom args passed in after the module definition and
+    // get rid of the module name and definition function
+    var customArgs = slice.apply(arguments);
+    customArgs.splice(0, 3);
+
+    // Loop through all the parts of the module definition
+    var length = moduleNames.length;
+    _.each(moduleNames, function(moduleName, i){
+      var isLastModuleInChain = (i === length-1);
+      var isFirstModuleInChain = (i === 0);
+
+      var module = that._getModuleDefinition(parentModule, moduleName, app, customArgs);
+      module.config.options = that._getModuleOptions(parentModule, moduleDefinition);
+
+      // if it's the first module in the chain, configure it
+      // for auto-start, as specified by the options
+      if (isFirstModuleInChain){
+        that._configureAutoStart(app, module);
+      }
+
+      // Only add a module definition and initializer when this is
+      // the last module in a "parent.child.grandchild" hierarchy of
+      // module names
+      if (isLastModuleInChain && module.config.options.hasDefinition){
+        module.addDefinition(module.config.options.definition);
+      }
+
+      // Reset the parent module so that the next child
+      // in the list will be added to the correct parent
+      parentModule = module;
+    });
+
+    // Return the last module in the definition chain
+    return parentModule;
+  },
+
+  _configureAutoStart: function(app, module){
+    // Only add the initializer if it's the first module, and
+    // if it is set to auto-start, and if it has not yet been added
+    if (module.config.options.startWithParent && !module.config.autoStartConfigured){
+      // start the module when the app starts
+      app.addInitializer(function(options){
+        module.start(options);
+      });
+    }
+
+    // prevent this module from being configured for
+    // auto start again. the first time the module
+    // is defined, determines it's auto-start
+    module.config.autoStartConfigured = true;
+  },
+
+  _getModuleDefinition: function(parentModule, moduleName, app, customArgs){
+    // Get an existing module of this name if we have one
+    var module = parentModule[moduleName];
+
+    if (!module){ 
+      // Create a new module if we don't have one
+      module = new Marionette.Module(moduleName, app, customArgs);
+      parentModule[moduleName] = module;
+      // store the module on the parent
+      parentModule.submodules[moduleName] = module;
+    }
+
+    return module;
+  },
+
+  _getModuleOptions: function(parentModule, moduleDefinition){
+    // default to starting the module with the app
+    var options = { 
+      startWithParent: true,
+      hasDefinition: !!moduleDefinition
+    };
+
+    // short circuit if we don't have a module definition
+    if (!options.hasDefinition){ return options; }
+
+    if (_.isFunction(moduleDefinition)){
+      // if the definition is a function, assign it directly
+      // and use the defaults
+      options.definition = moduleDefinition;
+
+    } else {
+
+      // the definition is an object. 
+
+      // grab the "define" attribute
+      options.hasDefinition = !!moduleDefinition.define;
+      options.definition = moduleDefinition.define;
+      
+      // grab the "startWithParent" attribute if one exists
+      if (moduleDefinition.hasOwnProperty("startWithParent")){
+        options.startWithParent = moduleDefinition.startWithParent;
+      }
+    }
+
+    return options;
+  }
+});
+
+// Template Cache
+// --------------
+
+// Manage templates stored in `<script>` blocks,
+// caching them for faster access.
+Marionette.TemplateCache = function(templateId){
+  this.templateId = templateId;
+};
+
+// TemplateCache object-level methods. Manage the template
+// caches from these method calls instead of creating 
+// your own TemplateCache instances
+_.extend(Marionette.TemplateCache, {
+  templateCaches: {},
+
+  // Get the specified template by id. Either
+  // retrieves the cached version, or loads it
+  // from the DOM.
+  get: function(templateId){
+    var that = this;
+    var cachedTemplate = this.templateCaches[templateId];
+
+    if (!cachedTemplate){
+      cachedTemplate = new Marionette.TemplateCache(templateId);
+      this.templateCaches[templateId] = cachedTemplate;
+    }
+
+    return cachedTemplate.load();
+  },
+
+  // Clear templates from the cache. If no arguments
+  // are specified, clears all templates:
+  // `clear()`
+  //
+  // If arguments are specified, clears each of the 
+  // specified templates from the cache:
+  // `clear("#t1", "#t2", "...")`
+  clear: function(){
+    var i;
+    var length = arguments.length;
+
+    if (length > 0){
+      for(i=0; i<length; i++){
+        delete this.templateCaches[arguments[i]];
+      }
+    } else {
+      this.templateCaches = {};
+    }
+  }
+});
+
+// TemplateCache instance methods, allowing each
+// template cache object to manage it's own state
+// and know whether or not it has been loaded
+_.extend(Marionette.TemplateCache.prototype, {
+
+  // Internal method to load the template asynchronously.
+  load: function(){
+    var that = this;
+
+    // Guard clause to prevent loading this template more than once
+    if (this.compiledTemplate){
+      return this.compiledTemplate;
+    }
+
+    // Load the template and compile it
+    var template = this.loadTemplate(this.templateId);
+    this.compiledTemplate = this.compileTemplate(template);
+
+    return this.compiledTemplate;
+  },
+
+  // Load a template from the DOM, by default. Override
+  // this method to provide your own template retrieval,
+  // such as asynchronous loading from a server.
+  loadTemplate: function(templateId){
+    var template = $(templateId).html();
+
+    if (!template || template.length === 0){
+      var msg = "Could not find template: '" + templateId + "'";
+      var err = new Error(msg);
+      err.name = "NoTemplateError";
+      throw err;
+    }
+
+    return template;
+  },
+
+  // Pre-compile the template before caching it. Override
+  // this method if you do not need to pre-compile a template
+  // (JST / RequireJS for example) or if you want to change
+  // the template engine used (Handebars, etc).
+  compileTemplate: function(rawTemplate){
+    return _.template(rawTemplate);
+  }
+});
+
+
+// Renderer
+// --------
+
+// Render a template with data by passing in the template
+// selector and the data to render.
+Marionette.Renderer = {
+
+  // Render a template with data. The `template` parameter is
+  // passed to the `TemplateCache` object to retrieve the
+  // template function. Override this method to provide your own
+  // custom rendering and template handling for all of Marionette.
+  render: function(template, data){
+    var templateFunc = typeof template === 'function' ? template : Marionette.TemplateCache.get(template);
+    var html = templateFunc(data);
+    return html;
+  }
+};
+
+
+// Callbacks
+// ---------
+
+// A simple way of managing a collection of callbacks
+// and executing them at a later point in time, using jQuery's
+// `Deferred` object.
+Marionette.Callbacks = function(){
+  this._deferred = $.Deferred();
+  this._callbacks = [];
+};
+
+_.extend(Marionette.Callbacks.prototype, {
+
+  // Add a callback to be executed. Callbacks added here are
+  // guaranteed to execute, even if they are added after the 
+  // `run` method is called.
+  add: function(callback, contextOverride){
+    this._callbacks.push({cb: callback, ctx: contextOverride});
+
+    this._deferred.done(function(context, options){
+      if (contextOverride){ context = contextOverride; }
+      callback.call(context, options);
+    });
+  },
+
+  // Run all registered callbacks with the context specified. 
+  // Additional callbacks can be added after this has been run 
+  // and they will still be executed.
+  run: function(options, context){
+    this._deferred.resolve(context, options);
+  },
+
+  // Resets the list of callbacks to be run, allowing the same list
+  // to be run multiple times - whenever the `run` method is called.
+  reset: function(){
+    var that = this;
+    this._deferred = $.Deferred();
+    _.each(this._callbacks, function(cb){
+      that.add(cb.cb, cb.ctx);
+    });
+  }
+});
+
+
+// Event Aggregator
+// ----------------
+
+// A pub-sub object that can be used to decouple various parts
+// of an application through event-driven architecture.
+Marionette.EventAggregator = Marionette.EventBinder.extend({
+  
+  // Extend any provided options directly on to the event binder
+  constructor: function(options){
+    Marionette.EventBinder.apply(this, arguments);
+    _.extend(this, options);
+  },
+
+  // Override the `bindTo` method to ensure that the event aggregator
+  // is used as the event binding storage
+  bindTo: function(eventName, callback, context){
+    return Marionette.EventBinder.prototype.bindTo.call(this, this, eventName, callback, context);
+  }
+});
+
+// Copy the basic Backbone.Events on to the event aggregator
+_.extend(Marionette.EventAggregator.prototype, Backbone.Events);
+
+// Copy the `extend` function used by Backbone's classes
+Marionette.EventAggregator.extend = Backbone.View.extend;
+
+
+// Helpers
+// -------
+
+// For slicing `arguments` in functions
+var slice = Array.prototype.slice;
+
+
+  return Marionette;
+})(Backbone, _, window.jQuery || window.Zepto || window.ender);
 // lib/handlebars/base.js
 var Handlebars = {};
 
@@ -15616,7 +14815,7 @@ Handlebars.VM = {
 Handlebars.template = Handlebars.VM.template;
 ;
 Backbone.Marionette.Renderer.render = function(template, data) {
-  return HanderbarsTemplates['templates/' + template](data);
+  return HandlebarsTemplates[template](data);
 };
 App = new Backbone.Marionette.Application();
 
@@ -15630,11 +14829,12 @@ App.Helpers = {};
 App.layouts = {};
 
 App.addRegions({
-  content: '#content',
-  loginWidget: '#login-widget'
+  content: '#content'
 });
 
-App.content.show(App.layouts.home);
+App.bind("initialize:after", function() {
+  App.content.show(App.layouts.home);
+});
 App.Models.User = Backbone.Model.extend({})
 ;
 App.Models.UserRegistration = Backbone.Model.extend({
@@ -15658,26 +14858,6 @@ App.Models.UserSession = Backbone.Model.extend({
   }
 })
 ;
-var app = app || {}
-var AppRouter = Backbone.Router.extend({
-
-  routes : {
-    '' : 'home_page',
-    '../users/sign_in' : 'sign_in_user'
-  },
-
-  home_page : function() {
-    console.log("rendering home page");
-  },
-
-  sign_in_user : function() {
-    console.log(app.Login);
-  },
-
-});
-
-var app = new AppRouter();
-Backbone.history.start();
           (function() {
             this.HandlebarsTemplates || (this.HandlebarsTemplates = {});
             this.HandlebarsTemplates["layouts/home"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -15702,13 +14882,13 @@ App.Views.Layouts.Home = Backbone.Marionette.Layout.extend({
   template: 'layouts/home',
 
   regions : {
-    loginWidget: 'login-widget'
+    loginWidget: '#login-widget'
   },
 
   views:{},
 
   onShow: function() {
-    this.views.login = App.Views.RegistrationAndLogin.Login;
+    this.views.login = App.Views.LoginAndRegistration.Login;
     this.loginWidget.show(new this.views.login);
   }
 });
@@ -15733,7 +14913,8 @@ App.Views.LoginAndRegistration.Login = Backbone.Marionette.ItemView.extend({
   },
 
   onRender: function() {
-    this.ModelBinder.bind(this.model, this.el);
+    console.log(this.el);
+    this.modelBinder.bind(this.model, this.el);
   },
 
   login: function(e) {
