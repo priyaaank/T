@@ -14875,7 +14875,7 @@ App.Models.UserSession = Backbone.Model.extend({
   var foundHelper, self=this;
 
 
-  return "<form id=\"login-form\">\n  <fieldset>\n\n    <div id=\"email_group\">\n      <label for=\"email\">Email</label>\n      <div>\n        <input id=\"email\" name=\"email\" type=\"email\" required=\"required\" />\n      </div>\n    </div>\n\n    <div id=\"password_group\">\n      <label for=\"password\">Password</label>\n      <div>\n        <input id=\"password\" name=\"password\" type=\"password\" required=\"required\" />\n      </div>\n    </div>\n\n    <div id=\"password_confirmation_group\">\n      <label for=\"password_confirmation\">Confirm Password</label>\n      <div>\n        <input id=\"password_confirmation\" name=\"password_confirmation\" type=\"password\" required=\"required\" />\n      </div>\n    </div>\n\n    <div>\n      <input type=\"submit\" value=\"Login\" />\n    </div>\n  </fieldset>\n</form>\n";});
+  return "<form id=\"login-form\">\n  <fieldset>\n\n    <div id=\"email_group\">\n      <label for=\"email\">Email</label>\n      <div>\n        <input id=\"email\" name=\"email\" type=\"email\" required=\"required\" />\n      </div>\n    </div>\n\n    <div id=\"password_group\">\n      <label for=\"password\">Password</label>\n      <div>\n        <input id=\"password\" name=\"password\" type=\"password\" required=\"required\" />\n      </div>\n    </div>\n\n    <div>\n      <input type=\"submit\" value=\"Login\" class='login-button'/>\n    </div>\n  </fieldset>\n</form>\n";});
             return this.HandlebarsTemplates["registrationAndLogin/login"];
           }).call(this);
 App.Views.Layouts.Home = Backbone.Marionette.Layout.extend({
@@ -14919,9 +14919,18 @@ App.Views.LoginAndRegistration.Login = Backbone.Marionette.ItemView.extend({
 
   login: function(e) {
     e.preventDefault();
-    console.log("trying to login");
-  }
+    var el = $(this.el);
 
+    this.model.save(this.model.attributes, {
+      success: function(userSession, response) {
+        console.log(userSession);
+      },
+      error: function(userSession, response) {
+        var serverResponse = $.parseJSON(response.responseText);
+        console.log(serverResponse);
+      }
+    });
+  }
 });
 // This is a manifest file that'll be compiled into including all the files listed below.
 // Add new JavaScript/Coffee code in separate files in this directory and they'll automatically

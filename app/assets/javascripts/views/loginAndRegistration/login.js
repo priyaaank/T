@@ -20,7 +20,16 @@ App.Views.LoginAndRegistration.Login = Backbone.Marionette.ItemView.extend({
 
   login: function(e) {
     e.preventDefault();
-    console.log("trying to login");
-  }
+    var el = $(this.el);
 
+    this.model.save(this.model.attributes, {
+      success: function(userSession, response) {
+        console.log(userSession);
+      },
+      error: function(userSession, response) {
+        var serverResponse = $.parseJSON(response.responseText);
+        console.log(serverResponse);
+      }
+    });
+  }
 });
