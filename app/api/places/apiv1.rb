@@ -7,7 +7,7 @@ module Places
       desc "Returns a place for an id"
       get '/:id' do
         place = Place.find(params[:id])
-        present place, :with => Places::ResponseEntity
+        present place, :with => Places::PlaceResponseEntity
       end
     end
   end

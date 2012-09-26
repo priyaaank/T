@@ -33,4 +33,7 @@ RSpec.configure do |config|
   config.include RSpec::Rails::RequestExampleGroup, :type => :request, :example_group => {
     :file_path => /spec\/api/
   }
+
+  #including json matching helpers
+  config.include JsonSpec::Helpers
 end

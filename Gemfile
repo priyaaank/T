@@ -28,4 +28,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'fabrication'
+  gem 'json_spec'
 end
