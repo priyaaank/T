@@ -6,7 +6,7 @@ describe Photo do
     it { should respond_to :url     }
     it { should respond_to :type    }
     it { should respond_to :caption }
-    it { should respond_to :point_of_interest }
+    it { should respond_to :place }
   end
 
 end
