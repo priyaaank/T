@@ -1,4 +1,4 @@
-class PointOfInterest
+class Place
 
   include Mongoid::Document
   include Mongoid::Timestamps

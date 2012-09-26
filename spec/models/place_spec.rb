@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PointOfInterest do
+describe Place do
   
   context "attributes" do
     it { should respond_to :categories          }

@@ -11,6 +11,7 @@ gem 'thin'
 gem 'carrierwave'
 gem 'mongoid-ancestry'
 gem 'rails-backbone'
+gem 'grape'
 
 group :development do
   gem 'travis-lint'
