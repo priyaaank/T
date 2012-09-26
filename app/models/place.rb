@@ -12,7 +12,7 @@ class Place
   embeds_many :categories
   embeds_many :photos
   embeds_one  :location
-  embeds_one  :stats
+  embeds_one  :stat_group
   embeds_one  :contact_info, :as => :contactable
 
   has_many :tips

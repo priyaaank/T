@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Stats do
+describe StatGroup do
 
   context "types" do
     it { should respond_to :likes         }

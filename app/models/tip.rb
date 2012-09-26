@@ -5,6 +5,6 @@ class Tip
   field :text, :type => String
 
   belongs_to :user
-  belongs_to :point_of_interest
+  belongs_to :place
 
 end

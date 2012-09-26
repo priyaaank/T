@@ -6,6 +6,6 @@ class Photo
   field :caption, :type => String
   field :type, :type => String
   
-  embedded_in :point_of_interest
+  embedded_in :place
 
 end

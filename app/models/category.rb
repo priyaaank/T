@@ -4,4 +4,6 @@ class Category
 
   field :name, :type => String
 
+  embedded_in :place
+
 end

@@ -31,6 +31,6 @@ RSpec.configure do |config|
 
   #Config for locating the api files for api tests
   config.include RSpec::Rails::RequestExampleGroup, :type => :request, :example_group => {
-    :file_path => /spec\/apis/
+    :file_path => /spec\/api/
   }
 end

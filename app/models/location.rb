@@ -5,4 +5,6 @@ class Location
   field :longitude, :type => Float
   field :latitude, :type => Float
 
+  embedded_in :place
+
 end
