@@ -1,6 +1,7 @@
 T::Application.routes.draw do
   devise_for :users
 
+  mount API => "/api"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -28,4 +28,9 @@ RSpec.configure do |config|
 
   #added devise helpers for rspec
   config.include Devise::TestHelpers, :type => :controller
+
+  #Config for locating the api files for api tests
+  config.include RSpec::Rails::RequestExampleGroup, :type => :request, :example_group => {
+    :file_path => /spec\/apis/
+  }
 end

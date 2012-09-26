@@ -7,10 +7,10 @@ class Place
   has_ancestry
 
   field :name, :type => String
+  field :alternate_name, :type => Array
   
   embeds_many :categories
   embeds_many :photos
-  embeds_many :alternate_names
   embeds_one  :location
   embeds_one  :stats
   embeds_one  :contact_info, :as => :contactable
