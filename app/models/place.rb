@@ -9,7 +9,6 @@ class Place
   field :name, :type => String
   field :alternate_names, :type => Array
   
-  embeds_many :categories
   embeds_many :photos
   embeds_one  :location
   embeds_one  :stat_group
@@ -17,6 +16,7 @@ class Place
 
   has_many :tips
   has_many :reviews
+  has_many :categories
 
   has_one :user, :as => :owner
 
