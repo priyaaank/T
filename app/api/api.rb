@@ -9,6 +9,7 @@ class API < Grape::API
 
   #Places API
   mount Places::APIV1
+  mount Users::APIV1
 
   #Review API
   
