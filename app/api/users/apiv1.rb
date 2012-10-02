@@ -1,6 +1,5 @@
 module Users
   class APIV1 < Grape::API
-    version 'v1', :using => :header
 
     resource :user do
 

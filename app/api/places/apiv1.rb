@@ -1,6 +1,5 @@
 module Places
   class APIV1 < Grape::API
-    version 'v1', :using => :header
 
     resource :place do
       
