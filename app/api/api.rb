@@ -13,6 +13,7 @@ class API < Grape::API
   mount Places::APIV1
 
   #Review API
+  mount Reviews::APIV1
   
   #Tips API
   mount Tips::APIV1
