@@ -15,6 +15,7 @@ class API < Grape::API
   #Review API
   
   #Tips API
+  mount Tips::APIV1
 
   #User API
   mount Users::APIV1

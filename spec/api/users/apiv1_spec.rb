@@ -25,13 +25,13 @@ module Users
         json_response.should be_json_eql(user_details_as_json)
       end
 
-      it "should return a 404 status code in response when place is not found" do
+      it "should return a 404 status code in response when user is not found" do
         get "/api/user/#{non_existent_user_id}"
 
         response.status.should eq 404
       end
 
-      it "should return an error json when place is not found" do
+      it "should return an error json when user is not found" do
         get "/api/user/#{non_existent_user_id}"
 
         response.body.should eq({:error => {:message => "We did not find what you were looking for", :code => 404}}.to_json)
