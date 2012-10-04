@@ -1,0 +1,3 @@
+Fabricator(:itinerary) do
+
+end
