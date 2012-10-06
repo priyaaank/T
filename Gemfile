@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.3'
+gem 'rails', '~> 3.2.0'
 
 gem 'devise'
 gem 'jquery-rails'
@@ -12,6 +12,7 @@ gem 'carrierwave'
 gem 'mongoid-ancestry'
 gem 'rails-backbone'
 gem 'grape'
+gem 'mongoid_rails_migrations', '~> 1.0.0'
 
 group :development do
   gem 'travis-lint'
