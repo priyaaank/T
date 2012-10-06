@@ -7,3 +7,13 @@ Fabricator(:place) do
   photos { Array.wrap(Fabricate.build(:photo)) }
   after_create { |place| place.contact_info = Fabricate.build(:eiffel_tower_address, :contactable => place); place.save!}
 end
+
+Fabricator(:hilton_hotel, :from => :place) do
+  name "Hilton Hotel"
+  alternate_names ['Hotel la Hilton']
+  categories { Array.wrap(Fabricate.build(:hotels)) }
+  location { Fabricate.build(:location, :latitude => 51.505612, :longitude => -0.149633) }
+  stat_group { Fabricate.build(:likable) }
+  photos { Array.wrap(Fabricate.build(:photo)) }
+  after_create { |place| place.contact_info = Fabricate.build(:hilton_hotel_address, :contactable => place); place.save!}
+end

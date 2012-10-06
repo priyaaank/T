@@ -22,5 +22,6 @@ class API < Grape::API
   mount Users::APIV1
 
   #Itenerary API
+  mount Itineraries::APIV1
 
 end
