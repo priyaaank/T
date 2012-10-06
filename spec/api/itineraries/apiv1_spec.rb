@@ -50,8 +50,8 @@ module Itineraries
           get "/api/itinerary/#{@itinerary_to_paris.id}"
 
           json_response = response.body
-          json_response.should have_json_type(Integer).at_path("stopovers/0/point_of_interest/stat_group/likes")
-          json_response.should have_json_type(Integer).at_path("stopovers/0/point_of_interest/stat_group/dislikes")
+          json_response.should have_json_type(Integer).at_path("stopovers/0/point_of_interest/stats/likes")
+          json_response.should have_json_type(Integer).at_path("stopovers/0/point_of_interest/stats/dislikes")
         end
 
       end
