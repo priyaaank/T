@@ -8,11 +8,10 @@
     = stylesheet_link_tag "application"
 
   %body
-
+    #header
     #content
-
-    = yield
-
+      = yield
+    #footer
     
   :javascript
     $(function() {
