@@ -13,6 +13,7 @@ gem 'mongoid-ancestry'
 gem 'rails-backbone'
 gem 'grape'
 gem 'mongoid_rails_migrations', '~> 1.0.0'
+gem 'uglifier'
 
 group :development do
   gem 'travis-lint'
