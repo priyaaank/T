@@ -53,6 +53,7 @@ T::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => 'invite#new'
 
+  match 'home' => 'home#index', :as => :homepage
   match 'invite/new' => 'invite#new', :as => :new_invite
   match 'invite' => 'invite#create', :as => :invite, :via => [:post]
 end
