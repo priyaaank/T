@@ -15549,10 +15549,20 @@ App.addRegions({
 App.bind("initialize:after", function() {
   App.header.show(App.layouts.header);
   App.footer.show(App.layouts.footer);
+  App.content.show(App.layouts.invitation);
 });
 
 App.vent.on("authentication:login", function() {
   App.content.show(App.layouts.home);
+});
+App.Models.Beta = App.Models.Beta || {};
+App.Models.Beta.Invitation = Backbone.Model.extend({
+  url: "/invite.json",
+  paramRoot: 'invite',
+
+  defaults: {
+    "email":""
+  }
 });
 App.Models.User = Backbone.Model.extend({})
 ;
@@ -15577,6 +15587,16 @@ App.Models.UserSession = Backbone.Model.extend({
   }
 })
 ;
+          (function() {
+            this.HandlebarsTemplates || (this.HandlebarsTemplates = {});
+            this.HandlebarsTemplates["layouts/betaInvitation"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  helpers = helpers || Handlebars.helpers;
+  
+
+
+  return "<div id=\"invite\" class=\"invite-modal\">\n\n</div>\n";});
+            return this.HandlebarsTemplates["layouts/betaInvitation"];
+          }).call(this);
           (function() {
             this.HandlebarsTemplates || (this.HandlebarsTemplates = {});
             this.HandlebarsTemplates["layouts/footer"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -15609,6 +15629,16 @@ App.Models.UserSession = Backbone.Model.extend({
           }).call(this);
           (function() {
             this.HandlebarsTemplates || (this.HandlebarsTemplates = {});
+            this.HandlebarsTemplates["privateBeta/betaInvitation"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  helpers = helpers || Handlebars.helpers;
+  
+
+
+  return "<div id=\"modal-content\">\n  <h1 class=\"logo\">\n    <img src=\"/assets/logo.png\" alt=\"Logo\">\n  </h1>\n  <h2>\n    Trippy is dying to meet you with ideas to revolutionize your travel planning. Here's your chance for a sneak preview invitation.\n  </h2>\n  <h4>\n    You'll be one of the select few to get invited to our private beta!\n  </h4>\n  <form id=\"invite-form\" method=\"post\" action=\"/request_invite\">\n    <fieldset>\n      <input id=\"email\" type=\"text\" value=\"\" placeholder=\"trippy@gmail.com\" name=\"email\">\n      <div>\n        <input id=\"invite_btn\" type=\"submit\" value=\"Invite Me!\">\n      </div>\n    </fieldset>\n  </form>\n</div>\n";});
+            return this.HandlebarsTemplates["privateBeta/betaInvitation"];
+          }).call(this);
+          (function() {
+            this.HandlebarsTemplates || (this.HandlebarsTemplates = {});
             this.HandlebarsTemplates["registrationAndLogin/login"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   helpers = helpers || Handlebars.helpers;
   
@@ -15617,6 +15647,44 @@ App.Models.UserSession = Backbone.Model.extend({
   return "<form id=\"login-form\">\n  <fieldset>\n\n    <div id=\"email_group\">\n      <label for=\"email\">Email</label>\n      <div>\n        <input id=\"email\" name=\"email\" type=\"email\" required=\"required\" />\n      </div>\n    </div>\n\n    <div id=\"password_group\">\n      <label for=\"password\">Password</label>\n      <div>\n        <input id=\"password\" name=\"password\" type=\"password\" required=\"required\" />\n      </div>\n    </div>\n\n    <div>\n      <input type=\"submit\" value=\"Login\" class='login-button'/>\n    </div>\n  </fieldset>\n</form>\n";});
             return this.HandlebarsTemplates["registrationAndLogin/login"];
           }).call(this);
+          (function() {
+            this.HandlebarsTemplates || (this.HandlebarsTemplates = {});
+            this.HandlebarsTemplates["shared/notifications"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  helpers = helpers || Handlebars.helpers;
+  var buffer = "", stack1, foundHelper, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  buffer += "<div class=\"";
+  foundHelper = helpers.notificationType;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.notificationType; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  buffer += escapeExpression(stack1) + "\">";
+  foundHelper = helpers.message;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.message; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  buffer += escapeExpression(stack1) + "</di>\n";
+  return buffer;});
+            return this.HandlebarsTemplates["shared/notifications"];
+          }).call(this);
+App.Views.Layouts.Beta = App.Views.Layouts.Beta || {};
+App.Views.Layouts.Beta.Invitation = Backbone.Marionette.Layout.extend({
+  template: 'layouts/betaInvitation',
+
+  regions: {
+    content: '#invite'
+  },
+
+  views:{},
+
+  onShow: function() {
+    this.views.invitation = App.Views.Beta.Invitation;
+    this.content.show(new this.views.invitation);
+  }
+});
+
+App.addInitializer(function() {
+  App.layouts.invitation = new App.Views.Layouts.Beta.Invitation();
+});
 App.Views.Layouts.Footer = Backbone.Marionette.Layout.extend({
   template: 'layouts/footer',
   
@@ -15633,13 +15701,11 @@ App.addInitializer(function() {
 App.Views.Layouts.Header = Backbone.Marionette.Layout.extend({
   template: 'layouts/header',
 
-  regions: {
-  },
+  regions: {},
 
   views:{},
 
-  onShow: function() {
-  }
+  onShow: function() {}
 });
 
 App.addInitializer(function() {
@@ -15680,7 +15746,6 @@ App.Views.LoginAndRegistration.Login = Backbone.Marionette.ItemView.extend({
   },
 
   onRender: function() {
-    console.log(this.el);
     this.modelBinder.bind(this.model, this.el);
   },
 
@@ -15698,6 +15763,45 @@ App.Views.LoginAndRegistration.Login = Backbone.Marionette.ItemView.extend({
       }
     });
   }
+});
+App.Views.Beta = App.Views.Beta || {};
+App.Views.Beta.Invitation = Backbone.Marionette.ItemView.extend({
+  
+  template: 'privateBeta/betaInvitation',
+
+  events: {
+    'submit form' : 'rememberToInvite',
+  },
+
+  initialize: function() {
+    this.model = new App.Models.Beta.Invitation();
+    this.modelBinder = new Backbone.ModelBinder();
+    this.inviteForm = $("#invite-form");
+  },
+
+  onRender: function() {
+    this.modelBinder.bind(this.model, this.el);
+  },
+
+  rememberToInvite: function(event) {
+    event.preventDefault();
+    var el = $(this.el);
+
+    this.model.save(this.model.attributes, {
+      success: function() {
+        console.log("success");
+        value = HandlebarsTemplates['shared/notifications']({
+          'notificationType': "success",
+          'message': "Gee Thanks! We will let you know once we are ready to launch."
+        });
+        el.find("#modal-content").append(value);
+        el.find("#invite-form").remove();
+      },
+      error: function() {
+        console.log("failure");
+      }
+    });
+  },
 });
 // This is a manifest file that'll be compiled into including all the files listed below.
 // Add new JavaScript/Coffee code in separate files in this directory and they'll automatically

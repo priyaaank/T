@@ -18,6 +18,7 @@ App.addRegions({
 App.bind("initialize:after", function() {
   App.header.show(App.layouts.header);
   App.footer.show(App.layouts.footer);
+  App.content.show(App.layouts.invitation);
 });
 
 App.vent.on("authentication:login", function() {

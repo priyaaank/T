@@ -14,7 +14,6 @@ App.Views.LoginAndRegistration.Login = Backbone.Marionette.ItemView.extend({
   },
 
   onRender: function() {
-    console.log(this.el);
     this.modelBinder.bind(this.model, this.el);
   },
 

@@ -53,5 +53,6 @@ T::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => 'home#index'
 
-  match 'signup' => 'signup#index', :as => :beta_signup
+  match 'invite/new' => 'invite#new', :as => :new_invite
+  match 'invite' => 'invite#create', :as => :invite, :via => [:post]
 end

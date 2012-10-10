@@ -32,6 +32,24 @@ body {
   padding: 10px 20px 10px;
 }
 
+.info, .success, .warning, .error, .validation {
+  margin: 10px 0px;
+  padding:15px 10px 15px 60px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  font-size:14px;
+}
+
+.success {
+  color: #8EC94F;
+  background-image:url('assets/images/success.png');
+}
+
+.error {
+  color: #D8000C;
+  background-image: url('assets/images/error.png');
+}
+
 li {
   list-style: none outside none;
 }
