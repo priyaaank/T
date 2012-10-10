@@ -51,7 +51,7 @@ T::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+  root :to => 'invite#new'
 
   match 'invite/new' => 'invite#new', :as => :new_invite
   match 'invite' => 'invite#create', :as => :invite, :via => [:post]
