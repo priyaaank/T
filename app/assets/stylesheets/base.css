@@ -107,7 +107,11 @@ h2, h4 {
 }
 
 #invite_btn {
-  background: -moz-linear-gradient(center top , #FEC130 25%, #FF9000 100%) repeat scroll 0 0 transparent;
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0.25,#FEC130),color-stop(1,#FF9000));
+  background: -moz-linear-gradient(center top,#FEC130 25%,#FF9000 100%);
+  background: -o-linear-gradient(top,#FEC130 25%,#FF9000 100%);
+  background: -ms-linear-gradient(top,#FEC130 25%,#FF9000 100%);
+  background: linear-gradient(top,#FEC130 25%,#FF9000 100%);
   border: 1px solid #FF9000;
   box-shadow: 0 0 2px #FFCC00;
   color: #000000;
