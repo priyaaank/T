@@ -16,6 +16,7 @@ rerun.txt
 pickle-email-*.html
 /.bundle
 /db/*.sqlite3
+/public/assets/*
 .env
 .notes
 *.DS_Store

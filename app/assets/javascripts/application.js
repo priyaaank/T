@@ -11,6 +11,7 @@
 //= require backbone_datalink
 //= require lib/Backbone.ModelBinder.min.js
 //= require lib/Backbone.Marionette.js
+//= require lib/bootstrap.js
 //= require handlebars.js
 //= require render_handlebar_templates
 //= require init

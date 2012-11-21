@@ -15,6 +15,9 @@ gem 'rails-backbone'
 gem 'grape'
 gem 'mongoid_rails_migrations', '~> 1.0.0'
 gem 'uglifier'
+gem 'less-rails'
+gem 'therubyracer'
+gem 'twitter-bootstrap-rails'
 
 group :development do
   gem 'travis-lint'

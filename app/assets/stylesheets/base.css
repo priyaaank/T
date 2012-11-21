@@ -106,26 +106,26 @@ h2, h4 {
   background-image: url('assets/images/error.png');
 }
 
-#invite_btn {
-  background: -webkit-gradient(linear,left top,left bottom,color-stop(0.25,#FEC130),color-stop(1,#FF9000));
-  background: -moz-linear-gradient(center top,#FEC130 25%,#FF9000 100%);
-  background: -o-linear-gradient(top,#FEC130 25%,#FF9000 100%);
-  background: -ms-linear-gradient(top,#FEC130 25%,#FF9000 100%);
-  background: linear-gradient(top,#FEC130 25%,#FF9000 100%);
-  border: 1px solid #FF9000;
-  box-shadow: 0 0 2px #FFCC00;
-  color: #000000;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  height: 36px;
-  line-height: 36px;
-  margin: 0px 0 0 35px;
-  outline: 0 none;
-  padding: 0;
-  text-shadow: 0 1px 0 #FFCC00;
-  width: 120px;
-}
+/*#invite_btn {*/
+  /*background: -webkit-gradient(linear,left top,left bottom,color-stop(0.25,#FEC130),color-stop(1,#FF9000));*/
+  /*background: -moz-linear-gradient(center top,#FEC130 25%,#FF9000 100%);*/
+  /*background: -o-linear-gradient(top,#FEC130 25%,#FF9000 100%);*/
+  /*background: -ms-linear-gradient(top,#FEC130 25%,#FF9000 100%);*/
+  /*background: linear-gradient(top,#FEC130 25%,#FF9000 100%);*/
+  /*border: 1px solid #FF9000;*/
+  /*box-shadow: 0 0 2px #FFCC00;*/
+  /*color: #000000;*/
+  /*cursor: pointer;*/
+  /*font-size: 14px;*/
+  /*font-weight: 500;*/
+  /*height: 36px;*/
+  /*line-height: 36px;*/
+  /*margin: 0px 0 0 35px;*/
+  /*outline: 0 none;*/
+  /*padding: 0;*/
+  /*text-shadow: 0 1px 0 #FFCC00;*/
+  /*width: 120px;*/
+/*}*/
 
 #invite h1 {
   overflow:hidden;
