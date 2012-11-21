@@ -56,4 +56,6 @@ T::Application.routes.draw do
   match 'home' => 'home#index', :as => :homepage
   match 'invite/new' => 'invite#new', :as => :new_invite
   match 'invite' => 'invite#create', :as => :invite, :via => [:post]
+
+  match 'mock/home' => 'mocks#home', :as => :mock_homepage
 end
