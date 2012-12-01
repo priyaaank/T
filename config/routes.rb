@@ -58,4 +58,5 @@ T::Application.routes.draw do
   match 'invite' => 'invite#create', :as => :invite, :via => [:post]
 
   match 'mock/home' => 'mocks#home', :as => :mock_homepage
+  match 'mock/itinerary' => 'mocks#itinerary', :as => :mock_itinerary_detail
 end

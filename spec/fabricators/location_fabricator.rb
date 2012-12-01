@@ -1,4 +1,3 @@
 Fabricator(:location) do
-  latitude 48.858165
-  longitude 2.295354
+  cordinates [48.858165,2.295354]
 end
