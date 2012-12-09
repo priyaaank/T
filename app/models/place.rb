@@ -4,7 +4,7 @@ class Place
   include Mongoid::Timestamps
   include Mongoid::Ancestry
 
-  has_ancestry
+  has_ancestry :orphan_strategy => :restrict
 
   field :name, :type => String
   field :alternate_names, :type => Array

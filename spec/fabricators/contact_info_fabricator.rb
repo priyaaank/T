@@ -15,3 +15,12 @@ Fabricator(:hilton_hotel_address, :from => :contact_info) do
   zipcode "W1K1BE"
   contactable(:fabricator => :place)
 end
+
+Fabricator(:france_address, :from => :contact_info) do
+  address_line_1 "France"
+  address_line_2 "Europe"
+  city "France"
+  country "France"
+  zipcode "NA"
+  contactable(:fabricator => :place)
+end

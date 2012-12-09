@@ -21,5 +21,21 @@ describe Place do
 
   end
 
+  context "hierarchy" do
+
+    let(:france) { Fabricate(:france) }
+
+    it "should not allow place with sub-places to be deleted" do
+      eiffel_tower = Fabricate(:place, :parent => france)
+      
+      lambda {france.destroy}.should raise_error(Mongoid::Ancestry::Error)
+    end
+
+    it "should allow place to be deleted if no children exists" do
+      france.destroy.should be_true
+    end
+
+  end
+
 
 end

@@ -1,3 +1,4 @@
+#encoding: UTF-8
 Fabricator(:place) do
   name "Eiffel Tower"
   alternate_names ['La Tour Eiffel','a dame de fer', 'the iron lady']
@@ -16,4 +17,12 @@ Fabricator(:hilton_hotel, :from => :place) do
   stat_group { Fabricate.build(:likable) }
   photos { Array.wrap(Fabricate.build(:photo)) }
   after_create { |place| place.contact_info = Fabricate.build(:hilton_hotel_address, :contactable => place); place.save!}
+end
+
+Fabricator(:france, :from => :place) do
+  name "France"
+  alternate_names ['République française','French Republic']
+  categories { Array.wrap(Fabricate.build(:monuments)) }
+  location { Fabricate.build(:location, :cordinates => [41.00, 6.0]) }
+  after_create { |place| place.contact_info = Fabricate.build(:france_address, :contactable => place); place.save!}
 end
